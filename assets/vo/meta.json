@@ -1,0 +1,242 @@
+{
+ "intro1": {
+  "t": [
+   0.0,
+   3.62
+  ],
+  "d": 10.73,
+  "lines": [
+   "Three hundred years ago, the sun did not rise on its own.",
+   "It was sung. Every dawn, from the Cathedral of the Hundred Bells, the Sun-Choir lifted it over the Reach."
+  ]
+ },
+ "intro2": {
+  "t": [
+   0.0,
+   3.25
+  ],
+  "d": 8.92,
+  "lines": [
+   "Then, on the last morning, one voice sang the wrong note.",
+   "The Bell of First Light cracked from crown to lip... and the sun never rose again."
+  ]
+ },
+ "intro3": {
+  "t": [
+   0.0,
+   4.62
+  ],
+  "d": 9.2,
+  "lines": [
+   "From the crack poured the Gloam. Not darkness, but a living dusk.",
+   "It drowned the roads. It woke the dead. It hollowed the minds of the living."
+  ]
+ },
+ "intro4": {
+  "t": [
+   0.0,
+   6.41
+  ],
+  "d": 9.1,
+  "lines": [
+   "Only Candlemere endures, huddled around the Undying Wick, the last flame that remembers the sun.",
+   "And now... the Wick is guttering."
+  ]
+ },
+ "intro5": {
+  "t": [
+   0.0,
+   5.51
+  ],
+  "d": 11.01,
+  "lines": [
+   "The Vigil sends Lanternbearers into the dark, each carrying an ember of the Wick.",
+   "Four hundred names are carved in the Crypt of the Nameless. None of them reached the Cathedral."
+  ]
+ },
+ "intro6": {
+  "t": [
+   0.0,
+   5.27
+  ],
+  "d": 8.5,
+  "lines": [
+   "You wake on the pyre-steps with a lantern in your hand. Your name is all you remember.",
+   "The dark is waiting, Lanternbearer. Carry the light."
+  ]
+ },
+ "sfx_bell": {
+  "d": 7
+ },
+ "sfx_crack": {
+  "d": 5
+ },
+ "sfx_drone": {
+  "d": 22
+ },
+ "end_ring1": {
+  "t": [
+   0.0,
+   4.41
+  ],
+  "d": 7.8,
+  "lines": [
+   "You set the ember of the Wick into the cracked Bell, and begin to sing.",
+   "You do not know the words. The Bell teaches them to you."
+  ]
+ },
+ "end_ring2": {
+  "t": [
+   0.0,
+   4.11
+  ],
+  "d": 9.75,
+  "lines": [
+   "Your voice gives out at the final verse, as it was always meant to.",
+   "Far above, for the first time in three hundred years, the sky turns grey... then gold."
+  ]
+ },
+ "end_ring3": {
+  "t": [
+   0.0,
+   5.21
+  ],
+  "d": 10.08,
+  "lines": [
+   "In Candlemere, twelve thousand people step into the street and weep in the sunlight.",
+   "The Vigil carves a new name into the Crypt. Tomorrow, someone else must sing."
+  ]
+ },
+ "end_ring4": {
+  "t": [
+   0.0,
+   4.82
+  ],
+  "d": 9.61,
+  "lines": [
+   "...and you wake on the pyre-steps of Candlemere, lantern in hand.",
+   "Your name is all you remember. Somewhere far below, a new darkness is stirring."
+  ]
+ },
+ "end_silence1": {
+  "t": [
+   0.0,
+   3.29
+  ],
+  "d": 6.41,
+  "lines": [
+   "You lower your lantern. The Bell stays silent.",
+   "No one else will be sung to death for a sunrise."
+  ]
+ },
+ "end_silence2": {
+  "t": [
+   0.0,
+   5.26
+  ],
+  "d": 9.2,
+  "lines": [
+   "The Gloam does not end. But without the Cantor, it no longer hungers.",
+   "Slowly, the dead lie down in the black water, and rest."
+  ]
+ },
+ "end_silence3": {
+  "t": [
+   0.0,
+   5.49
+  ],
+  "d": 11.1,
+  "lines": [
+   "You carry the Wick ember back to Candlemere, and light a second flame. Then a third.",
+   "The world will be lit by human hands from now on. It will be enough. It will have to be."
+  ]
+ },
+ "end_ember1": {
+  "t": [
+   0.0,
+   4.95
+  ],
+  "d": 9.33,
+  "lines": [
+   "You open your lantern, and offer the Heart your ember, and yourself with it.",
+   "The Hunger takes you gently, the way a wave takes a candle."
+  ]
+ },
+ "end_ember2": {
+  "t": [
+   0.0,
+   5.41
+  ],
+  "d": 12.68,
+  "lines": [
+   "Ivel bows his hidden face, and steps out of the dark at last, light as ash.",
+   "Tell them, he says, the watch is over. Someone is keeping it. Then he is gone... and you are the flame."
+  ]
+ },
+ "end_ember3": {
+  "t": [
+   0.0,
+   6.91
+  ],
+  "d": 14.95,
+  "lines": [
+   "Above, a pale dawn rises. Thin, but true. And it does not ask for a voice.",
+   "In Candlemere, the Wick burns brighter than it has in three hundred years. No one knows why. Maelis knows why."
+  ]
+ },
+ "end_ember4": {
+  "t": [
+   0.0,
+   4.35
+  ],
+  "d": 10.03,
+  "lines": [
+   "The Vigil carves two names into the Crypt that day, side by side.",
+   "The lanterns of the Reach never go out now. Somewhere in the deep, something warm is keeping them lit."
+  ]
+ },
+ "end_hunger1": {
+  "t": [
+   0.0,
+   3.6
+  ],
+  "d": 7.89,
+  "lines": [
+   "You reach into the Heart, and take the Hunger into yourself.",
+   "It comes willingly. It has been so lonely. And you are so warm."
+  ]
+ },
+ "end_hunger2": {
+  "t": [
+   0.0,
+   6.92
+  ],
+  "d": 10.96,
+  "lines": [
+   "Ivel is free. He turns to you with the shadow where his face was, and he is smiling. You can tell.",
+   "Walk softly, he says, and it will follow you like a fed hound."
+  ]
+ },
+ "end_hunger3": {
+  "t": [
+   0.0,
+   5.16
+  ],
+  "d": 11.8,
+  "lines": [
+   "You walk out into the deep dark, and the dark walks with you, gentle as dusk.",
+   "It does not feed on the world anymore. It feeds on you. And you are endless, and content."
+  ]
+ },
+ "end_hunger4": {
+  "t": [
+   0.0,
+   8.21
+  ],
+  "d": 16.53,
+  "lines": [
+   "In Candlemere, the nights grow quiet. The dead rest. The fog thins to a grey that children no longer fear.",
+   "On moonless nights, at the edge of the Wood, a single lantern is seen walking. It is not hunting. It is herding the dark home."
+  ]
+ }
+}

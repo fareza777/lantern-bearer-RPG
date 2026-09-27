@@ -1,0 +1,17 @@
+﻿{
+ "end_ring1": ["You set the ember of the Wick into the cracked Bell, and begin to sing.", "You do not know the words. The Bell teaches them to you."],
+ "end_ring2": ["Your voice gives out at the final verse, as it was always meant to.", "Far above, for the first time in three hundred years, the sky turns grey... then gold."],
+ "end_ring3": ["In Candlemere, twelve thousand people step into the street and weep in the sunlight.", "The Vigil carves a new name into the Crypt. Tomorrow, someone else must sing."],
+ "end_ring4": ["...and you wake on the pyre-steps of Candlemere, lantern in hand.", "Your name is all you remember. Somewhere far below, a new darkness is stirring."],
+ "end_silence1": ["You lower your lantern. The Bell stays silent.", "No one else will be sung to death for a sunrise."],
+ "end_silence2": ["The Gloam does not end. But without the Cantor, it no longer hungers.", "Slowly, the dead lie down in the black water, and rest."],
+ "end_silence3": ["You carry the Wick ember back to Candlemere, and light a second flame. Then a third.", "The world will be lit by human hands from now on. It will be enough. It will have to be."],
+ "end_ember1": ["You open your lantern, and offer the Heart your ember, and yourself with it.", "The Hunger takes you gently, the way a wave takes a candle."],
+ "end_ember2": ["Ivel bows his hidden face, and steps out of the dark at last, light as ash.", "Tell them, he says, the watch is over. Someone is keeping it. Then he is gone... and you are the flame."],
+ "end_ember3": ["Above, a pale dawn rises. Thin, but true. And it does not ask for a voice.", "In Candlemere, the Wick burns brighter than it has in three hundred years. No one knows why. Maelis knows why."],
+ "end_ember4": ["The Vigil carves two names into the Crypt that day, side by side.", "The lanterns of the Reach never go out now. Somewhere in the deep, something warm is keeping them lit."],
+ "end_hunger1": ["You reach into the Heart, and take the Hunger into yourself.", "It comes willingly. It has been so lonely. And you are so warm."],
+ "end_hunger2": ["Ivel is free. He turns to you with the shadow where his face was, and he is smiling. You can tell.", "Walk softly, he says, and it will follow you like a fed hound."],
+ "end_hunger3": ["You walk out into the deep dark, and the dark walks with you, gentle as dusk.", "It does not feed on the world anymore. It feeds on you. And you are endless, and content."],
+ "end_hunger4": ["In Candlemere, the nights grow quiet. The dead rest. The fog thins to a grey that children no longer fear.", "On moonless nights, at the edge of the Wood, a single lantern is seen walking. It is not hunting. It is herding the dark home."]
+}
