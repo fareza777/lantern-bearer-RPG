@@ -1,0 +1,314 @@
+[
+  {
+    "path": "assets/items/noon_lantern.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-37fc184a-6747-4ee5-8e9d-a9503fee6e92.png"
+  },
+  {
+    "path": "assets/items/noonday_mace.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-8df26d6d-afcc-4258-b772-ab3516435b5b.png"
+  },
+  {
+    "path": "assets/items/q_glass_rose.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-77d96cad-d959-4486-9022-769e836ba421.png"
+  },
+  {
+    "path": "assets/items/orrery_rod.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-3073ed43-cfd6-49be-b79a-2c0419af60ae.png"
+  },
+  {
+    "path": "assets/items/q_moth_silk.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-75c4e8d0-79d5-4322-965c-0da848bfe57b.png"
+  },
+  {
+    "path": "assets/items/q_nine_sigils.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-3f09495e-5295-4968-9c7b-c47eaeb3414b.png"
+  },
+  {
+    "path": "assets/items/pulsar_lens.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-d0a858ae-bba8-4202-8100-ed1dc6163100.png"
+  },
+  {
+    "path": "assets/items/q_astro_log.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-9e2e888e-163b-4ecb-979e-f5a4b64ccf28.png"
+  },
+  {
+    "path": "assets/items/q_cold_key.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-0605d274-851e-4d99-acdc-7f0fc3c2743d.png"
+  },
+  {
+    "path": "assets/items/q_ninth_letter.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-8660bbde-265e-4bea-996a-71ba79cfd394.png"
+  },
+  {
+    "path": "assets/items/q_first_faceplate.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-17cfd306-49b4-4312-b542-2ad8b15786a2.png"
+  },
+  {
+    "path": "assets/items/q_foreman_lamp.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-f42158b3-7faa-4fae-b4ac-9571d30f213f.png"
+  },
+  {
+    "path": "assets/items/r_embers.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-12a79cc4-0fad-4f3a-b69f-a93438c93a4c.png"
+  },
+  {
+    "path": "assets/items/q_star_chart.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-326336bd-ff5f-4eec-8c7a-42fef390ac06.png"
+  },
+  {
+    "path": "assets/items/r_briars.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-bd111a3f-2b25-448c-81b3-16ac679bc4dc.png"
+  },
+  {
+    "path": "assets/items/r_frost.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-bcef4e0e-5050-40b7-b998-7e5d87150863.png"
+  },
+  {
+    "path": "assets/items/r_dawn.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-a0ec49d2-c30a-49d2-9cbf-b72920a5bd40.png"
+  },
+  {
+    "path": "assets/items/q_sunglass.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-ebe48924-46be-4223-a923-b9ca047d921c.png"
+  },
+  {
+    "path": "assets/items/r_glass.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-0042fed2-c8c1-491e-80e5-a4ec528c6b76.png"
+  },
+  {
+    "path": "assets/items/r_hunger.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-2194d16c-a441-46d2-b626-c7725a0c0eae.png"
+  },
+  {
+    "path": "assets/items/r_ash.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-cd21e5a6-eb32-437e-83a0-b36e42041276.png"
+  },
+  {
+    "path": "assets/items/r_iron.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-5e28678b-c274-4c15-817a-d45b8094650b.png"
+  },
+  {
+    "path": "assets/items/r_stars.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-1777c30d-662d-437c-922f-559325f8f72f.png"
+  },
+  {
+    "path": "assets/items/r_eclipse.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-68ff76ce-81bc-4722-8e10-04c2deabbe7b.png"
+  },
+  {
+    "path": "assets/items/r_nine.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-9ba26482-7ef1-4bba-a601-6431b5f3a307.png"
+  },
+  {
+    "path": "assets/items/r_sunforge.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-feedd00f-4327-48e8-96b2-9a684ced72e4.png"
+  },
+  {
+    "path": "assets/items/r_veils.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-235fabf6-c694-4579-9951-990a9f4ca4e2.png"
+  },
+  {
+    "path": "assets/items/r_noon.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-91bda598-501e-46f8-a75b-2248f58a6084.png"
+  },
+  {
+    "path": "assets/items/r_vigil.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-8eaad8e8-899e-4e5f-95ba-e368b955d5cd.png"
+  },
+  {
+    "path": "assets/items/shroud_of_nine.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-29f662f0-e344-4045-bf84-22c9dad6da65.png"
+  },
+  {
+    "path": "assets/items/r_wick.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-e74ccd7c-0252-472f-b611-a7dd635f1eb2.png"
+  },
+  {
+    "path": "assets/items/smith_maul.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-8706c926-997b-46c5-8f62-41615e69f65a.png"
+  },
+  {
+    "path": "assets/items/radiant_staff.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-4d1bc862-dd4b-43e3-9ece-ea9ced1f062f.png"
+  },
+  {
+    "path": "assets/items/sunfall_maul.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-00cab71a-9fc8-4e4f-a1af-5afcea0601f8.png"
+  },
+  {
+    "path": "assets/items/star_compass.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-1fb85689-6522-450c-9c77-e92714fbceea.png"
+  },
+  {
+    "path": "assets/items/radiant_totem.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-5fc7f7bf-d935-44f3-b207-f8f3a1e3119d.png"
+  },
+  {
+    "path": "assets/items/sunforged_gauntlets.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-ef9b0ace-ab6f-4ad0-bd6e-f05b37698e2c.png"
+  },
+  {
+    "path": "assets/items/star_lens.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-37cd0178-c1a5-45ee-9116-2e00fa4f6663.png"
+  },
+  {
+    "path": "assets/items/sunforged_greaves.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-1bf729e1-495f-4d95-a3f2-bab4fcfae8a7.png"
+  },
+  {
+    "path": "assets/items/starseer_circlet.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-2ce54511-1941-4844-bb98-f610a0aedbc6.png"
+  },
+  {
+    "path": "assets/items/sunsplitter.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-7218ce03-5bf0-42b5-b48a-af30c673211f.png"
+  },
+  {
+    "path": "assets/items/sunforged_hammer.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-903ed2b7-13e4-4fa7-9f66-30473aeb320d.png"
+  },
+  {
+    "path": "assets/items/sunchain_flail.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-e9b10e3a-d62b-400e-a53a-9d5d1d46c547.png"
+  },
+  {
+    "path": "assets/items/sunwarden_quiver.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-7cbe12b3-51e7-49e0-88fb-a21eac6fb94b.png"
+  },
+  {
+    "path": "assets/items/sunwarden_helm.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-2ab55a44-325e-4afe-85f6-be721f45fe6e.png"
+  },
+  {
+    "path": "assets/items/sunforged_plate.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-79c3f104-be2c-4125-bc85-49b35f96e492.png"
+  },
+  {
+    "path": "assets/items/u_ashen_gauntlets.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-4af16fb7-c694-4778-bb45-2aaac8a7f2fb.png"
+  },
+  {
+    "path": "assets/items/u_cinder_ring.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-73fc2193-2d11-473c-a453-e5af148cf461.png"
+  },
+  {
+    "path": "assets/items/sunheart_amulet.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-8a262fc4-0cb2-44a4-a8f3-2691e7409994.png"
+  },
+  {
+    "path": "assets/items/u_atlas_of_ends.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-0c254670-4ffa-460a-8b95-5bcafe5ddef4.png"
+  },
+  {
+    "path": "assets/items/u_dawnsmith.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-9782023f-dfe0-4dc7-a8d2-c0bd7169338c.png"
+  },
+  {
+    "path": "assets/items/u_emberplate.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-0df5bdbc-df5d-4c0a-929c-1161acff008c.png"
+  },
+  {
+    "path": "assets/items/u_eclipse_mace.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-478ea2eb-182d-4271-8cdd-8bea610222fa.png"
+  },
+  {
+    "path": "assets/items/u_foreman_pick.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-e0024b7f-739d-475e-8a21-30eb49cfad6c.png"
+  },
+  {
+    "path": "assets/items/u_gaoler_chain.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-251f0eeb-5dc4-47c0-84a1-1fdf5464d923.png"
+  },
+  {
+    "path": "assets/items/u_lamplighters_crook.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-c894ab1a-c756-416a-9a63-ea247047184b.png"
+  },
+  {
+    "path": "assets/items/u_glass_edge.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-b53db2c3-c2ef-438b-a9a0-36cb59dcb43b.png"
+  },
+  {
+    "path": "assets/items/u_hungering_scythe.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-cc1749eb-0242-461b-b163-4f3b491f93a4.png"
+  },
+  {
+    "path": "assets/items/u_mothmother_veil.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-0e3b16ca-2a9b-4a05-8481-0b6b4f9c835c.png"
+  },
+  {
+    "path": "assets/items/u_orrery_eye.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-08ac15bd-a29d-445f-a7c3-4fe4d19299ee.png"
+  },
+  {
+    "path": "assets/items/u_nameless_hood.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-673aeee1-5e3a-4966-b724-343476836ecc.png"
+  },
+  {
+    "path": "assets/items/u_radiant_crown.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-9782a51b-4ce9-41f0-883f-729cf19f4afc.png"
+  },
+  {
+    "path": "assets/items/u_polaris.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-bc620a74-e780-4c64-91b5-961bbbe730e3.png"
+  },
+  {
+    "path": "assets/items/u_nebula_robe.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-9942a775-6429-4a4e-af62-cf744ef34c04.png"
+  },
+  {
+    "path": "assets/items/u_starmap_amulet.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-06ddadcf-7a68-4696-9967-7c1551d05e74.png"
+  },
+  {
+    "path": "assets/items/u_nightveil_talons.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-ebfe9e53-d97b-40d1-b3ff-372f298107cb.png"
+  },
+  {
+    "path": "assets/items/u_sunforge_hammer.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-44880eb0-091b-4fa9-b6a0-5ef3072d8bda.png"
+  },
+  {
+    "path": "assets/items/u_ninth_lamp.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-aa2b5c25-b7d8-4e7b-ad4d-c38e438a8eae.png"
+  },
+  {
+    "path": "assets/items/u_tidewalker_boots.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-6305ca7d-d6fa-4fd8-aa1a-16fffa954d42.png"
+  },
+  {
+    "path": "assets/items/u_sunspear_arbalest.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-12035178-e14b-4591-a99d-2da78451d056.png"
+  },
+  {
+    "path": "assets/items/u_umbral_fang.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-966c72b3-1009-41b2-a521-6cac46eca1c1.png"
+  },
+  {
+    "path": "assets/items/veil_talons.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-d97ae4d3-cd82-475a-bbf4-ca32a5240356.png"
+  },
+  {
+    "path": "assets/items/voidstep_boots.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-45fb68b7-7060-416b-97c3-d06add60de67.png"
+  },
+  {
+    "path": "assets/items/u_wardens_bulwark.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-33e187cb-fb5f-4119-8ab1-3ef24913667b.png"
+  },
+  {
+    "path": "assets/items/warden_flail.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-3c19d615-67ad-4ae4-b498-ea916fd9a667.png"
+  },
+  {
+    "path": "assets/items/veil_of_dusk.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-3e4c2cba-9c1b-465e-b939-3748a5987db0.png"
+  },
+  {
+    "path": "assets/items/zenith_crossbow.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-03cc8737-982c-477e-9d45-14efef23d687.png"
+  },
+  {
+    "path": "assets/items/veil_of_glass.webp",
+    "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-b9ed5a44-d4db-41c9-9307-36d867e8ecf2.png"
+  }
+]

@@ -1,0 +1,5990 @@
+{
+  "note": "Initial Act III artwork audit. Completed assets retain their source descriptions here for the review gallery; current missing files are reported by tools/verify-content.cjs.",
+  "assets": [
+    {
+      "path": "assets/foe/blindeel.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "blindeel",
+      "id": "blindeel",
+      "slot": null,
+      "name": "Blind Eel",
+      "description": "A pale, eyeless eel that has grown fat in the drowned lower levels on lamp-oil and scholars. It hunts by the heat of a lantern, so you are the loudest thing in the room.",
+      "source": {
+        "n": "Blind Eel",
+        "ic": "horns",
+        "lvl": 44,
+        "hp": 330,
+        "atk": [
+          30,
+          46
+        ],
+        "armor": 14,
+        "res": 15,
+        "dodge": 18,
+        "crit": 10,
+        "tags": [
+          "beast"
+        ],
+        "xp": 1.4,
+        "gold": [
+          36,
+          68
+        ],
+        "desc": "A pale, eyeless eel that has grown fat in the drowned lower levels on lamp-oil and scholars. It hunts by the heat of a lantern, so you are the loudest thing in the room.",
+        "moves": [
+          {
+            "n": "Ripping Bite",
+            "t": "multi",
+            "hits": 2,
+            "m": 0.7,
+            "st": {
+              "id": "bleed",
+              "ch": 45,
+              "turns": 3,
+              "pow": 8
+            },
+            "w": 3
+          },
+          {
+            "n": "Shocking Coil",
+            "t": "atk",
+            "m": 0.9,
+            "st": {
+              "id": "stun",
+              "ch": 35,
+              "turns": 1
+            },
+            "w": 2
+          },
+          {
+            "n": "Slip Away",
+            "t": "buff",
+            "self": {
+              "id": "evasive",
+              "turns": 2,
+              "pow": 40
+            },
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/brightwraith.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "brightwraith",
+      "id": "brightwraith",
+      "slot": null,
+      "name": "Bright Wraith",
+      "description": "The opposite of a shade: a figure made of light so bright it leaves a shape burned on the inside of your lids. It is not warm. It is only bright, and it is very close.",
+      "source": {
+        "n": "Bright Wraith",
+        "ic": "wisp",
+        "lvl": 57,
+        "hp": 380,
+        "atk": [
+          40,
+          60
+        ],
+        "armor": 8,
+        "res": 50,
+        "dodge": 20,
+        "crit": 10,
+        "tags": [
+          "gloam"
+        ],
+        "xp": 1.6,
+        "gold": [
+          50,
+          92
+        ],
+        "desc": "The opposite of a shade: a figure made of light so bright it leaves a shape burned on the inside of your lids. It is not warm. It is only bright, and it is very close.",
+        "moves": [
+          {
+            "n": "Blinding Touch",
+            "t": "debuff",
+            "st": {
+              "id": "weak",
+              "ch": 100,
+              "turns": 2,
+              "pow": 30
+            },
+            "dread": 8,
+            "w": 2
+          },
+          {
+            "n": "Searing Ray",
+            "t": "mag",
+            "m": 1.3,
+            "st": {
+              "id": "burn",
+              "ch": 60,
+              "turns": 3,
+              "pow": 9
+            },
+            "w": 3
+          },
+          {
+            "n": "Bleach the Lantern",
+            "t": "drain",
+            "drain": 26,
+            "m": 0.6,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/cinderhound.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "cinderhound",
+      "id": "cinderhound",
+      "slot": null,
+      "name": "Cinderhound",
+      "description": "A lean hunting-dog with a coat of grey ash and a mouth full of coals. Kaldrec's kennel-hounds once guarded his forge. They still do, and they are hungry for the first time in three centuries.",
+      "source": {
+        "n": "Cinderhound",
+        "ic": "horns",
+        "lvl": 47,
+        "hp": 330,
+        "atk": [
+          32,
+          48
+        ],
+        "armor": 14,
+        "res": 15,
+        "dodge": 16,
+        "crit": 12,
+        "tags": [
+          "beast"
+        ],
+        "xp": 1.4,
+        "gold": [
+          38,
+          72
+        ],
+        "desc": "A lean hunting-dog with a coat of grey ash and a mouth full of coals. Kaldrec's kennel-hounds once guarded his forge. They still do, and they are hungry for the first time in three centuries.",
+        "moves": [
+          {
+            "n": "Coal-Toothed Bite",
+            "t": "atk",
+            "m": 1.1,
+            "st": {
+              "id": "burn",
+              "ch": 55,
+              "turns": 3,
+              "pow": 8
+            },
+            "w": 3
+          },
+          {
+            "n": "Tearing Rush",
+            "t": "multi",
+            "hits": 2,
+            "m": 0.7,
+            "st": {
+              "id": "bleed",
+              "ch": 35,
+              "turns": 2,
+              "pow": 8
+            },
+            "w": 2
+          },
+          {
+            "n": "Bay for the Pack",
+            "t": "buff",
+            "self": {
+              "id": "rage",
+              "turns": 3,
+              "pow": 30
+            },
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/clockworkcrab.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "clockworkcrab",
+      "id": "clockworkcrab",
+      "slot": null,
+      "name": "Clockwork Crab",
+      "description": "A brass crab the size of a table, wound up by the tide, ticking. It was built to clean the lenses. Now it cleans away anything that blocks the view.",
+      "source": {
+        "n": "Clockwork Crab",
+        "ic": "anvil",
+        "lvl": 43,
+        "hp": 350,
+        "atk": [
+          30,
+          45
+        ],
+        "armor": 34,
+        "res": 10,
+        "dodge": 4,
+        "crit": 8,
+        "tags": [
+          "construct"
+        ],
+        "xp": 1.5,
+        "gold": [
+          36,
+          66
+        ],
+        "desc": "A brass crab the size of a table, wound up by the tide, ticking. It was built to clean the lenses. Now it cleans away anything that blocks the view.",
+        "moves": [
+          {
+            "n": "Pincer Snap",
+            "t": "atk",
+            "m": 1.1,
+            "st": {
+              "id": "bleed",
+              "ch": 45,
+              "turns": 3,
+              "pow": 8
+            },
+            "w": 3
+          },
+          {
+            "n": "Flurry of Legs",
+            "t": "multi",
+            "hits": 2,
+            "m": 0.7,
+            "w": 2
+          },
+          {
+            "n": "Shell Down",
+            "t": "buff",
+            "self": {
+              "id": "guard",
+              "turns": 2,
+              "pow": 50
+            },
+            "w": 1
+          },
+          {
+            "n": "Snap Shut",
+            "t": "charge",
+            "m": 2.5,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/cocoonhusk.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "cocoonhusk",
+      "id": "cocoonhusk",
+      "slot": null,
+      "name": "Cocoon Husk",
+      "description": "A body wrapped in silk from ankle to crown and hung from the Warren ceiling to ripen. Whatever was inside has left. Something else has moved in, and it is restless, and it is hatching.",
+      "source": {
+        "n": "Cocoon Husk",
+        "ic": "skull",
+        "lvl": 32,
+        "hp": 265,
+        "atk": [
+          24,
+          35
+        ],
+        "armor": 18,
+        "res": 15,
+        "dodge": 0,
+        "crit": 6,
+        "tags": [
+          "undead"
+        ],
+        "xp": 1.4,
+        "gold": [
+          20,
+          38
+        ],
+        "desc": "A body wrapped in silk from ankle to crown and hung from the Warren ceiling to ripen. Whatever was inside has left. Something else has moved in, and it is restless, and it is hatching.",
+        "moves": [
+          {
+            "n": "Binding Slam",
+            "t": "atk",
+            "m": 1.1,
+            "st": {
+              "id": "stun",
+              "ch": 20,
+              "turns": 1
+            },
+            "w": 3
+          },
+          {
+            "n": "Hatch",
+            "t": "summon",
+            "summon": "dustmoth",
+            "w": 1
+          },
+          {
+            "n": "Silk Armor",
+            "t": "buff",
+            "self": {
+              "id": "guard",
+              "turns": 2,
+              "pow": 45
+            },
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/corona.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "corona",
+      "id": "corona",
+      "slot": null,
+      "name": "Corona",
+      "description": "A ring of flame with nothing at its centre, drifting through the deep like a halo without a head. It sings, very faintly, in a voice that sounds like someone you were once fond of.",
+      "source": {
+        "n": "Corona",
+        "ic": "flame",
+        "lvl": 58,
+        "hp": 400,
+        "atk": [
+          40,
+          61
+        ],
+        "armor": 8,
+        "res": 50,
+        "dodge": 16,
+        "crit": 10,
+        "tags": [
+          "gloam"
+        ],
+        "xp": 1.7,
+        "gold": [
+          52,
+          94
+        ],
+        "desc": "A ring of flame with nothing at its centre, drifting through the deep like a halo without a head. It sings, very faintly, in a voice that sounds like someone you were once fond of.",
+        "moves": [
+          {
+            "n": "Solar Flare",
+            "t": "mag",
+            "m": 1.3,
+            "st": {
+              "id": "burn",
+              "ch": 70,
+              "turns": 3,
+              "pow": 9
+            },
+            "w": 3
+          },
+          {
+            "n": "Coronal Lash",
+            "t": "atk",
+            "m": 1,
+            "st": {
+              "id": "stun",
+              "ch": 25,
+              "turns": 1
+            },
+            "w": 2
+          },
+          {
+            "n": "Sing the Old Name",
+            "t": "dread",
+            "dread": 18,
+            "m": 0.5,
+            "w": 1
+          },
+          {
+            "n": "Coronal Ejection",
+            "t": "charge",
+            "m": 2.7,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/dawnhusk.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "dawnhusk",
+      "id": "dawnhusk",
+      "slot": null,
+      "name": "Dawnhusk",
+      "description": "A Lanternbearer who reached the Sunken Sun and looked at it. What is left is dry and bright and brittle as a moth's wing, and it glows from the inside, like a paper lantern with a fire in it.",
+      "source": {
+        "n": "Dawnhusk",
+        "ic": "skull",
+        "lvl": 56,
+        "hp": 400,
+        "atk": [
+          39,
+          59
+        ],
+        "armor": 22,
+        "res": 30,
+        "dodge": 6,
+        "crit": 10,
+        "tags": [
+          "undead"
+        ],
+        "xp": 1.6,
+        "gold": [
+          50,
+          90
+        ],
+        "desc": "A Lanternbearer who reached the Sunken Sun and looked at it. What is left is dry and bright and brittle as a moth's wing, and it glows from the inside, like a paper lantern with a fire in it.",
+        "moves": [
+          {
+            "n": "Sun-Baked Claw",
+            "t": "atk",
+            "m": 1.1,
+            "st": {
+              "id": "burn",
+              "ch": 50,
+              "turns": 3,
+              "pow": 9
+            },
+            "w": 3
+          },
+          {
+            "n": "Warm Husk",
+            "t": "heal",
+            "heal": 18,
+            "w": 1
+          },
+          {
+            "n": "Radiant Rot",
+            "t": "dread",
+            "dread": 16,
+            "m": 0.5,
+            "w": 1
+          },
+          {
+            "n": "Crumbling Rush",
+            "t": "charge",
+            "m": 2.6,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/deathshead.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "deathshead",
+      "id": "deathshead",
+      "slot": null,
+      "name": "Deathshead",
+      "description": "A hawk-moth the size of a horse, with a skull-shaped mark across its back. It screams like a child when it lands, and when it stops screaming the lamps go out.",
+      "source": {
+        "n": "Deathshead",
+        "ic": "skull",
+        "rank": "elite",
+        "lvl": 34,
+        "hp": 820,
+        "atk": [
+          30,
+          43
+        ],
+        "armor": 26,
+        "res": 25,
+        "dodge": 10,
+        "crit": 10,
+        "tags": [
+          "beast"
+        ],
+        "xp": 3,
+        "gold": [
+          260,
+          380
+        ],
+        "desc": "A hawk-moth the size of a horse, with a skull-shaped mark across its back. It screams like a child when it lands, and when it stops screaming the lamps go out.",
+        "moves": [
+          {
+            "n": "Bone-Dust Bite",
+            "t": "atk",
+            "m": 1.1,
+            "st": {
+              "id": "poison",
+              "ch": 50,
+              "turns": 3,
+              "pow": 7
+            },
+            "w": 3
+          },
+          {
+            "n": "Shrieking Dread",
+            "t": "dread",
+            "dread": 14,
+            "m": 0.6,
+            "w": 1
+          },
+          {
+            "n": "Snuff the Lamp",
+            "t": "drain",
+            "drain": 28,
+            "m": 0.7,
+            "w": 1
+          },
+          {
+            "n": "Dive of the Skull",
+            "t": "charge",
+            "m": 2.6,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/deeplamp.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "deeplamp",
+      "id": "deeplamp",
+      "slot": null,
+      "name": "Deeplamp",
+      "description": "The miners hung safety lamps at the bottom of every shaft. Some of the lamps went out. Some of the flames did not, and climbed down out of the glass to look for oil.",
+      "source": {
+        "n": "Deeplamp",
+        "ic": "wisp",
+        "lvl": 18,
+        "hp": 100,
+        "atk": [
+          14,
+          22
+        ],
+        "armor": 2,
+        "res": 40,
+        "dodge": 22,
+        "crit": 6,
+        "tags": [
+          "gloam"
+        ],
+        "xp": 1.3,
+        "gold": [
+          12,
+          26
+        ],
+        "desc": "The miners hung safety lamps at the bottom of every shaft. Some of the lamps went out. Some of the flames did not, and climbed down out of the glass to look for oil.",
+        "moves": [
+          {
+            "n": "Drink the Wick",
+            "t": "drain",
+            "drain": 18,
+            "m": 0.5,
+            "w": 2
+          },
+          {
+            "n": "Firedamp Flash",
+            "t": "mag",
+            "m": 1.2,
+            "st": {
+              "id": "burn",
+              "ch": 50,
+              "turns": 2,
+              "pow": 4
+            },
+            "w": 3
+          },
+          {
+            "n": "Beckon Downward",
+            "t": "dread",
+            "dread": 10,
+            "m": 0.3,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/dimflame.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "dimflame",
+      "id": "dimflame",
+      "slot": null,
+      "name": "Dimflame",
+      "description": "A lamp-flame that has burned so long without being lit that it forgot what it was for. It gives no light. It gives a sort of pale, sad heat, and it takes your light in exchange.",
+      "source": {
+        "n": "Dimflame",
+        "ic": "flame",
+        "lvl": 54,
+        "hp": 350,
+        "atk": [
+          38,
+          57
+        ],
+        "armor": 6,
+        "res": 50,
+        "dodge": 24,
+        "crit": 8,
+        "tags": [
+          "gloam"
+        ],
+        "xp": 1.6,
+        "gold": [
+          46,
+          84
+        ],
+        "desc": "A lamp-flame that has burned so long without being lit that it forgot what it was for. It gives no light. It gives a sort of pale, sad heat, and it takes your light in exchange.",
+        "moves": [
+          {
+            "n": "Drain the Wick",
+            "t": "drain",
+            "drain": 26,
+            "m": 0.7,
+            "w": 3
+          },
+          {
+            "n": "Dim Fire",
+            "t": "mag",
+            "m": 1.3,
+            "st": {
+              "id": "burn",
+              "ch": 50,
+              "turns": 3,
+              "pow": 9
+            },
+            "w": 2
+          },
+          {
+            "n": "The Last Guttering",
+            "t": "dread",
+            "dread": 16,
+            "m": 0.5,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/drownedastronomer.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "drownedastronomer",
+      "id": "drownedastronomer",
+      "slot": null,
+      "name": "Drowned Astronomer",
+      "description": "A hooded scholar of the Observatory, still with a brass eyepiece screwed into the veil where an eye would be. The water rose over the dome on the night the sky closed. He is still taking the measurements.",
+      "source": {
+        "n": "Drowned Astronomer",
+        "ic": "eye",
+        "lvl": 41,
+        "hp": 300,
+        "atk": [
+          28,
+          42
+        ],
+        "armor": 14,
+        "res": 35,
+        "dodge": 8,
+        "crit": 8,
+        "tags": [
+          "undead"
+        ],
+        "xp": 1.3,
+        "gold": [
+          34,
+          62
+        ],
+        "drop": {
+          "q": "s_astro2",
+          "item": "astro_log",
+          "ch": 8
+        },
+        "desc": "A hooded scholar of the Observatory, still with a brass eyepiece screwed into the veil where an eye would be. The water rose over the dome on the night the sky closed. He is still taking the measurements.",
+        "moves": [
+          {
+            "n": "Drowned Comet",
+            "t": "mag",
+            "m": 1.3,
+            "st": {
+              "id": "weak",
+              "ch": 40,
+              "turns": 2,
+              "pow": 20
+            },
+            "w": 3
+          },
+          {
+            "n": "Names of the Dead Stars",
+            "t": "dread",
+            "dread": 14,
+            "m": 0.5,
+            "w": 2
+          },
+          {
+            "n": "Draw the Tide",
+            "t": "debuff",
+            "st": {
+              "id": "vuln",
+              "ch": 100,
+              "turns": 2,
+              "pow": 25
+            },
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/dustmoth.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "dustmoth",
+      "id": "dustmoth",
+      "slot": null,
+      "name": "Dustmoth Swarm",
+      "description": "Ten thousand moths the colour of old ash, moving as one body. Wherever they settle, the light thins. Wherever they lift, the walls are a shade darker.",
+      "source": {
+        "n": "Dustmoth Swarm",
+        "ic": "wisp",
+        "lvl": 31,
+        "hp": 195,
+        "atk": [
+          22,
+          32
+        ],
+        "armor": 2,
+        "res": 20,
+        "dodge": 24,
+        "crit": 8,
+        "tags": [
+          "beast"
+        ],
+        "xp": 1.2,
+        "gold": [
+          16,
+          32
+        ],
+        "desc": "Ten thousand moths the colour of old ash, moving as one body. Wherever they settle, the light thins. Wherever they lift, the walls are a shade darker.",
+        "moves": [
+          {
+            "n": "Beating Wings",
+            "t": "multi",
+            "hits": 3,
+            "m": 0.5,
+            "w": 3
+          },
+          {
+            "n": "Choking Dust",
+            "t": "mag",
+            "m": 0.8,
+            "st": {
+              "id": "poison",
+              "ch": 70,
+              "turns": 3,
+              "pow": 6
+            },
+            "w": 2
+          },
+          {
+            "n": "Drink the Light",
+            "t": "drain",
+            "drain": 15,
+            "m": 0.5,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/eclipsemaw.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "eclipsemaw",
+      "id": "eclipsemaw",
+      "slot": null,
+      "name": "Eclipsemaw",
+      "description": "A disc of darkness with a mouth in the middle and a corona of teeth, gliding through the bright water. The Gloam did not make it. The Radiant did, to eat whatever is left of the dark.",
+      "source": {
+        "n": "Eclipsemaw",
+        "ic": "horns",
+        "lvl": 59,
+        "hp": 440,
+        "atk": [
+          42,
+          63
+        ],
+        "armor": 26,
+        "res": 25,
+        "dodge": 10,
+        "crit": 12,
+        "tags": [
+          "beast"
+        ],
+        "xp": 1.7,
+        "gold": [
+          54,
+          96
+        ],
+        "desc": "A disc of darkness with a mouth in the middle and a corona of teeth, gliding through the bright water. The Gloam did not make it. The Radiant did, to eat whatever is left of the dark.",
+        "moves": [
+          {
+            "n": "Swallow the Light",
+            "t": "atk",
+            "m": 1.2,
+            "leech": 50,
+            "w": 3
+          },
+          {
+            "n": "Ring of Teeth",
+            "t": "multi",
+            "hits": 3,
+            "m": 0.55,
+            "st": {
+              "id": "bleed",
+              "ch": 35,
+              "turns": 2,
+              "pow": 9
+            },
+            "w": 2
+          },
+          {
+            "n": "Pass Before the Sun",
+            "t": "buff",
+            "self": {
+              "id": "evasive",
+              "turns": 2,
+              "pow": 40
+            },
+            "w": 1
+          },
+          {
+            "n": "Endless Totality",
+            "t": "dread",
+            "dread": 14,
+            "m": 0.5,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/emberwisp.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "emberwisp",
+      "id": "emberwisp",
+      "slot": null,
+      "name": "Emberwisp",
+      "description": "A spark from Kaldrec's forge that never cooled and never landed. It drifts across the Cinderwaste on the hot wind, looking for something to set alight. Lanterns are its favourite.",
+      "source": {
+        "n": "Emberwisp",
+        "ic": "flame",
+        "lvl": 48,
+        "hp": 300,
+        "atk": [
+          33,
+          49
+        ],
+        "armor": 4,
+        "res": 45,
+        "dodge": 26,
+        "crit": 8,
+        "tags": [
+          "gloam"
+        ],
+        "xp": 1.4,
+        "gold": [
+          36,
+          68
+        ],
+        "desc": "A spark from Kaldrec's forge that never cooled and never landed. It drifts across the Cinderwaste on the hot wind, looking for something to set alight. Lanterns are its favourite.",
+        "moves": [
+          {
+            "n": "Ember Bolt",
+            "t": "mag",
+            "m": 1.3,
+            "st": {
+              "id": "burn",
+              "ch": 60,
+              "turns": 3,
+              "pow": 8
+            },
+            "w": 3
+          },
+          {
+            "n": "Drink the Flame",
+            "t": "drain",
+            "drain": 22,
+            "m": 0.6,
+            "w": 2
+          },
+          {
+            "n": "Flicker of Dread",
+            "t": "dread",
+            "dread": 12,
+            "m": 0.4,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/furnaceknight.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "furnaceknight",
+      "id": "furnaceknight",
+      "slot": null,
+      "name": "Furnace Knight",
+      "description": "One of Kaldrec's armour-bearers: a hooded knight whose plate is welded shut over a working forge. The visor glows. The steam vents from the joints. He served the Sunforger for three hundred years, and asked for nothing.",
+      "source": {
+        "n": "Furnace Knight",
+        "ic": "helm",
+        "rank": "elite",
+        "lvl": 50,
+        "hp": 1150,
+        "atk": [
+          45,
+          62
+        ],
+        "armor": 42,
+        "res": 30,
+        "dodge": 4,
+        "crit": 12,
+        "tags": [
+          "human",
+          "construct"
+        ],
+        "xp": 3.3,
+        "gold": [
+          420,
+          580
+        ],
+        "desc": "One of Kaldrec's armour-bearers: a hooded knight whose plate is welded shut over a working forge. The visor glows. The steam vents from the joints. He served the Sunforger for three hundred years, and asked for nothing.",
+        "moves": [
+          {
+            "n": "Hammer of the Forge",
+            "t": "atk",
+            "m": 1.2,
+            "st": {
+              "id": "burn",
+              "ch": 45,
+              "turns": 3,
+              "pow": 9
+            },
+            "w": 3
+          },
+          {
+            "n": "Stoke the Fire",
+            "t": "buff",
+            "self": {
+              "id": "rage",
+              "turns": 3,
+              "pow": 35
+            },
+            "w": 1
+          },
+          {
+            "n": "Molten Splash",
+            "t": "mag",
+            "m": 1.2,
+            "st": {
+              "id": "burn",
+              "ch": 100,
+              "turns": 3,
+              "pow": 9
+            },
+            "w": 1
+          },
+          {
+            "n": "Quench and Strike",
+            "t": "charge",
+            "m": 2.8,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/glassgolem.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "glassgolem",
+      "id": "glassgolem",
+      "slot": null,
+      "name": "Glass Golem",
+      "description": "A giant of fused sand, poured into a man-shape in Kaldrec's kilns and left to cool. It is clear as a window, and lit from within by a small furnace that has burned for three hundred years.",
+      "source": {
+        "n": "Glass Golem",
+        "ic": "shield",
+        "lvl": 49,
+        "hp": 400,
+        "atk": [
+          34,
+          50
+        ],
+        "armor": 42,
+        "res": 15,
+        "dodge": 0,
+        "crit": 6,
+        "tags": [
+          "construct"
+        ],
+        "xp": 1.6,
+        "gold": [
+          40,
+          76
+        ],
+        "desc": "A giant of fused sand, poured into a man-shape in Kaldrec's kilns and left to cool. It is clear as a window, and lit from within by a small furnace that has burned for three hundred years.",
+        "moves": [
+          {
+            "n": "Prism Fist",
+            "t": "atk",
+            "m": 1.1,
+            "w": 3
+          },
+          {
+            "n": "Refract",
+            "t": "mag",
+            "m": 1.2,
+            "st": {
+              "id": "burn",
+              "ch": 70,
+              "turns": 3,
+              "pow": 8
+            },
+            "w": 2
+          },
+          {
+            "n": "Fire Hardens Glass",
+            "t": "buff",
+            "self": {
+              "id": "guard",
+              "turns": 2,
+              "pow": 50
+            },
+            "w": 1
+          },
+          {
+            "n": "Shatter Slam",
+            "t": "charge",
+            "m": 2.6,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/glasswalker.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "glasswalker",
+      "id": "glasswalker",
+      "slot": null,
+      "name": "Glasswalker",
+      "description": "A traveller whose flesh was fired to glass when the Black Noon first opened. Its hood and veil are fused smooth to what is beneath. It walks the dunes in a straight line, and it rings faintly with each step.",
+      "source": {
+        "n": "Glasswalker",
+        "ic": "mirror",
+        "lvl": 46,
+        "hp": 322,
+        "atk": [
+          31,
+          47
+        ],
+        "armor": 22,
+        "res": 20,
+        "dodge": 8,
+        "crit": 10,
+        "tags": [
+          "undead"
+        ],
+        "xp": 1.4,
+        "gold": [
+          38,
+          70
+        ],
+        "drop": {
+          "q": "s_glass2",
+          "item": "glass_rose",
+          "ch": 8
+        },
+        "desc": "A traveller whose flesh was fired to glass when the Black Noon first opened. Its hood and veil are fused smooth to what is beneath. It walks the dunes in a straight line, and it rings faintly with each step.",
+        "moves": [
+          {
+            "n": "Shard Slash",
+            "t": "atk",
+            "m": 1.1,
+            "st": {
+              "id": "bleed",
+              "ch": 45,
+              "turns": 3,
+              "pow": 8
+            },
+            "w": 3
+          },
+          {
+            "n": "Shatter Burst",
+            "t": "multi",
+            "hits": 3,
+            "m": 0.5,
+            "st": {
+              "id": "bleed",
+              "ch": 25,
+              "turns": 2,
+              "pow": 8
+            },
+            "w": 2
+          },
+          {
+            "n": "Reflected Sun",
+            "t": "dread",
+            "dread": 14,
+            "m": 0.5,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/hollowminer.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "hollowminer",
+      "id": "hollowminer",
+      "slot": null,
+      "name": "Hollow Miner",
+      "description": "A miner of the Weeping Mines, still in his leather hood and cracked lamp-helm. The shift whistle blew three hundred years ago. He is still on shift, and he has noticed you are not.",
+      "source": {
+        "n": "Hollow Miner",
+        "ic": "hammer",
+        "lvl": 16,
+        "hp": 108,
+        "atk": [
+          14,
+          21
+        ],
+        "armor": 8,
+        "res": 15,
+        "dodge": 4,
+        "crit": 8,
+        "tags": [
+          "undead",
+          "human"
+        ],
+        "xp": 1.2,
+        "gold": [
+          12,
+          24
+        ],
+        "desc": "A miner of the Weeping Mines, still in his leather hood and cracked lamp-helm. The shift whistle blew three hundred years ago. He is still on shift, and he has noticed you are not.",
+        "moves": [
+          {
+            "n": "Pick Swing",
+            "t": "atk",
+            "m": 1,
+            "st": {
+              "id": "bleed",
+              "ch": 35,
+              "turns": 3,
+              "pow": 3
+            },
+            "w": 3
+          },
+          {
+            "n": "Rockfall Cough",
+            "t": "debuff",
+            "st": {
+              "id": "weak",
+              "ch": 100,
+              "turns": 2,
+              "pow": 20
+            },
+            "w": 1
+          },
+          {
+            "n": "Last Shift",
+            "t": "dread",
+            "dread": 8,
+            "m": 0.4,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/kaldrec.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "kaldrec",
+      "id": "kaldrec",
+      "slot": null,
+      "name": "Kaldrec the Sunforger",
+      "description": "The first Lanternsmith, hooded and veiled in a smith's scorched leather, standing over a forge gone cold in a desert of glass. He made the lanterns from the Radiant's own eye. He made the first Key. He kept the receipts.",
+      "source": {
+        "n": "Kaldrec the Sunforger",
+        "ic": "hammer",
+        "rank": "boss",
+        "lvl": 50,
+        "hp": 5800,
+        "atk": [
+          50,
+          66
+        ],
+        "armor": 32,
+        "res": 35,
+        "dodge": 6,
+        "crit": 12,
+        "tags": [
+          "human"
+        ],
+        "xp": 16,
+        "gold": [
+          4000,
+          4800
+        ],
+        "unique": "sunforge_hammer",
+        "desc": "The first Lanternsmith, hooded and veiled in a smith's scorched leather, standing over a forge gone cold in a desert of glass. He made the lanterns from the Radiant's own eye. He made the first Key. He kept the receipts.",
+        "moves": [
+          {
+            "n": "Sunforged Hammer",
+            "t": "atk",
+            "m": 1.2,
+            "st": {
+              "id": "burn",
+              "ch": 40,
+              "turns": 3,
+              "pow": 9
+            },
+            "w": 3
+          },
+          {
+            "n": "Forge-Fire",
+            "t": "mag",
+            "m": 1.3,
+            "st": {
+              "id": "burn",
+              "ch": 70,
+              "turns": 3,
+              "pow": 9
+            },
+            "w": 2
+          },
+          {
+            "n": "Work the Bellows",
+            "t": "buff",
+            "self": {
+              "id": "rage",
+              "turns": 3,
+              "pow": 35
+            },
+            "w": 1
+          },
+          {
+            "n": "Call the Embers",
+            "t": "summon",
+            "summon": "emberwisp",
+            "w": 1
+          },
+          {
+            "n": "Brand of the Smith",
+            "t": "debuff",
+            "st": {
+              "id": "vuln",
+              "ch": 100,
+              "turns": 3,
+              "pow": 30
+            },
+            "dread": 6,
+            "w": 1
+          },
+          {
+            "n": "Anvil Fall",
+            "t": "charge",
+            "m": 3,
+            "w": 1
+          }
+        ],
+        "phase2": {
+          "at": 50,
+          "txt": "Kaldrec drops his hammer and takes up the forge itself. The whole desert glows red. \"Every lantern I made was a promise,\" he says, \"and you are the last one I have left to keep.\"",
+          "self": {
+            "id": "rage",
+            "turns": 99,
+            "pow": 25
+          },
+          "add": [
+            {
+              "n": "Molten Rain",
+              "t": "multi",
+              "hits": 3,
+              "m": 0.7,
+              "st": {
+                "id": "burn",
+                "ch": 45,
+                "turns": 3,
+                "pow": 9
+              },
+              "w": 2
+            },
+            {
+              "n": "Kiln Roar",
+              "t": "mag",
+              "m": 2,
+              "st": {
+                "id": "stun",
+                "ch": 20,
+                "turns": 1
+              },
+              "dread": 10,
+              "w": 1
+            },
+            {
+              "n": "White-Heat Blow",
+              "t": "charge",
+              "m": 3.4,
+              "w": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "assets/foe/keybearer.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "keybearer",
+      "id": "keybearer",
+      "slot": null,
+      "name": "Faceless Key-Bearer",
+      "description": "A hooded, veiled Lanternbearer with a key-lantern of its own, and a stance you know. It was a Key that failed. It fights the way you do, and it wears your silence like a second veil.",
+      "source": {
+        "n": "Faceless Key-Bearer",
+        "ic": "lantern",
+        "lvl": 59,
+        "hp": 430,
+        "atk": [
+          42,
+          63
+        ],
+        "armor": 30,
+        "res": 30,
+        "dodge": 12,
+        "crit": 14,
+        "tags": [
+          "human"
+        ],
+        "xp": 1.8,
+        "gold": [
+          56,
+          100
+        ],
+        "desc": "A hooded, veiled Lanternbearer with a key-lantern of its own, and a stance you know. It was a Key that failed. It fights the way you do, and it wears your silence like a second veil.",
+        "moves": [
+          {
+            "n": "Key-Strike",
+            "t": "atk",
+            "m": 1.1,
+            "w": 3
+          },
+          {
+            "n": "Your Own Stance",
+            "t": "buff",
+            "self": {
+              "id": "guard",
+              "turns": 2,
+              "pow": 45
+            },
+            "w": 1
+          },
+          {
+            "n": "Dim the Key-Lantern",
+            "t": "debuff",
+            "st": {
+              "id": "weak",
+              "ch": 100,
+              "turns": 2,
+              "pow": 25
+            },
+            "st2": {
+              "id": "vuln",
+              "ch": 50,
+              "turns": 2,
+              "pow": 20
+            },
+            "w": 1
+          },
+          {
+            "n": "A Face You Almost Remember",
+            "t": "dread",
+            "dread": 16,
+            "m": 0.5,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/lampmoth.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "lampmoth",
+      "id": "lampmoth",
+      "slot": null,
+      "name": "Lampmoth",
+      "description": "A moth the size of a cart-wheel with a lantern-glow behind each wing, patterned like a wide and patient eye. It follows lit lanterns the way tides follow the moon, and for the same reason.",
+      "source": {
+        "n": "Lampmoth",
+        "ic": "wisp",
+        "lvl": 33,
+        "hp": 225,
+        "atk": [
+          23,
+          34
+        ],
+        "armor": 5,
+        "res": 40,
+        "dodge": 20,
+        "crit": 8,
+        "tags": [
+          "gloam"
+        ],
+        "xp": 1.4,
+        "gold": [
+          22,
+          42
+        ],
+        "desc": "A moth the size of a cart-wheel with a lantern-glow behind each wing, patterned like a wide and patient eye. It follows lit lanterns the way tides follow the moon, and for the same reason.",
+        "moves": [
+          {
+            "n": "Dim the Lantern",
+            "t": "drain",
+            "drain": 22,
+            "m": 0.6,
+            "w": 2
+          },
+          {
+            "n": "Scorching Scales",
+            "t": "mag",
+            "m": 1.2,
+            "st": {
+              "id": "burn",
+              "ch": 60,
+              "turns": 3,
+              "pow": 6
+            },
+            "w": 3
+          },
+          {
+            "n": "Eyespot Stare",
+            "t": "dread",
+            "dread": 14,
+            "m": 0.4,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/lampshade.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "lampshade",
+      "id": "lampshade",
+      "slot": null,
+      "name": "Lampshade",
+      "description": "The shadow thrown by one of the nine lamps, which has learned to walk without the lamp. It follows the light of a lantern and stands just behind you, where the shadow should be. It stands there a little too long.",
+      "source": {
+        "n": "Lampshade",
+        "ic": "wisp",
+        "lvl": 52,
+        "hp": 350,
+        "atk": [
+          36,
+          54
+        ],
+        "armor": 8,
+        "res": 45,
+        "dodge": 14,
+        "crit": 8,
+        "tags": [
+          "undead"
+        ],
+        "xp": 1.5,
+        "gold": [
+          44,
+          80
+        ],
+        "desc": "The shadow thrown by one of the nine lamps, which has learned to walk without the lamp. It follows the light of a lantern and stands just behind you, where the shadow should be. It stands there a little too long.",
+        "moves": [
+          {
+            "n": "Shade Touch",
+            "t": "drain",
+            "drain": 22,
+            "m": 0.7,
+            "w": 2
+          },
+          {
+            "n": "Cold Umbra",
+            "t": "mag",
+            "m": 1.2,
+            "st": {
+              "id": "weak",
+              "ch": 60,
+              "turns": 2,
+              "pow": 25
+            },
+            "w": 3
+          },
+          {
+            "n": "Stand Behind You",
+            "t": "dread",
+            "dread": 16,
+            "m": 0.5,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/lampwarden.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "lampwarden",
+      "id": "lampwarden",
+      "slot": null,
+      "name": "Lampwarden",
+      "description": "An iron lamp-post walking on brass legs, its glass head lit with a flame that does not flicker. It was built to keep the lamps of the Hall alight. It has decided that includes yours.",
+      "source": {
+        "n": "Lampwarden",
+        "ic": "lantern",
+        "lvl": 51,
+        "hp": 380,
+        "atk": [
+          36,
+          54
+        ],
+        "armor": 38,
+        "res": 20,
+        "dodge": 2,
+        "crit": 8,
+        "tags": [
+          "construct"
+        ],
+        "xp": 1.5,
+        "gold": [
+          44,
+          80
+        ],
+        "desc": "An iron lamp-post walking on brass legs, its glass head lit with a flame that does not flicker. It was built to keep the lamps of the Hall alight. It has decided that includes yours.",
+        "moves": [
+          {
+            "n": "Lampstand Bash",
+            "t": "atk",
+            "m": 1.1,
+            "st": {
+              "id": "stun",
+              "ch": 25,
+              "turns": 1
+            },
+            "w": 3
+          },
+          {
+            "n": "Wickfire",
+            "t": "mag",
+            "m": 1.2,
+            "st": {
+              "id": "burn",
+              "ch": 60,
+              "turns": 3,
+              "pow": 9
+            },
+            "w": 2
+          },
+          {
+            "n": "Hold the Flame",
+            "t": "buff",
+            "self": {
+              "id": "guard",
+              "turns": 2,
+              "pow": 45
+            },
+            "w": 1
+          },
+          {
+            "n": "Snuffing Cage",
+            "t": "charge",
+            "m": 2.5,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/lenseye.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "lenseye",
+      "id": "lenseye",
+      "slot": null,
+      "name": "Lens-Eye",
+      "description": "A great ground-glass lens on brass legs, wandering the flooded galleries. It was built to look at the stars. It has spent three hundred years looking at everything else, and it burns what it finds.",
+      "source": {
+        "n": "Lens-Eye",
+        "ic": "eye",
+        "lvl": 42,
+        "hp": 320,
+        "atk": [
+          29,
+          43
+        ],
+        "armor": 24,
+        "res": 20,
+        "dodge": 6,
+        "crit": 12,
+        "tags": [
+          "construct"
+        ],
+        "xp": 1.4,
+        "gold": [
+          34,
+          64
+        ],
+        "desc": "A great ground-glass lens on brass legs, wandering the flooded galleries. It was built to look at the stars. It has spent three hundred years looking at everything else, and it burns what it finds.",
+        "moves": [
+          {
+            "n": "Focused Beam",
+            "t": "mag",
+            "m": 1.3,
+            "st": {
+              "id": "burn",
+              "ch": 60,
+              "turns": 3,
+              "pow": 7
+            },
+            "w": 3
+          },
+          {
+            "n": "Refocus",
+            "t": "buff",
+            "self": {
+              "id": "guard",
+              "turns": 2,
+              "pow": 40
+            },
+            "w": 1
+          },
+          {
+            "n": "Blinding Glare",
+            "t": "debuff",
+            "st": {
+              "id": "weak",
+              "ch": 100,
+              "turns": 2,
+              "pow": 25
+            },
+            "focusDrain": 8,
+            "w": 1
+          },
+          {
+            "n": "Burning Point",
+            "t": "charge",
+            "m": 2.5,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/maelis.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "maelis",
+      "id": "maelis",
+      "slot": null,
+      "name": "Maelis, the Ninth Lamplighter",
+      "description": "The last of the Nine, veiled in grey wool, four hundred years old and not one day tired. She kept you like a good tool: oiled, sharpened, and never asked whether you minded. She loves you. She has a lantern for you, and it does not have a wick.",
+      "source": {
+        "n": "Maelis, the Ninth Lamplighter",
+        "ic": "lantern",
+        "rank": "boss",
+        "lvl": 55,
+        "hp": 7800,
+        "atk": [
+          52,
+          72
+        ],
+        "armor": 38,
+        "res": 40,
+        "dodge": 10,
+        "crit": 14,
+        "tags": [
+          "human"
+        ],
+        "xp": 18,
+        "gold": [
+          5000,
+          6000
+        ],
+        "unique": "ninth_lamp",
+        "desc": "The last of the Nine, veiled in grey wool, four hundred years old and not one day tired. She kept you like a good tool: oiled, sharpened, and never asked whether you minded. She loves you. She has a lantern for you, and it does not have a wick.",
+        "moves": [
+          {
+            "n": "Lamplighter's Blade",
+            "t": "atk",
+            "m": 1.1,
+            "st": {
+              "id": "bleed",
+              "ch": 45,
+              "turns": 3,
+              "pow": 9
+            },
+            "w": 3
+          },
+          {
+            "n": "Riposte",
+            "t": "multi",
+            "hits": 2,
+            "m": 0.7,
+            "st": {
+              "id": "bleed",
+              "ch": 30,
+              "turns": 2,
+              "pow": 9
+            },
+            "w": 2
+          },
+          {
+            "n": "Tired Reproach",
+            "t": "debuff",
+            "st": {
+              "id": "weak",
+              "ch": 100,
+              "turns": 2,
+              "pow": 25
+            },
+            "st2": {
+              "id": "vuln",
+              "ch": 60,
+              "turns": 2,
+              "pow": 25
+            },
+            "dread": 8,
+            "w": 1
+          },
+          {
+            "n": "Gentle Words",
+            "t": "dread",
+            "dread": 14,
+            "m": 0.4,
+            "w": 1
+          },
+          {
+            "n": "Practised Parry",
+            "t": "buff",
+            "self": {
+              "id": "guard",
+              "turns": 2,
+              "pow": 40
+            },
+            "w": 1
+          },
+          {
+            "n": "The Sealing Stroke",
+            "t": "charge",
+            "m": 3,
+            "w": 1
+          }
+        ],
+        "phase2": {
+          "at": 50,
+          "txt": "Maelis unshutters the ninth lamp at last. Warm light floods the Hall, and she is smiling behind the veil. \"There now. It is only a little pain. It is only a little longer.\"",
+          "self": {
+            "id": "rage",
+            "turns": 99,
+            "pow": 25
+          },
+          "add": [
+            {
+              "n": "Lamplight Mending",
+              "t": "heal",
+              "heal": 8,
+              "w": 1
+            },
+            {
+              "n": "Drink the Lamplight",
+              "t": "drain",
+              "drain": 35,
+              "m": 0.9,
+              "w": 2
+            },
+            {
+              "n": "Call the Shades",
+              "t": "summon",
+              "summon": "lampshade",
+              "w": 1
+            },
+            {
+              "n": "The Ninth Flame",
+              "t": "mag",
+              "m": 2.1,
+              "st": {
+                "id": "stun",
+                "ch": 20,
+                "turns": 1
+              },
+              "dread": 12,
+              "w": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "assets/foe/mothkeeper.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "mothkeeper",
+      "id": "mothkeeper",
+      "slot": null,
+      "name": "Moth-Keeper",
+      "description": "A veiled breeder of the old Silkwrights, robed in cocoon-cloth from crown to hem. She tends the Warren's moths as a shepherd tends a flock, and she has not yet decided that you are not one of them.",
+      "source": {
+        "n": "Moth-Keeper",
+        "ic": "hero",
+        "lvl": 30,
+        "hp": 215,
+        "atk": [
+          22,
+          32
+        ],
+        "armor": 12,
+        "res": 25,
+        "dodge": 10,
+        "crit": 8,
+        "tags": [
+          "human"
+        ],
+        "xp": 1.3,
+        "gold": [
+          22,
+          40
+        ],
+        "drop": {
+          "q": "s_moth2",
+          "item": "moth_silk",
+          "ch": 8
+        },
+        "desc": "A veiled breeder of the old Silkwrights, robed in cocoon-cloth from crown to hem. She tends the Warren's moths as a shepherd tends a flock, and she has not yet decided that you are not one of them.",
+        "moves": [
+          {
+            "n": "Hooked Lantern",
+            "t": "atk",
+            "m": 1,
+            "st": {
+              "id": "bleed",
+              "ch": 30,
+              "turns": 2,
+              "pow": 6
+            },
+            "w": 3
+          },
+          {
+            "n": "Silk Snare",
+            "t": "debuff",
+            "st": {
+              "id": "stun",
+              "ch": 35,
+              "turns": 1
+            },
+            "st2": {
+              "id": "weak",
+              "ch": 100,
+              "turns": 2,
+              "pow": 20
+            },
+            "w": 2
+          },
+          {
+            "n": "Tend the Swarm",
+            "t": "heal",
+            "heal": 20,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/mothmother.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "mothmother",
+      "id": "mothmother",
+      "slot": null,
+      "name": "The Moth-Mother",
+      "description": "Queen of the Warren, a grey moth as broad as the cavern, wrapped in a veil of her own silk. Every cocoon on the ceiling is hers. Every light she has ever put out hangs there in a row, still warm.",
+      "source": {
+        "n": "The Moth-Mother",
+        "ic": "wisp",
+        "rank": "boss",
+        "lvl": 34,
+        "hp": 2600,
+        "atk": [
+          30,
+          42
+        ],
+        "armor": 20,
+        "res": 30,
+        "dodge": 12,
+        "crit": 10,
+        "tags": [
+          "beast",
+          "gloam"
+        ],
+        "xp": 12,
+        "gold": [
+          1700,
+          2100
+        ],
+        "unique": "mothmother_veil",
+        "drop": {
+          "q": "s_moth2",
+          "item": "moth_silk",
+          "ch": 100
+        },
+        "desc": "Queen of the Warren, a grey moth as broad as the cavern, wrapped in a veil of her own silk. Every cocoon on the ceiling is hers. Every light she has ever put out hangs there in a row, still warm.",
+        "moves": [
+          {
+            "n": "Wing-Beat Choke",
+            "t": "mag",
+            "m": 1.3,
+            "st": {
+              "id": "poison",
+              "ch": 60,
+              "turns": 3,
+              "pow": 7
+            },
+            "w": 3
+          },
+          {
+            "n": "Brood Call",
+            "t": "summon",
+            "summon": "dustmoth",
+            "w": 1
+          },
+          {
+            "n": "Devour the Light",
+            "t": "drain",
+            "drain": 30,
+            "m": 0.8,
+            "w": 1
+          },
+          {
+            "n": "Veil of Dust",
+            "t": "debuff",
+            "st": {
+              "id": "weak",
+              "ch": 100,
+              "turns": 2,
+              "pow": 25
+            },
+            "st2": {
+              "id": "vuln",
+              "ch": 60,
+              "turns": 2,
+              "pow": 25
+            },
+            "dread": 8,
+            "w": 1
+          },
+          {
+            "n": "Smothering Descent",
+            "t": "charge",
+            "m": 2.8,
+            "w": 1
+          }
+        ],
+        "phase2": {
+          "at": 50,
+          "txt": "The Moth-Mother shreds her own veil. Beneath it is a face made of a hundred thousand tiny eyes, and every one of them is looking at your lantern.",
+          "self": {
+            "id": "rage",
+            "turns": 99,
+            "pow": 25
+          },
+          "add": [
+            {
+              "n": "Silk Storm",
+              "t": "multi",
+              "hits": 3,
+              "m": 0.65,
+              "st": {
+                "id": "poison",
+                "ch": 40,
+                "turns": 3,
+                "pow": 7
+              },
+              "w": 2
+            },
+            {
+              "n": "Hundred Thousand Eyes",
+              "t": "mag",
+              "m": 1.9,
+              "st": {
+                "id": "stun",
+                "ch": 20,
+                "turns": 1
+              },
+              "dread": 12,
+              "w": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "assets/foe/oathbound.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "oathbound",
+      "id": "oathbound",
+      "slot": null,
+      "name": "Oathbound",
+      "description": "A hooded Lamplighter who swore the vigil oath and never asked to be released. The oath has kept the body upright long after the rest of him left. It speaks the words very quietly, over and over.",
+      "source": {
+        "n": "Oathbound",
+        "ic": "helm",
+        "lvl": 53,
+        "hp": 400,
+        "atk": [
+          38,
+          56
+        ],
+        "armor": 28,
+        "res": 30,
+        "dodge": 8,
+        "crit": 10,
+        "tags": [
+          "human"
+        ],
+        "xp": 1.6,
+        "gold": [
+          46,
+          84
+        ],
+        "desc": "A hooded Lamplighter who swore the vigil oath and never asked to be released. The oath has kept the body upright long after the rest of him left. It speaks the words very quietly, over and over.",
+        "moves": [
+          {
+            "n": "Oath-Blade",
+            "t": "atk",
+            "m": 1.1,
+            "st": {
+              "id": "bleed",
+              "ch": 40,
+              "turns": 3,
+              "pow": 9
+            },
+            "w": 3
+          },
+          {
+            "n": "Broken Vow",
+            "t": "debuff",
+            "st": {
+              "id": "vuln",
+              "ch": 100,
+              "turns": 2,
+              "pow": 25
+            },
+            "dread": 8,
+            "w": 2
+          },
+          {
+            "n": "Stand the Watch",
+            "t": "buff",
+            "self": {
+              "id": "guard",
+              "turns": 2,
+              "pow": 45
+            },
+            "w": 1
+          },
+          {
+            "n": "Sworn Mending",
+            "t": "heal",
+            "heal": 18,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/orrery.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "orrery",
+      "id": "orrery",
+      "slot": null,
+      "name": "The Orrery Sovereign",
+      "description": "The great engine at the heart of the Observatory: nine brass spheres turning on nine rings around a lens as tall as a house. It was built to predict the sun. It predicts you, and every turn it is a little more right.",
+      "source": {
+        "n": "The Orrery Sovereign",
+        "ic": "eye",
+        "rank": "boss",
+        "lvl": 46,
+        "hp": 4400,
+        "atk": [
+          42,
+          58
+        ],
+        "armor": 34,
+        "res": 35,
+        "dodge": 6,
+        "crit": 12,
+        "tags": [
+          "construct"
+        ],
+        "xp": 14,
+        "gold": [
+          3200,
+          3900
+        ],
+        "unique": "orrery_eye",
+        "desc": "The great engine at the heart of the Observatory: nine brass spheres turning on nine rings around a lens as tall as a house. It was built to predict the sun. It predicts you, and every turn it is a little more right.",
+        "moves": [
+          {
+            "n": "Armillary Sweep",
+            "t": "atk",
+            "m": 1.1,
+            "w": 3
+          },
+          {
+            "n": "Gravity Well",
+            "t": "mag",
+            "m": 1.3,
+            "st": {
+              "id": "weak",
+              "ch": 50,
+              "turns": 2,
+              "pow": 25
+            },
+            "w": 2
+          },
+          {
+            "n": "Planet of Iron",
+            "t": "buff",
+            "self": {
+              "id": "guard",
+              "turns": 2,
+              "pow": 45
+            },
+            "w": 1
+          },
+          {
+            "n": "Planet of Fire",
+            "t": "buff",
+            "self": {
+              "id": "rage",
+              "turns": 3,
+              "pow": 35
+            },
+            "w": 1
+          },
+          {
+            "n": "Planet of Glass",
+            "t": "buff",
+            "self": {
+              "id": "evasive",
+              "turns": 2,
+              "pow": 40
+            },
+            "w": 1
+          },
+          {
+            "n": "Wheel of Lenses",
+            "t": "summon",
+            "summon": "lenseye",
+            "w": 1
+          },
+          {
+            "n": "Cold Starlight",
+            "t": "debuff",
+            "st": {
+              "id": "vuln",
+              "ch": 100,
+              "turns": 3,
+              "pow": 30
+            },
+            "dread": 8,
+            "w": 1
+          },
+          {
+            "n": "Conjunction",
+            "t": "charge",
+            "m": 3,
+            "w": 1
+          }
+        ],
+        "phase2": {
+          "at": 50,
+          "txt": "The Sovereign's rings tear loose of their axles and spin free. The lens swings toward you, and in it you see your hooded self, very small, a long way down.",
+          "self": {
+            "id": "rage",
+            "turns": 99,
+            "pow": 20
+          },
+          "add": [
+            {
+              "n": "Total Eclipse",
+              "t": "mag",
+              "m": 2,
+              "st": {
+                "id": "stun",
+                "ch": 20,
+                "turns": 1
+              },
+              "dread": 10,
+              "w": 2
+            },
+            {
+              "n": "Meteor Shower",
+              "t": "multi",
+              "hits": 3,
+              "m": 0.7,
+              "st": {
+                "id": "burn",
+                "ch": 35,
+                "turns": 2,
+                "pow": 8
+              },
+              "w": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "assets/foe/radiant.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "radiant",
+      "id": "radiant",
+      "slot": null,
+      "name": "The Radiant",
+      "description": "The true sun, asleep beneath the lid of the Gloam, and no longer quite asleep. It is not a god and it is not a monster. It is a hunger that warms. It has waited a very long time to speak with the one who was made to close its eye.",
+      "source": {
+        "n": "The Radiant",
+        "ic": "flame",
+        "rank": "boss",
+        "lvl": 60,
+        "hp": 11500,
+        "atk": [
+          64,
+          86
+        ],
+        "armor": 42,
+        "res": 45,
+        "dodge": 8,
+        "crit": 14,
+        "tags": [
+          "gloam"
+        ],
+        "xp": 20,
+        "gold": [
+          7000,
+          8500
+        ],
+        "unique": "radiant_crown",
+        "final3": true,
+        "desc": "The true sun, asleep beneath the lid of the Gloam, and no longer quite asleep. It is not a god and it is not a monster. It is a hunger that warms. It has waited a very long time to speak with the one who was made to close its eye.",
+        "moves": [
+          {
+            "n": "Blinding Radiance",
+            "t": "debuff",
+            "st": {
+              "id": "weak",
+              "ch": 100,
+              "turns": 2,
+              "pow": 30
+            },
+            "dread": 10,
+            "w": 3
+          },
+          {
+            "n": "Searing Ray",
+            "t": "mag",
+            "m": 1.3,
+            "st": {
+              "id": "burn",
+              "ch": 60,
+              "turns": 3,
+              "pow": 9
+            },
+            "w": 3
+          },
+          {
+            "n": "Sun-Touch",
+            "t": "atk",
+            "m": 1.2,
+            "st": {
+              "id": "burn",
+              "ch": 45,
+              "turns": 3,
+              "pow": 9
+            },
+            "w": 2
+          },
+          {
+            "n": "The Dawn Rises",
+            "t": "summon",
+            "summon": "dawnhusk",
+            "w": 1
+          },
+          {
+            "n": "Warmth of the Predator",
+            "t": "drain",
+            "drain": 30,
+            "m": 0.8,
+            "w": 1
+          },
+          {
+            "n": "Zenith",
+            "t": "charge",
+            "m": 3.2,
+            "w": 1
+          }
+        ],
+        "phase2": {
+          "at": 66,
+          "txt": "The Radiant tilts its gaze and the dark dissolves. Its corona unfurls to fill the chamber, and the air itself begins to burn.",
+          "self": {
+            "id": "rage",
+            "turns": 99,
+            "pow": 25
+          },
+          "add": [
+            {
+              "n": "Corona Ejection",
+              "t": "mag",
+              "m": 2,
+              "st": {
+                "id": "burn",
+                "ch": 100,
+                "turns": 3,
+                "pow": 9
+              },
+              "w": 2
+            },
+            {
+              "n": "Solar Prominence",
+              "t": "multi",
+              "hits": 3,
+              "m": 0.7,
+              "st": {
+                "id": "burn",
+                "ch": 40,
+                "turns": 3,
+                "pow": 9
+              },
+              "w": 2
+            },
+            {
+              "n": "Total Noon",
+              "t": "charge",
+              "m": 3.5,
+              "w": 1
+            }
+          ]
+        },
+        "phase3": {
+          "at": 33,
+          "txt": "The light stops shouting. It speaks softly, in your own voice: \"I am not lying to you. I have never lied to you. Would you like a face?\"",
+          "self": {
+            "id": "rage",
+            "turns": 99,
+            "pow": 20
+          },
+          "add": [
+            {
+              "n": "Your Own Voice",
+              "t": "dread",
+              "dread": 24,
+              "m": 0.8,
+              "w": 3
+            },
+            {
+              "n": "A Face, Freely Given",
+              "t": "debuff",
+              "st": {
+                "id": "vuln",
+                "ch": 100,
+                "turns": 3,
+                "pow": 30
+              },
+              "st2": {
+                "id": "weak",
+                "ch": 100,
+                "turns": 2,
+                "pow": 25
+              },
+              "dread": 14,
+              "focusDrain": 10,
+              "w": 2
+            },
+            {
+              "n": "Everything Warms",
+              "t": "mag",
+              "m": 2.5,
+              "st": {
+                "id": "stun",
+                "ch": 25,
+                "turns": 1
+              },
+              "dread": 14,
+              "w": 2
+            },
+            {
+              "n": "Eat the Light",
+              "t": "drain",
+              "drain": 40,
+              "m": 1,
+              "w": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "assets/foe/sigilknight.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "sigilknight",
+      "id": "sigilknight",
+      "slot": null,
+      "name": "Sigil Knight",
+      "description": "The Lamplighters' champion of the Hall: a knight veiled in white and armoured in plates etched with the nine sigils. When he raises his sword, the lamps lean toward him like plants toward a window.",
+      "source": {
+        "n": "Sigil Knight",
+        "ic": "helm",
+        "rank": "elite",
+        "lvl": 55,
+        "hp": 1300,
+        "atk": [
+          50,
+          68
+        ],
+        "armor": 44,
+        "res": 35,
+        "dodge": 4,
+        "crit": 12,
+        "tags": [
+          "human"
+        ],
+        "xp": 3.4,
+        "gold": [
+          480,
+          660
+        ],
+        "desc": "The Lamplighters' champion of the Hall: a knight veiled in white and armoured in plates etched with the nine sigils. When he raises his sword, the lamps lean toward him like plants toward a window.",
+        "moves": [
+          {
+            "n": "Sigil Cut",
+            "t": "atk",
+            "m": 1.2,
+            "st": {
+              "id": "bleed",
+              "ch": 40,
+              "turns": 3,
+              "pow": 9
+            },
+            "w": 3
+          },
+          {
+            "n": "Sigil of Binding",
+            "t": "debuff",
+            "st": {
+              "id": "stun",
+              "ch": 30,
+              "turns": 1
+            },
+            "st2": {
+              "id": "vuln",
+              "ch": 80,
+              "turns": 2,
+              "pow": 25
+            },
+            "w": 1
+          },
+          {
+            "n": "Ward of Nine",
+            "t": "buff",
+            "self": {
+              "id": "guard",
+              "turns": 2,
+              "pow": 50
+            },
+            "w": 1
+          },
+          {
+            "n": "Sigil Burst",
+            "t": "mag",
+            "m": 1.3,
+            "dread": 8,
+            "w": 1
+          },
+          {
+            "n": "Verdict of the Order",
+            "t": "charge",
+            "m": 2.8,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/slagbrute.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "slagbrute",
+      "id": "slagbrute",
+      "slot": null,
+      "name": "Slag Brute",
+      "description": "A hulking press-man cast from smelter waste and fused with the hollow shell of a foreman's lantern-carrier. It still carries the lamp. Nothing that tries to take it comes back with hands.",
+      "source": {
+        "n": "Slag Brute",
+        "ic": "anvil",
+        "rank": "elite",
+        "lvl": 19,
+        "hp": 460,
+        "atk": [
+          19,
+          28
+        ],
+        "armor": 28,
+        "res": 20,
+        "dodge": 3,
+        "crit": 8,
+        "tags": [
+          "construct"
+        ],
+        "xp": 3,
+        "gold": [
+          110,
+          170
+        ],
+        "drop": {
+          "q": "s_mine2",
+          "item": "foreman_lamp",
+          "ch": 15
+        },
+        "desc": "A hulking press-man cast from smelter waste and fused with the hollow shell of a foreman's lantern-carrier. It still carries the lamp. Nothing that tries to take it comes back with hands.",
+        "moves": [
+          {
+            "n": "Cinder Fist",
+            "t": "atk",
+            "m": 1.2,
+            "st": {
+              "id": "burn",
+              "ch": 40,
+              "turns": 3,
+              "pow": 4
+            },
+            "w": 3
+          },
+          {
+            "n": "Stoke the Ladle",
+            "t": "buff",
+            "self": {
+              "id": "rage",
+              "turns": 3,
+              "pow": 30
+            },
+            "w": 1
+          },
+          {
+            "n": "Molten Splash",
+            "t": "mag",
+            "m": 1.1,
+            "st": {
+              "id": "burn",
+              "ch": 100,
+              "turns": 3,
+              "pow": 5
+            },
+            "w": 1
+          },
+          {
+            "n": "Crucible Slam",
+            "t": "charge",
+            "m": 2.5,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/slagworm.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "slagworm",
+      "id": "slagworm",
+      "slot": null,
+      "name": "Slagworm",
+      "description": "A blind worm as long as a mine cart, grown fat on the runoff of the old smelters. It glows a sullen orange along the seams of its hide and leaves glass in its wake.",
+      "source": {
+        "n": "Slagworm",
+        "ic": "horns",
+        "lvl": 17,
+        "hp": 122,
+        "atk": [
+          15,
+          23
+        ],
+        "armor": 10,
+        "res": 15,
+        "dodge": 8,
+        "crit": 8,
+        "tags": [
+          "beast"
+        ],
+        "xp": 1.3,
+        "gold": [
+          10,
+          22
+        ],
+        "desc": "A blind worm as long as a mine cart, grown fat on the runoff of the old smelters. It glows a sullen orange along the seams of its hide and leaves glass in its wake.",
+        "moves": [
+          {
+            "n": "Molten Bite",
+            "t": "atk",
+            "m": 1.1,
+            "st": {
+              "id": "burn",
+              "ch": 50,
+              "turns": 3,
+              "pow": 4
+            },
+            "w": 3
+          },
+          {
+            "n": "Spit Slag",
+            "t": "mag",
+            "m": 1,
+            "st": {
+              "id": "burn",
+              "ch": 90,
+              "turns": 3,
+              "pow": 4
+            },
+            "w": 2
+          },
+          {
+            "n": "Coil Tight",
+            "t": "buff",
+            "self": {
+              "id": "guard",
+              "turns": 2,
+              "pow": 40
+            },
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/spherewarden.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "spherewarden",
+      "id": "spherewarden",
+      "slot": null,
+      "name": "Sphere Warden",
+      "description": "A guardian of nested brass rings, spinning in three planes around a hooded shape that may once have been a scholar. It was left to guard the great orrery, and it has never once let the rings stop.",
+      "source": {
+        "n": "Sphere Warden",
+        "ic": "shield",
+        "rank": "elite",
+        "lvl": 45,
+        "hp": 1050,
+        "atk": [
+          40,
+          56
+        ],
+        "armor": 36,
+        "res": 30,
+        "dodge": 4,
+        "crit": 10,
+        "tags": [
+          "construct"
+        ],
+        "xp": 3.2,
+        "gold": [
+          380,
+          520
+        ],
+        "desc": "A guardian of nested brass rings, spinning in three planes around a hooded shape that may once have been a scholar. It was left to guard the great orrery, and it has never once let the rings stop.",
+        "moves": [
+          {
+            "n": "Armillary Strike",
+            "t": "atk",
+            "m": 1.1,
+            "w": 3
+          },
+          {
+            "n": "Aligned Spheres",
+            "t": "mag",
+            "m": 1.3,
+            "st": {
+              "id": "burn",
+              "ch": 50,
+              "turns": 3,
+              "pow": 8
+            },
+            "w": 2
+          },
+          {
+            "n": "Gravity Well",
+            "t": "debuff",
+            "st": {
+              "id": "vuln",
+              "ch": 100,
+              "turns": 3,
+              "pow": 30
+            },
+            "w": 1
+          },
+          {
+            "n": "Rings Lock",
+            "t": "buff",
+            "self": {
+              "id": "guard",
+              "turns": 2,
+              "pow": 50
+            },
+            "w": 1
+          },
+          {
+            "n": "Eclipse Slam",
+            "t": "charge",
+            "m": 2.8,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/stonechewer.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "stonechewer",
+      "id": "stonechewer",
+      "slot": null,
+      "name": "Stonechewer",
+      "description": "A boring-engine of iron teeth and bronze gears, built to eat the mountain. When the crew fled it kept eating, and it has run out of mountain and started on the timbers.",
+      "source": {
+        "n": "Stonechewer",
+        "ic": "anvil",
+        "lvl": 18,
+        "hp": 155,
+        "atk": [
+          17,
+          25
+        ],
+        "armor": 30,
+        "res": 10,
+        "dodge": 0,
+        "crit": 5,
+        "tags": [
+          "construct"
+        ],
+        "xp": 1.4,
+        "gold": [
+          14,
+          28
+        ],
+        "desc": "A boring-engine of iron teeth and bronze gears, built to eat the mountain. When the crew fled it kept eating, and it has run out of mountain and started on the timbers.",
+        "moves": [
+          {
+            "n": "Grinding Maw",
+            "t": "atk",
+            "m": 1.1,
+            "st": {
+              "id": "bleed",
+              "ch": 35,
+              "turns": 3,
+              "pow": 4
+            },
+            "w": 3
+          },
+          {
+            "n": "Set the Drill",
+            "t": "buff",
+            "self": {
+              "id": "guard",
+              "turns": 2,
+              "pow": 45
+            },
+            "w": 1
+          },
+          {
+            "n": "Bore Through",
+            "t": "charge",
+            "m": 2.3,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/sunscarred.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "sunscarred",
+      "id": "sunscarred",
+      "slot": null,
+      "name": "Sun-Scarred",
+      "description": "A wanderer wrapped from crown to boot in scorched linen, whose mask was burned into the skin beneath. It did not look away from the Black Noon. It says the sun told it a secret, and it will tell you.",
+      "source": {
+        "n": "Sun-Scarred",
+        "ic": "hero",
+        "lvl": 48,
+        "hp": 350,
+        "atk": [
+          33,
+          49
+        ],
+        "armor": 20,
+        "res": 30,
+        "dodge": 8,
+        "crit": 10,
+        "tags": [
+          "human"
+        ],
+        "xp": 1.5,
+        "gold": [
+          40,
+          74
+        ],
+        "desc": "A wanderer wrapped from crown to boot in scorched linen, whose mask was burned into the skin beneath. It did not look away from the Black Noon. It says the sun told it a secret, and it will tell you.",
+        "moves": [
+          {
+            "n": "Scorched Blade",
+            "t": "atk",
+            "m": 1.1,
+            "st": {
+              "id": "burn",
+              "ch": 50,
+              "turns": 3,
+              "pow": 8
+            },
+            "w": 3
+          },
+          {
+            "n": "Flash of Truth",
+            "t": "debuff",
+            "st": {
+              "id": "weak",
+              "ch": 100,
+              "turns": 2,
+              "pow": 25
+            },
+            "dread": 8,
+            "w": 2
+          },
+          {
+            "n": "Wrap the Wounds",
+            "t": "heal",
+            "heal": 18,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/sunwarden.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "sunwarden",
+      "id": "sunwarden",
+      "slot": null,
+      "name": "Sun Warden",
+      "description": "A colossus of black iron and captive light, forged to stand between the Radiant and the door. Its chest is an open furnace with a small white sun inside, and the sun has seen you and is pleased.",
+      "source": {
+        "n": "Sun Warden",
+        "ic": "crown",
+        "rank": "elite",
+        "lvl": 60,
+        "hp": 1500,
+        "atk": [
+          54,
+          74
+        ],
+        "armor": 46,
+        "res": 40,
+        "dodge": 4,
+        "crit": 12,
+        "tags": [
+          "construct",
+          "gloam"
+        ],
+        "xp": 3.5,
+        "gold": [
+          520,
+          720
+        ],
+        "desc": "A colossus of black iron and captive light, forged to stand between the Radiant and the door. Its chest is an open furnace with a small white sun inside, and the sun has seen you and is pleased.",
+        "moves": [
+          {
+            "n": "Solar Hammer",
+            "t": "atk",
+            "m": 1.2,
+            "st": {
+              "id": "burn",
+              "ch": 50,
+              "turns": 3,
+              "pow": 9
+            },
+            "w": 3
+          },
+          {
+            "n": "Flare of the Furnace",
+            "t": "mag",
+            "m": 1.3,
+            "st": {
+              "id": "burn",
+              "ch": 100,
+              "turns": 3,
+              "pow": 9
+            },
+            "w": 2
+          },
+          {
+            "n": "Shutter the Sun",
+            "t": "buff",
+            "self": {
+              "id": "guard",
+              "turns": 2,
+              "pow": 50
+            },
+            "w": 1
+          },
+          {
+            "n": "Blinding Gaze",
+            "t": "debuff",
+            "st": {
+              "id": "weak",
+              "ch": 100,
+              "turns": 2,
+              "pow": 30
+            },
+            "dread": 8,
+            "w": 1
+          },
+          {
+            "n": "Zenith Slam",
+            "t": "charge",
+            "m": 2.9,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/tidewraith.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "tidewraith",
+      "id": "tidewraith",
+      "slot": null,
+      "name": "Tide Wraith",
+      "description": "The water that filled the Observatory remembers drowning the astronomers. It has taken their shapes and stands in the flooded corridors with its hands open, pretending to plead.",
+      "source": {
+        "n": "Tide Wraith",
+        "ic": "wisp",
+        "lvl": 43,
+        "hp": 290,
+        "atk": [
+          29,
+          44
+        ],
+        "armor": 6,
+        "res": 45,
+        "dodge": 16,
+        "crit": 8,
+        "tags": [
+          "gloam"
+        ],
+        "xp": 1.4,
+        "gold": [
+          36,
+          66
+        ],
+        "desc": "The water that filled the Observatory remembers drowning the astronomers. It has taken their shapes and stands in the flooded corridors with its hands open, pretending to plead.",
+        "moves": [
+          {
+            "n": "Undertow",
+            "t": "atk",
+            "m": 1.1,
+            "st": {
+              "id": "stun",
+              "ch": 25,
+              "turns": 1
+            },
+            "w": 3
+          },
+          {
+            "n": "Drown the Light",
+            "t": "drain",
+            "drain": 22,
+            "m": 0.6,
+            "w": 2
+          },
+          {
+            "n": "Cold Deep Whisper",
+            "t": "dread",
+            "dread": 14,
+            "m": 0.5,
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/foe/wickcrawler.webp",
+      "kind": "foe",
+      "type": "foe",
+      "key": "wickcrawler",
+      "id": "wickcrawler",
+      "slot": null,
+      "name": "Wickcrawler",
+      "description": "A pale, many-legged thing that lives in the lamp-oil channels of the Hall, feeding on wicks. It has a lamp-flame growing from its back like a mushroom, and it does not mind being set alight.",
+      "source": {
+        "n": "Wickcrawler",
+        "ic": "horns",
+        "lvl": 53,
+        "hp": 380,
+        "atk": [
+          37,
+          55
+        ],
+        "armor": 18,
+        "res": 20,
+        "dodge": 14,
+        "crit": 10,
+        "tags": [
+          "beast"
+        ],
+        "xp": 1.5,
+        "gold": [
+          44,
+          82
+        ],
+        "desc": "A pale, many-legged thing that lives in the lamp-oil channels of the Hall, feeding on wicks. It has a lamp-flame growing from its back like a mushroom, and it does not mind being set alight.",
+        "moves": [
+          {
+            "n": "Wick-Legs",
+            "t": "multi",
+            "hits": 3,
+            "m": 0.5,
+            "st": {
+              "id": "burn",
+              "ch": 30,
+              "turns": 2,
+              "pow": 9
+            },
+            "w": 3
+          },
+          {
+            "n": "Drink the Oil",
+            "t": "drain",
+            "drain": 24,
+            "m": 0.7,
+            "w": 2
+          },
+          {
+            "n": "Slip Into the Channel",
+            "t": "buff",
+            "self": {
+              "id": "evasive",
+              "turns": 2,
+              "pow": 40
+            },
+            "w": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/items/anvil_breaker.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "anvil_breaker",
+      "id": "anvil_breaker",
+      "slot": "weapon",
+      "name": "Anvil-Breaker",
+      "description": "",
+      "source": {
+        "n": "Anvil-Breaker",
+        "slot": "weapon",
+        "wt": "hammer",
+        "ic": "hammer",
+        "tier": 4,
+        "dmg": [
+          22,
+          37
+        ],
+        "scale": "str",
+        "stats": {
+          "dmg": 12
+        }
+      }
+    },
+    {
+      "path": "assets/items/astral_gloves.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "astral_gloves",
+      "id": "astral_gloves",
+      "slot": "hands",
+      "name": "Astral Gloves",
+      "description": "",
+      "source": {
+        "n": "Astral Gloves",
+        "slot": "hands",
+        "ic": "gloves",
+        "tier": 4,
+        "armor": 3,
+        "stats": {
+          "spell": 6,
+          "crit": 4
+        }
+      }
+    },
+    {
+      "path": "assets/items/black_scythe.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "black_scythe",
+      "id": "black_scythe",
+      "slot": "weapon",
+      "name": "Black Scythe",
+      "description": "",
+      "source": {
+        "n": "Black Scythe",
+        "slot": "weapon",
+        "wt": "sickle",
+        "ic": "dagger",
+        "tier": 5,
+        "dmg": [
+          19,
+          31
+        ],
+        "scale": "int",
+        "stats": {
+          "spell": 37
+        }
+      }
+    },
+    {
+      "path": "assets/items/bone_talons.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "bone_talons",
+      "id": "bone_talons",
+      "slot": "weapon",
+      "name": "Bone Talons",
+      "description": "",
+      "source": {
+        "n": "Bone Talons",
+        "slot": "weapon",
+        "wt": "claw",
+        "ic": "dagger",
+        "tier": 1,
+        "dmg": [
+          2,
+          5
+        ],
+        "scale": "agi",
+        "stats": {
+          "crit": 4,
+          "dodge": 1
+        }
+      }
+    },
+    {
+      "path": "assets/items/brass_astrolabe.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "brass_astrolabe",
+      "id": "brass_astrolabe",
+      "slot": "weapon",
+      "name": "Brass Astrolabe",
+      "description": "",
+      "source": {
+        "n": "Brass Astrolabe",
+        "slot": "weapon",
+        "wt": "astrolabe",
+        "ic": "star",
+        "tier": 1,
+        "dmg": [
+          2,
+          4
+        ],
+        "scale": "int",
+        "stats": {
+          "spell": 3,
+          "crit": 2
+        }
+      }
+    },
+    {
+      "path": "assets/items/brass_lens.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "brass_lens",
+      "id": "brass_lens",
+      "slot": "offhand",
+      "name": "Brass-Ringed Lens",
+      "description": "",
+      "source": {
+        "n": "Brass-Ringed Lens",
+        "slot": "offhand",
+        "ot": "lens",
+        "ic": "eye",
+        "tier": 2,
+        "stats": {
+          "spell": 5,
+          "crit": 3
+        }
+      }
+    },
+    {
+      "path": "assets/items/bulwark.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "bulwark",
+      "id": "bulwark",
+      "slot": "offhand",
+      "name": "Lamplighter's Bulwark",
+      "description": "",
+      "source": {
+        "n": "Lamplighter's Bulwark",
+        "slot": "offhand",
+        "ic": "shield",
+        "tier": 5,
+        "armor": 27,
+        "stats": {
+          "dodge": -5
+        }
+      }
+    },
+    {
+      "path": "assets/items/c_emberdraught.webp",
+      "kind": "cons",
+      "type": "cons",
+      "key": "emberdraught",
+      "id": "emberdraught",
+      "slot": null,
+      "name": "Ember Draught",
+      "description": "Restores 35% HP and 35% Focus, and takes 15 Dread off.",
+      "source": {
+        "n": "Ember Draught",
+        "ic": "potion",
+        "desc": "Restores 35% HP and 35% Focus, and takes 15 Dread off.",
+        "price": 140,
+        "combat": true,
+        "unlock": "act3",
+        "fx": {
+          "heal": 35,
+          "focus": 35,
+          "dread": -15
+        }
+      }
+    },
+    {
+      "path": "assets/items/c_greaterdraught.webp",
+      "kind": "cons",
+      "type": "cons",
+      "key": "greaterdraught",
+      "id": "greaterdraught",
+      "slot": null,
+      "name": "Greater Red Draught",
+      "description": "Restores 60% of your HP.",
+      "source": {
+        "n": "Greater Red Draught",
+        "ic": "potion",
+        "desc": "Restores 60% of your HP.",
+        "price": 90,
+        "combat": true,
+        "unlock": "act3",
+        "fx": {
+          "heal": 60
+        }
+      }
+    },
+    {
+      "path": "assets/items/c_greatersalts.webp",
+      "kind": "cons",
+      "type": "cons",
+      "key": "greatersalts",
+      "id": "greatersalts",
+      "slot": null,
+      "name": "Greater Mind Salts",
+      "description": "Restores 80% of your Focus.",
+      "source": {
+        "n": "Greater Mind Salts",
+        "ic": "bolt",
+        "desc": "Restores 80% of your Focus.",
+        "price": 80,
+        "combat": true,
+        "unlock": "act3",
+        "fx": {
+          "focus": 80
+        }
+      }
+    },
+    {
+      "path": "assets/items/c_lightflask.webp",
+      "kind": "cons",
+      "type": "cons",
+      "key": "lightflask",
+      "id": "lightflask",
+      "slot": null,
+      "name": "Lantern Flask",
+      "description": "A full flask of clean resin-oil. Refills 100 Light in your lantern.",
+      "source": {
+        "n": "Lantern Flask",
+        "ic": "lantern",
+        "desc": "A full flask of clean resin-oil. Refills 100 Light in your lantern.",
+        "price": 60,
+        "explore": true,
+        "unlock": "act3",
+        "fx": {
+          "light": 100
+        }
+      }
+    },
+    {
+      "path": "assets/items/c_nighttonic.webp",
+      "kind": "cons",
+      "type": "cons",
+      "key": "nighttonic",
+      "id": "nighttonic",
+      "slot": null,
+      "name": "Nightleaf Tonic",
+      "description": "The whispers go quiet. -60 Dread and cures ailments.",
+      "source": {
+        "n": "Nightleaf Tonic",
+        "ic": "leaf",
+        "desc": "The whispers go quiet. -60 Dread and cures ailments.",
+        "price": 90,
+        "combat": true,
+        "unlock": "act3",
+        "fx": {
+          "dread": -60,
+          "cure": true
+        }
+      }
+    },
+    {
+      "path": "assets/items/c_phoenixash.webp",
+      "kind": "cons",
+      "type": "cons",
+      "key": "phoenixash",
+      "id": "phoenixash",
+      "slot": null,
+      "name": "Phoenix Ash",
+      "description": "Carry it and death may think twice. Once per fight, a killing blow returns you at 40% HP. Consumed automatically.",
+      "source": {
+        "n": "Phoenix Ash",
+        "ic": "sparkle",
+        "desc": "Carry it and death may think twice. Once per fight, a killing blow returns you at 40% HP. Consumed automatically.",
+        "price": 500,
+        "combat": true,
+        "combatOnly": true,
+        "auto": true,
+        "unlock": "act3",
+        "fx": {
+          "phoenix": 40
+        }
+      }
+    },
+    {
+      "path": "assets/items/c_starwater.webp",
+      "kind": "cons",
+      "type": "cons",
+      "key": "starwater",
+      "id": "starwater",
+      "slot": null,
+      "name": "Starwater",
+      "description": "Water from a drowned sky. Fully restores HP, cures all ailments and clears all Dread.",
+      "source": {
+        "n": "Starwater",
+        "ic": "star",
+        "desc": "Water from a drowned sky. Fully restores HP, cures all ailments and clears all Dread.",
+        "price": 400,
+        "combat": true,
+        "unlock": "act3",
+        "fx": {
+          "heal": 100,
+          "cure": true,
+          "dread": -100
+        }
+      }
+    },
+    {
+      "path": "assets/items/c_stoneskin.webp",
+      "kind": "cons",
+      "type": "cons",
+      "key": "stoneskin",
+      "id": "stoneskin",
+      "slot": null,
+      "name": "Stoneskin Draught",
+      "description": "Your skin greys and hardens. -35% damage taken until the fight ends.",
+      "source": {
+        "n": "Stoneskin Draught",
+        "ic": "shield",
+        "desc": "Your skin greys and hardens. -35% damage taken until the fight ends.",
+        "price": 110,
+        "combat": true,
+        "combatOnly": true,
+        "unlock": "act3",
+        "fx": {
+          "status": {
+            "id": "guard",
+            "turns": 99,
+            "pow": 35
+          }
+        }
+      }
+    },
+    {
+      "path": "assets/items/c_sunbomb.webp",
+      "kind": "cons",
+      "type": "cons",
+      "key": "sunbomb",
+      "id": "sunbomb",
+      "slot": null,
+      "name": "Sunbomb",
+      "description": "A glass sphere of caged noon. Heavy magic damage to all enemies and sets them burning.",
+      "source": {
+        "n": "Sunbomb",
+        "ic": "flame",
+        "desc": "A glass sphere of caged noon. Heavy magic damage to all enemies and sets them burning.",
+        "price": 130,
+        "combat": true,
+        "combatOnly": true,
+        "unlock": "act3",
+        "fx": {
+          "aoe": {
+            "m": 3.2,
+            "dt": "magic",
+            "st": {
+              "id": "burn",
+              "ch": 100,
+              "turns": 3,
+              "pow": 14
+            }
+          }
+        }
+      }
+    },
+    {
+      "path": "assets/items/c_voidbomb.webp",
+      "kind": "cons",
+      "type": "cons",
+      "key": "voidbomb",
+      "id": "voidbomb",
+      "slot": null,
+      "name": "Voidflask",
+      "description": "A flask of bottled nothing. Magic damage to all enemies and weakens them.",
+      "source": {
+        "n": "Voidflask",
+        "ic": "moon",
+        "desc": "A flask of bottled nothing. Magic damage to all enemies and weakens them.",
+        "price": 120,
+        "combat": true,
+        "combatOnly": true,
+        "unlock": "act3",
+        "fx": {
+          "aoe": {
+            "m": 2.6,
+            "dt": "magic",
+            "st": {
+              "id": "weak",
+              "ch": 100,
+              "turns": 3,
+              "pow": 30
+            }
+          }
+        }
+      }
+    },
+    {
+      "path": "assets/items/c_wardsalt.webp",
+      "kind": "cons",
+      "type": "cons",
+      "key": "wardsalt",
+      "id": "wardsalt",
+      "slot": null,
+      "name": "Ward-Salt",
+      "description": "Scatter a ring of salt. Absorbs damage equal to 35% of your max HP.",
+      "source": {
+        "n": "Ward-Salt",
+        "ic": "sparkle",
+        "desc": "Scatter a ring of salt. Absorbs damage equal to 35% of your max HP.",
+        "price": 100,
+        "combat": true,
+        "combatOnly": true,
+        "unlock": "act3",
+        "fx": {
+          "ward": 35
+        }
+      }
+    },
+    {
+      "path": "assets/items/c_warelixir.webp",
+      "kind": "cons",
+      "type": "cons",
+      "key": "warelixir",
+      "id": "warelixir",
+      "slot": null,
+      "name": "Elixir of War",
+      "description": "Bitter and hot. +30% damage until the fight ends.",
+      "source": {
+        "n": "Elixir of War",
+        "ic": "swords",
+        "desc": "Bitter and hot. +30% damage until the fight ends.",
+        "price": 120,
+        "combat": true,
+        "combatOnly": true,
+        "unlock": "act3",
+        "fx": {
+          "status": {
+            "id": "rage",
+            "turns": 99,
+            "pow": 30
+          }
+        }
+      }
+    },
+    {
+      "path": "assets/items/chain_flail.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "chain_flail",
+      "id": "chain_flail",
+      "slot": "weapon",
+      "name": "Chain Flail",
+      "description": "",
+      "source": {
+        "n": "Chain Flail",
+        "slot": "weapon",
+        "wt": "flail",
+        "ic": "mace",
+        "tier": 1,
+        "dmg": [
+          3,
+          6
+        ],
+        "scale": "str",
+        "stats": {
+          "thorns": 2
+        }
+      }
+    },
+    {
+      "path": "assets/items/comet_staff.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "comet_staff",
+      "id": "comet_staff",
+      "slot": "weapon",
+      "name": "Comet Staff",
+      "description": "",
+      "source": {
+        "n": "Comet Staff",
+        "slot": "weapon",
+        "wt": "astrolabe",
+        "ic": "star",
+        "tier": 4,
+        "dmg": [
+          11,
+          17
+        ],
+        "scale": "int",
+        "stats": {
+          "spell": 22,
+          "crit": 6
+        }
+      }
+    },
+    {
+      "path": "assets/items/corona_ring.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "corona_ring",
+      "id": "corona_ring",
+      "slot": "ring",
+      "name": "Corona Ring",
+      "description": "",
+      "source": {
+        "n": "Corona Ring",
+        "slot": "ring",
+        "ic": "ring",
+        "tier": 5,
+        "stats": {
+          "hp": 44
+        }
+      }
+    },
+    {
+      "path": "assets/items/cracked_lens.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "cracked_lens",
+      "id": "cracked_lens",
+      "slot": "offhand",
+      "name": "Cracked Lens",
+      "description": "",
+      "source": {
+        "n": "Cracked Lens",
+        "slot": "offhand",
+        "ot": "lens",
+        "ic": "eye",
+        "tier": 1,
+        "stats": {
+          "spell": 2,
+          "crit": 2
+        }
+      }
+    },
+    {
+      "path": "assets/items/dawn_codex.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "dawn_codex",
+      "id": "dawn_codex",
+      "slot": "offhand",
+      "name": "Codex of Dawns",
+      "description": "",
+      "source": {
+        "n": "Codex of Dawns",
+        "slot": "offhand",
+        "ic": "tome",
+        "tier": 5,
+        "stats": {
+          "spell": 24,
+          "focus": 20
+        }
+      }
+    },
+    {
+      "path": "assets/items/eclipse_astrolabe.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "eclipse_astrolabe",
+      "id": "eclipse_astrolabe",
+      "slot": "weapon",
+      "name": "Eclipse Astrolabe",
+      "description": "",
+      "source": {
+        "n": "Eclipse Astrolabe",
+        "slot": "weapon",
+        "wt": "astrolabe",
+        "ic": "star",
+        "tier": 5,
+        "dmg": [
+          19,
+          29
+        ],
+        "scale": "int",
+        "stats": {
+          "spell": 38,
+          "crit": 10
+        }
+      }
+    },
+    {
+      "path": "assets/items/eclipse_blade.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "eclipse_blade",
+      "id": "eclipse_blade",
+      "slot": "weapon",
+      "name": "Eclipseblade",
+      "description": "",
+      "source": {
+        "n": "Eclipseblade",
+        "slot": "weapon",
+        "wt": "sword",
+        "ic": "sword",
+        "tier": 5,
+        "dmg": [
+          34,
+          54
+        ],
+        "scale": "str"
+      }
+    },
+    {
+      "path": "assets/items/eclipse_lens.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "eclipse_lens",
+      "id": "eclipse_lens",
+      "slot": "offhand",
+      "name": "Eclipse Lens",
+      "description": "",
+      "source": {
+        "n": "Eclipse Lens",
+        "slot": "offhand",
+        "ot": "lens",
+        "ic": "eye",
+        "tier": 5,
+        "stats": {
+          "spell": 26,
+          "crit": 14
+        }
+      }
+    },
+    {
+      "path": "assets/items/eclipse_talons.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "eclipse_talons",
+      "id": "eclipse_talons",
+      "slot": "weapon",
+      "name": "Eclipse Talons",
+      "description": "",
+      "source": {
+        "n": "Eclipse Talons",
+        "slot": "weapon",
+        "wt": "claw",
+        "ic": "dagger",
+        "tier": 5,
+        "dmg": [
+          26,
+          44
+        ],
+        "scale": "agi",
+        "stats": {
+          "crit": 18,
+          "dodge": 8
+        }
+      }
+    },
+    {
+      "path": "assets/items/forge_hammer.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "forge_hammer",
+      "id": "forge_hammer",
+      "slot": "weapon",
+      "name": "Forge Hammer",
+      "description": "",
+      "source": {
+        "n": "Forge Hammer",
+        "slot": "weapon",
+        "wt": "hammer",
+        "ic": "hammer",
+        "tier": 1,
+        "dmg": [
+          3,
+          8
+        ],
+        "scale": "str",
+        "stats": {
+          "dmg": 3
+        }
+      }
+    },
+    {
+      "path": "assets/items/gaol_flail.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "gaol_flail",
+      "id": "gaol_flail",
+      "slot": "weapon",
+      "name": "Gaol Flail",
+      "description": "",
+      "source": {
+        "n": "Gaol Flail",
+        "slot": "weapon",
+        "wt": "flail",
+        "ic": "mace",
+        "tier": 4,
+        "dmg": [
+          19,
+          31
+        ],
+        "scale": "str",
+        "stats": {
+          "thorns": 9
+        }
+      }
+    },
+    {
+      "path": "assets/items/gauze_veil.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "gauze_veil",
+      "id": "gauze_veil",
+      "slot": "offhand",
+      "name": "Gauze Veil",
+      "description": "",
+      "source": {
+        "n": "Gauze Veil",
+        "slot": "offhand",
+        "ot": "veil",
+        "ic": "moon",
+        "tier": 1,
+        "stats": {
+          "dodge": 3,
+          "crit": 2
+        }
+      }
+    },
+    {
+      "path": "assets/items/glasswoven_gloves.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "glasswoven_gloves",
+      "id": "glasswoven_gloves",
+      "slot": "hands",
+      "name": "Glasswoven Gloves",
+      "description": "",
+      "source": {
+        "n": "Glasswoven Gloves",
+        "slot": "hands",
+        "ic": "gloves",
+        "tier": 5,
+        "armor": 5,
+        "stats": {
+          "spell": 10,
+          "crit": 7
+        }
+      }
+    },
+    {
+      "path": "assets/items/gloam_talons.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "gloam_talons",
+      "id": "gloam_talons",
+      "slot": "weapon",
+      "name": "Gloam Talons",
+      "description": "",
+      "source": {
+        "n": "Gloam Talons",
+        "slot": "weapon",
+        "wt": "claw",
+        "ic": "dagger",
+        "tier": 3,
+        "dmg": [
+          9,
+          17
+        ],
+        "scale": "agi",
+        "stats": {
+          "crit": 8,
+          "dodge": 3
+        }
+      }
+    },
+    {
+      "path": "assets/items/m_emberore.webp",
+      "kind": "mat",
+      "type": "mat",
+      "key": "emberore",
+      "id": "emberore",
+      "slot": null,
+      "name": "Ember Ore",
+      "description": "Rock that still glows from a fire nobody lit. Fuel for the Ember Forge.",
+      "source": {
+        "n": "Ember Ore",
+        "ic": "flame",
+        "desc": "Rock that still glows from a fire nobody lit. Fuel for the Ember Forge."
+      }
+    },
+    {
+      "path": "assets/items/m_lampresin.webp",
+      "kind": "mat",
+      "type": "mat",
+      "key": "lampresin",
+      "id": "lampresin",
+      "slot": null,
+      "name": "Lamp Resin",
+      "description": "Amber gum from wicks that burned too long. It smells of sweet smoke and old vigils.",
+      "source": {
+        "n": "Lamp Resin",
+        "ic": "drop",
+        "desc": "Amber gum from wicks that burned too long. It smells of sweet smoke and old vigils."
+      }
+    },
+    {
+      "path": "assets/items/m_starglass.webp",
+      "kind": "mat",
+      "type": "mat",
+      "key": "starglass",
+      "id": "starglass",
+      "slot": null,
+      "name": "Starglass",
+      "description": "Glass drawn from drowned lenses and dead constellations. It remembers light.",
+      "source": {
+        "n": "Starglass",
+        "ic": "star",
+        "desc": "Glass drawn from drowned lenses and dead constellations. It remembers light."
+      }
+    },
+    {
+      "path": "assets/items/m_sunsteel.webp",
+      "kind": "mat",
+      "type": "mat",
+      "key": "sunsteel",
+      "id": "sunsteel",
+      "slot": null,
+      "name": "Sunsteel Ingot",
+      "description": "Steel quenched in the Radiant's own glare. It gives back more warmth than it should.",
+      "source": {
+        "n": "Sunsteel Ingot",
+        "ic": "anvil",
+        "desc": "Steel quenched in the Radiant's own glare. It gives back more warmth than it should."
+      }
+    },
+    {
+      "path": "assets/items/m_voidsilk.webp",
+      "kind": "mat",
+      "type": "mat",
+      "key": "voidsilk",
+      "id": "voidsilk",
+      "slot": null,
+      "name": "Voidsilk",
+      "description": "Thread spun from the dark between webs. You feel it more than you see it.",
+      "source": {
+        "n": "Voidsilk",
+        "ic": "moon",
+        "desc": "Thread spun from the dark between webs. You feel it more than you see it."
+      }
+    },
+    {
+      "path": "assets/items/morning_chain.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "morning_chain",
+      "id": "morning_chain",
+      "slot": "weapon",
+      "name": "Morning Chain",
+      "description": "",
+      "source": {
+        "n": "Morning Chain",
+        "slot": "weapon",
+        "wt": "flail",
+        "ic": "mace",
+        "tier": 3,
+        "dmg": [
+          12,
+          20
+        ],
+        "scale": "str",
+        "stats": {
+          "thorns": 6
+        }
+      }
+    },
+    {
+      "path": "assets/items/mourning_veil.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "mourning_veil",
+      "id": "mourning_veil",
+      "slot": "offhand",
+      "name": "Mourning Veil",
+      "description": "",
+      "source": {
+        "n": "Mourning Veil",
+        "slot": "offhand",
+        "ot": "veil",
+        "ic": "moon",
+        "tier": 2,
+        "stats": {
+          "dodge": 5,
+          "crit": 3,
+          "dreadRes": 3
+        }
+      }
+    },
+    {
+      "path": "assets/items/night_talons.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "night_talons",
+      "id": "night_talons",
+      "slot": "weapon",
+      "name": "Night Talons",
+      "description": "",
+      "source": {
+        "n": "Night Talons",
+        "slot": "weapon",
+        "wt": "claw",
+        "ic": "dagger",
+        "tier": 4,
+        "dmg": [
+          15,
+          26
+        ],
+        "scale": "agi",
+        "stats": {
+          "crit": 11,
+          "dodge": 5
+        }
+      }
+    },
+    {
+      "path": "assets/items/nightglass_dirk.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "nightglass_dirk",
+      "id": "nightglass_dirk",
+      "slot": "weapon",
+      "name": "Nightglass Dirk",
+      "description": "",
+      "source": {
+        "n": "Nightglass Dirk",
+        "slot": "weapon",
+        "wt": "dagger",
+        "ic": "dagger",
+        "tier": 5,
+        "dmg": [
+          24,
+          42
+        ],
+        "scale": "agi",
+        "stats": {
+          "crit": 17
+        }
+      }
+    },
+    {
+      "path": "assets/items/nightstep_boots.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "nightstep_boots",
+      "id": "nightstep_boots",
+      "slot": "feet",
+      "name": "Nightstep Boots",
+      "description": "",
+      "source": {
+        "n": "Nightstep Boots",
+        "slot": "feet",
+        "ic": "boots",
+        "tier": 4,
+        "armor": 3,
+        "stats": {
+          "dodge": 6
+        }
+      }
+    },
+    {
+      "path": "assets/items/nightweave_robe.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "nightweave_robe",
+      "id": "nightweave_robe",
+      "slot": "chest",
+      "name": "Nightweave Robe",
+      "description": "",
+      "source": {
+        "n": "Nightweave Robe",
+        "slot": "chest",
+        "ic": "chest",
+        "tier": 5,
+        "armor": 15,
+        "stats": {
+          "spell": 19,
+          "wil": 5
+        }
+      }
+    },
+    {
+      "path": "assets/items/nine_flame_censer.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "nine_flame_censer",
+      "id": "nine_flame_censer",
+      "slot": "offhand",
+      "name": "Nine-Flame Censer",
+      "description": "",
+      "source": {
+        "n": "Nine-Flame Censer",
+        "slot": "offhand",
+        "ic": "censer",
+        "tier": 5,
+        "stats": {
+          "holy": 22,
+          "resolve": 38
+        }
+      }
+    },
+    {
+      "path": "assets/items/noon_lantern.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "noon_lantern",
+      "id": "noon_lantern",
+      "slot": "lantern",
+      "name": "Noon Lantern",
+      "description": "",
+      "source": {
+        "n": "Noon Lantern",
+        "slot": "lantern",
+        "ic": "lantern",
+        "tier": 5,
+        "stats": {
+          "lightMax": 230,
+          "lightEff": 42
+        }
+      }
+    },
+    {
+      "path": "assets/items/noonday_mace.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "noonday_mace",
+      "id": "noonday_mace",
+      "slot": "weapon",
+      "name": "Noonday Mace",
+      "description": "",
+      "source": {
+        "n": "Noonday Mace",
+        "slot": "weapon",
+        "wt": "mace",
+        "ic": "mace",
+        "tier": 5,
+        "dmg": [
+          32,
+          51
+        ],
+        "scale": "str",
+        "stats": {
+          "holy": 24
+        }
+      }
+    },
+    {
+      "path": "assets/items/orrery_rod.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "orrery_rod",
+      "id": "orrery_rod",
+      "slot": "weapon",
+      "name": "Orrery Rod",
+      "description": "",
+      "source": {
+        "n": "Orrery Rod",
+        "slot": "weapon",
+        "wt": "astrolabe",
+        "ic": "star",
+        "tier": 3,
+        "dmg": [
+          7,
+          11
+        ],
+        "scale": "int",
+        "stats": {
+          "spell": 14,
+          "crit": 4
+        }
+      }
+    },
+    {
+      "path": "assets/items/pulsar_lens.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "pulsar_lens",
+      "id": "pulsar_lens",
+      "slot": "offhand",
+      "name": "Pulsar Lens",
+      "description": "",
+      "source": {
+        "n": "Pulsar Lens",
+        "slot": "offhand",
+        "ot": "lens",
+        "ic": "eye",
+        "tier": 4,
+        "stats": {
+          "spell": 15,
+          "crit": 8
+        }
+      }
+    },
+    {
+      "path": "assets/items/q_astro_log.webp",
+      "kind": "qitem",
+      "type": "qitem",
+      "key": "astro_log",
+      "id": "astro_log",
+      "slot": null,
+      "name": "The Astronomer's Log",
+      "description": "A waterlogged log, the ink run to blue clouds. The last legible line: \"The sun is not setting. It is closing.\"",
+      "source": {
+        "n": "The Astronomer's Log",
+        "desc": "A waterlogged log, the ink run to blue clouds. The last legible line: \"The sun is not setting. It is closing.\""
+      }
+    },
+    {
+      "path": "assets/items/q_cold_key.webp",
+      "kind": "qitem",
+      "type": "qitem",
+      "key": "cold_key",
+      "id": "cold_key",
+      "slot": null,
+      "name": "The Cold Key",
+      "description": "A key of black iron, cold in the hottest room. It opens the one vault in the Cinderwaste that Kaldrec never fired.",
+      "source": {
+        "n": "The Cold Key",
+        "desc": "A key of black iron, cold in the hottest room. It opens the one vault in the Cinderwaste that Kaldrec never fired."
+      }
+    },
+    {
+      "path": "assets/items/q_first_faceplate.webp",
+      "kind": "qitem",
+      "type": "qitem",
+      "key": "first_faceplate",
+      "id": "first_faceplate",
+      "slot": null,
+      "name": "The First Faceplate",
+      "description": "A smooth, blank plate of pale metal, hammered to fit a face. It has no eye-holes. Kaldrec made it for the first Key, and it is still the right size.",
+      "source": {
+        "n": "The First Faceplate",
+        "desc": "A smooth, blank plate of pale metal, hammered to fit a face. It has no eye-holes. Kaldrec made it for the first Key, and it is still the right size."
+      }
+    },
+    {
+      "path": "assets/items/q_foreman_lamp.webp",
+      "kind": "qitem",
+      "type": "qitem",
+      "key": "foreman_lamp",
+      "id": "foreman_lamp",
+      "slot": null,
+      "name": "The Foreman's Lamp",
+      "description": "A miner's lamp with a name scratched on the base. The flame does not flicker, and it does not go out underwater.",
+      "source": {
+        "n": "The Foreman's Lamp",
+        "desc": "A miner's lamp with a name scratched on the base. The flame does not flicker, and it does not go out underwater."
+      }
+    },
+    {
+      "path": "assets/items/q_glass_rose.webp",
+      "kind": "qitem",
+      "type": "qitem",
+      "key": "glass_rose",
+      "id": "glass_rose",
+      "slot": null,
+      "name": "The Glass Rose",
+      "description": "A rose blown of clear sand-glass, every petal perfect. Someone left it on a grave with no name and no body.",
+      "source": {
+        "n": "The Glass Rose",
+        "desc": "A rose blown of clear sand-glass, every petal perfect. Someone left it on a grave with no name and no body."
+      }
+    },
+    {
+      "path": "assets/items/q_moth_silk.webp",
+      "kind": "qitem",
+      "type": "qitem",
+      "key": "moth_silk",
+      "id": "moth_silk",
+      "slot": null,
+      "name": "Moth-Silk Bolt",
+      "description": "A bolt of pale silk spun by something that never stopped. Soft, light, and it hums when a lamp is lit near it.",
+      "source": {
+        "n": "Moth-Silk Bolt",
+        "desc": "A bolt of pale silk spun by something that never stopped. Soft, light, and it hums when a lamp is lit near it."
+      }
+    },
+    {
+      "path": "assets/items/q_nine_sigils.webp",
+      "kind": "qitem",
+      "type": "qitem",
+      "key": "nine_sigils",
+      "id": "nine_sigils",
+      "slot": null,
+      "name": "The Nine Sigils",
+      "description": "Nine brass discs, one for each Lamplighter, each cut with a lamp. Eight are dull. One is still warm.",
+      "source": {
+        "n": "The Nine Sigils",
+        "desc": "Nine brass discs, one for each Lamplighter, each cut with a lamp. Eight are dull. One is still warm."
+      }
+    },
+    {
+      "path": "assets/items/q_ninth_letter.webp",
+      "kind": "qitem",
+      "type": "qitem",
+      "key": "ninth_letter",
+      "id": "ninth_letter",
+      "slot": null,
+      "name": "The Ninth Letter",
+      "description": "A sealed letter in a tired, careful hand, addressed to \"Whoever comes last.\" The wax is a lamp with nine flames, eight of them scratched out.",
+      "source": {
+        "n": "The Ninth Letter",
+        "desc": "A sealed letter in a tired, careful hand, addressed to \"Whoever comes last.\" The wax is a lamp with nine flames, eight of them scratched out."
+      }
+    },
+    {
+      "path": "assets/items/q_star_chart.webp",
+      "kind": "qitem",
+      "type": "qitem",
+      "key": "star_chart",
+      "id": "star_chart",
+      "slot": null,
+      "name": "The Star Chart",
+      "description": "A drowned astronomer's chart of the sky as it was. Nine stars are circled in wax pencil; the ninth is scratched out until the paper tore.",
+      "source": {
+        "n": "The Star Chart",
+        "desc": "A drowned astronomer's chart of the sky as it was. Nine stars are circled in wax pencil; the ninth is scratched out until the paper tore."
+      }
+    },
+    {
+      "path": "assets/items/q_sunglass.webp",
+      "kind": "qitem",
+      "type": "qitem",
+      "key": "sunglass",
+      "id": "sunglass",
+      "slot": null,
+      "name": "Sunglass",
+      "description": "A palm-sized shard of desert glass, fused by a light that no longer shines. Look into it and it looks back, warm.",
+      "source": {
+        "n": "Sunglass",
+        "desc": "A palm-sized shard of desert glass, fused by a light that no longer shines. Look into it and it looks back, warm."
+      }
+    },
+    {
+      "path": "assets/items/r_ash.webp",
+      "kind": "rune",
+      "type": "rune",
+      "key": "ash",
+      "id": "ash",
+      "slot": [
+        "chest",
+        "ring",
+        "amulet",
+        "feet"
+      ],
+      "name": "Rune of Ash",
+      "description": "",
+      "source": {
+        "n": "Rune of Ash",
+        "ic": "rune",
+        "tier": 1,
+        "stat": {
+          "hp": 14
+        },
+        "slots": [
+          "chest",
+          "ring",
+          "amulet",
+          "feet"
+        ],
+        "color": "#9a9088"
+      }
+    },
+    {
+      "path": "assets/items/r_briars.webp",
+      "kind": "rune",
+      "type": "rune",
+      "key": "briars",
+      "id": "briars",
+      "slot": [
+        "offhand",
+        "chest",
+        "hands",
+        "feet"
+      ],
+      "name": "Rune of Briars",
+      "description": "",
+      "source": {
+        "n": "Rune of Briars",
+        "ic": "rune",
+        "tier": 1,
+        "stat": {
+          "thorns": 4
+        },
+        "slots": [
+          "offhand",
+          "chest",
+          "hands",
+          "feet"
+        ],
+        "color": "#6a8a4a"
+      }
+    },
+    {
+      "path": "assets/items/r_dawn.webp",
+      "kind": "rune",
+      "type": "rune",
+      "key": "dawn",
+      "id": "dawn",
+      "slot": [
+        "chest",
+        "amulet",
+        "lantern"
+      ],
+      "name": "Rune of the Dawn",
+      "description": "",
+      "source": {
+        "n": "Rune of the Dawn",
+        "ic": "rune",
+        "tier": 3,
+        "stat": {
+          "hpPct": 6,
+          "regen": 4,
+          "resolve": 24
+        },
+        "slots": [
+          "chest",
+          "amulet",
+          "lantern"
+        ],
+        "color": "#fff0b0"
+      }
+    },
+    {
+      "path": "assets/items/r_eclipse.webp",
+      "kind": "rune",
+      "type": "rune",
+      "key": "eclipse",
+      "id": "eclipse",
+      "slot": [
+        "weapon",
+        "offhand",
+        "head",
+        "amulet"
+      ],
+      "name": "Rune of Eclipse",
+      "description": "",
+      "source": {
+        "n": "Rune of Eclipse",
+        "ic": "rune",
+        "tier": 3,
+        "stat": {
+          "spell": 26,
+          "crit": 8,
+          "spellPct": 6
+        },
+        "slots": [
+          "weapon",
+          "offhand",
+          "head",
+          "amulet"
+        ],
+        "color": "#6a4a9a"
+      }
+    },
+    {
+      "path": "assets/items/r_embers.webp",
+      "kind": "rune",
+      "type": "rune",
+      "key": "embers",
+      "id": "embers",
+      "slot": [
+        "weapon",
+        "hands"
+      ],
+      "name": "Rune of Embers",
+      "description": "",
+      "source": {
+        "n": "Rune of Embers",
+        "ic": "rune",
+        "tier": 1,
+        "stat": {
+          "dmg": 6
+        },
+        "slots": [
+          "weapon",
+          "hands"
+        ],
+        "color": "#e0954a"
+      }
+    },
+    {
+      "path": "assets/items/r_frost.webp",
+      "kind": "rune",
+      "type": "rune",
+      "key": "frost",
+      "id": "frost",
+      "slot": [
+        "head",
+        "chest",
+        "offhand"
+      ],
+      "name": "Rune of Frost",
+      "description": "",
+      "source": {
+        "n": "Rune of Frost",
+        "ic": "rune",
+        "tier": 1,
+        "stat": {
+          "resolve": 8,
+          "dodge": 2
+        },
+        "slots": [
+          "head",
+          "chest",
+          "offhand"
+        ],
+        "color": "#8fd0ff"
+      }
+    },
+    {
+      "path": "assets/items/r_glass.webp",
+      "kind": "rune",
+      "type": "rune",
+      "key": "glass",
+      "id": "glass",
+      "slot": [
+        "weapon",
+        "offhand",
+        "hands",
+        "ring"
+      ],
+      "name": "Rune of Glass",
+      "description": "",
+      "source": {
+        "n": "Rune of Glass",
+        "ic": "rune",
+        "tier": 1,
+        "stat": {
+          "crit": 3
+        },
+        "slots": [
+          "weapon",
+          "offhand",
+          "hands",
+          "ring"
+        ],
+        "color": "#cfe8ff"
+      }
+    },
+    {
+      "path": "assets/items/r_hunger.webp",
+      "kind": "rune",
+      "type": "rune",
+      "key": "hunger",
+      "id": "hunger",
+      "slot": [
+        "weapon",
+        "ring",
+        "amulet"
+      ],
+      "name": "Rune of Hunger",
+      "description": "",
+      "source": {
+        "n": "Rune of Hunger",
+        "ic": "rune",
+        "tier": 2,
+        "stat": {
+          "lifesteal": 4,
+          "dotPct": 12
+        },
+        "slots": [
+          "weapon",
+          "ring",
+          "amulet"
+        ],
+        "color": "#a83a4a"
+      }
+    },
+    {
+      "path": "assets/items/r_iron.webp",
+      "kind": "rune",
+      "type": "rune",
+      "key": "iron",
+      "id": "iron",
+      "slot": [
+        "offhand",
+        "head",
+        "chest",
+        "hands",
+        "feet"
+      ],
+      "name": "Rune of Iron",
+      "description": "",
+      "source": {
+        "n": "Rune of Iron",
+        "ic": "rune",
+        "tier": 2,
+        "stat": {
+          "armor": 8,
+          "armorPct": 3
+        },
+        "slots": [
+          "offhand",
+          "head",
+          "chest",
+          "hands",
+          "feet"
+        ],
+        "color": "#7c8d98"
+      }
+    },
+    {
+      "path": "assets/items/r_nine.webp",
+      "kind": "rune",
+      "type": "rune",
+      "key": "nine",
+      "id": "nine",
+      "slot": [
+        "amulet",
+        "ring"
+      ],
+      "name": "Rune of the Nine",
+      "description": "",
+      "source": {
+        "n": "Rune of the Nine",
+        "ic": "rune",
+        "tier": 3,
+        "stat": {
+          "str": 3,
+          "agi": 3,
+          "int": 3,
+          "wil": 3,
+          "vit": 3
+        },
+        "slots": [
+          "amulet",
+          "ring"
+        ],
+        "color": "#f2e6c0"
+      }
+    },
+    {
+      "path": "assets/items/r_noon.webp",
+      "kind": "rune",
+      "type": "rune",
+      "key": "noon",
+      "id": "noon",
+      "slot": [
+        "weapon",
+        "hands",
+        "ring"
+      ],
+      "name": "Rune of Noon",
+      "description": "",
+      "source": {
+        "n": "Rune of Noon",
+        "ic": "rune",
+        "tier": 3,
+        "stat": {
+          "dmg": 14,
+          "crit": 6,
+          "critDmg": 20
+        },
+        "slots": [
+          "weapon",
+          "hands",
+          "ring"
+        ],
+        "color": "#ffd23a"
+      }
+    },
+    {
+      "path": "assets/items/r_stars.webp",
+      "kind": "rune",
+      "type": "rune",
+      "key": "stars",
+      "id": "stars",
+      "slot": [
+        "weapon",
+        "offhand",
+        "head",
+        "amulet"
+      ],
+      "name": "Rune of Stars",
+      "description": "",
+      "source": {
+        "n": "Rune of Stars",
+        "ic": "rune",
+        "tier": 2,
+        "stat": {
+          "spell": 12,
+          "focus": 6
+        },
+        "slots": [
+          "weapon",
+          "offhand",
+          "head",
+          "amulet"
+        ],
+        "color": "#9db8ff"
+      }
+    },
+    {
+      "path": "assets/items/r_sunforge.webp",
+      "kind": "rune",
+      "type": "rune",
+      "key": "sunforge",
+      "id": "sunforge",
+      "slot": [
+        "chest",
+        "offhand",
+        "head"
+      ],
+      "name": "Rune of the Sunforge",
+      "description": "",
+      "source": {
+        "n": "Rune of the Sunforge",
+        "ic": "rune",
+        "tier": 3,
+        "stat": {
+          "armor": 14,
+          "armorPct": 6,
+          "thorns": 8,
+          "hp": 30
+        },
+        "slots": [
+          "chest",
+          "offhand",
+          "head"
+        ],
+        "color": "#e0954a"
+      }
+    },
+    {
+      "path": "assets/items/r_veils.webp",
+      "kind": "rune",
+      "type": "rune",
+      "key": "veils",
+      "id": "veils",
+      "slot": [
+        "offhand",
+        "chest",
+        "feet",
+        "head"
+      ],
+      "name": "Rune of Veils",
+      "description": "",
+      "source": {
+        "n": "Rune of Veils",
+        "ic": "rune",
+        "tier": 2,
+        "stat": {
+          "dodge": 5,
+          "dreadRes": 6
+        },
+        "slots": [
+          "offhand",
+          "chest",
+          "feet",
+          "head"
+        ],
+        "color": "#b48ad0"
+      }
+    },
+    {
+      "path": "assets/items/r_vigil.webp",
+      "kind": "rune",
+      "type": "rune",
+      "key": "vigil",
+      "id": "vigil",
+      "slot": [
+        "head",
+        "chest",
+        "amulet",
+        "ring",
+        "lantern"
+      ],
+      "name": "Rune of the Vigil",
+      "description": "",
+      "source": {
+        "n": "Rune of the Vigil",
+        "ic": "rune",
+        "tier": 2,
+        "stat": {
+          "resolve": 16,
+          "regen": 2
+        },
+        "slots": [
+          "head",
+          "chest",
+          "amulet",
+          "ring",
+          "lantern"
+        ],
+        "color": "#e8c880"
+      }
+    },
+    {
+      "path": "assets/items/r_wick.webp",
+      "kind": "rune",
+      "type": "rune",
+      "key": "wick",
+      "id": "wick",
+      "slot": [
+        "lantern",
+        "head",
+        "amulet"
+      ],
+      "name": "Rune of the Wick",
+      "description": "",
+      "source": {
+        "n": "Rune of the Wick",
+        "ic": "rune",
+        "tier": 1,
+        "stat": {
+          "lightEff": 8
+        },
+        "slots": [
+          "lantern",
+          "head",
+          "amulet"
+        ],
+        "color": "#ffd27a"
+      }
+    },
+    {
+      "path": "assets/items/radiant_staff.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "radiant_staff",
+      "id": "radiant_staff",
+      "slot": "weapon",
+      "name": "Radiant Staff",
+      "description": "",
+      "source": {
+        "n": "Radiant Staff",
+        "slot": "weapon",
+        "wt": "staff",
+        "ic": "staff",
+        "tier": 5,
+        "dmg": [
+          19,
+          29
+        ],
+        "scale": "int",
+        "stats": {
+          "spell": 37
+        }
+      }
+    },
+    {
+      "path": "assets/items/radiant_totem.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "radiant_totem",
+      "id": "radiant_totem",
+      "slot": "offhand",
+      "name": "Radiant Totem",
+      "description": "",
+      "source": {
+        "n": "Radiant Totem",
+        "slot": "offhand",
+        "ot": "fetish",
+        "ic": "skull",
+        "tier": 5,
+        "stats": {
+          "spell": 24,
+          "lifesteal": 8,
+          "resolve": 32
+        }
+      }
+    },
+    {
+      "path": "assets/items/shroud_of_nine.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "shroud_of_nine",
+      "id": "shroud_of_nine",
+      "slot": "offhand",
+      "name": "Shroud of the Nine",
+      "description": "",
+      "source": {
+        "n": "Shroud of the Nine",
+        "slot": "offhand",
+        "ot": "veil",
+        "ic": "moon",
+        "tier": 5,
+        "stats": {
+          "dodge": 20,
+          "crit": 14,
+          "dreadRes": 14
+        }
+      }
+    },
+    {
+      "path": "assets/items/smith_maul.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "smith_maul",
+      "id": "smith_maul",
+      "slot": "weapon",
+      "name": "Smith's Maul",
+      "description": "",
+      "source": {
+        "n": "Smith's Maul",
+        "slot": "weapon",
+        "wt": "hammer",
+        "ic": "hammer",
+        "tier": 2,
+        "dmg": [
+          8,
+          15
+        ],
+        "scale": "str",
+        "stats": {
+          "dmg": 5
+        }
+      }
+    },
+    {
+      "path": "assets/items/star_compass.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "star_compass",
+      "id": "star_compass",
+      "slot": "weapon",
+      "name": "Star Compass",
+      "description": "",
+      "source": {
+        "n": "Star Compass",
+        "slot": "weapon",
+        "wt": "astrolabe",
+        "ic": "star",
+        "tier": 2,
+        "dmg": [
+          4,
+          7
+        ],
+        "scale": "int",
+        "stats": {
+          "spell": 8,
+          "crit": 3
+        }
+      }
+    },
+    {
+      "path": "assets/items/star_lens.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "star_lens",
+      "id": "star_lens",
+      "slot": "offhand",
+      "name": "Star Lens",
+      "description": "",
+      "source": {
+        "n": "Star Lens",
+        "slot": "offhand",
+        "ot": "lens",
+        "ic": "eye",
+        "tier": 3,
+        "stats": {
+          "spell": 9,
+          "crit": 5
+        }
+      }
+    },
+    {
+      "path": "assets/items/starseer_circlet.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "starseer_circlet",
+      "id": "starseer_circlet",
+      "slot": "head",
+      "name": "Starseer's Circlet",
+      "description": "",
+      "source": {
+        "n": "Starseer's Circlet",
+        "slot": "head",
+        "ic": "crown",
+        "tier": 5,
+        "armor": 9,
+        "stats": {
+          "spell": 14,
+          "focus": 10
+        }
+      }
+    },
+    {
+      "path": "assets/items/sunchain_flail.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "sunchain_flail",
+      "id": "sunchain_flail",
+      "slot": "weapon",
+      "name": "Sunchain Flail",
+      "description": "",
+      "source": {
+        "n": "Sunchain Flail",
+        "slot": "weapon",
+        "wt": "flail",
+        "ic": "mace",
+        "tier": 5,
+        "dmg": [
+          33,
+          53
+        ],
+        "scale": "str",
+        "stats": {
+          "thorns": 15
+        }
+      }
+    },
+    {
+      "path": "assets/items/sunfall_maul.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "sunfall_maul",
+      "id": "sunfall_maul",
+      "slot": "weapon",
+      "name": "Sunfall Maul",
+      "description": "",
+      "source": {
+        "n": "Sunfall Maul",
+        "slot": "weapon",
+        "wt": "hammer",
+        "ic": "hammer",
+        "tier": 3,
+        "dmg": [
+          14,
+          25
+        ],
+        "scale": "str",
+        "stats": {
+          "dmg": 8
+        }
+      }
+    },
+    {
+      "path": "assets/items/sunforged_gauntlets.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "sunforged_gauntlets",
+      "id": "sunforged_gauntlets",
+      "slot": "hands",
+      "name": "Sunforged Gauntlets",
+      "description": "",
+      "source": {
+        "n": "Sunforged Gauntlets",
+        "slot": "hands",
+        "ic": "gloves",
+        "tier": 5,
+        "armor": 12
+      }
+    },
+    {
+      "path": "assets/items/sunforged_greaves.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "sunforged_greaves",
+      "id": "sunforged_greaves",
+      "slot": "feet",
+      "name": "Sunforged Greaves",
+      "description": "",
+      "source": {
+        "n": "Sunforged Greaves",
+        "slot": "feet",
+        "ic": "boots",
+        "tier": 5,
+        "armor": 12
+      }
+    },
+    {
+      "path": "assets/items/sunforged_hammer.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "sunforged_hammer",
+      "id": "sunforged_hammer",
+      "slot": "weapon",
+      "name": "Sunforged Hammer",
+      "description": "",
+      "source": {
+        "n": "Sunforged Hammer",
+        "slot": "weapon",
+        "wt": "hammer",
+        "ic": "hammer",
+        "tier": 5,
+        "dmg": [
+          38,
+          62
+        ],
+        "scale": "str",
+        "stats": {
+          "dmg": 20
+        }
+      }
+    },
+    {
+      "path": "assets/items/sunforged_plate.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "sunforged_plate",
+      "id": "sunforged_plate",
+      "slot": "chest",
+      "name": "Sunforged Plate",
+      "description": "",
+      "source": {
+        "n": "Sunforged Plate",
+        "slot": "chest",
+        "ic": "chest",
+        "tier": 5,
+        "armor": 36,
+        "stats": {
+          "dodge": -7
+        }
+      }
+    },
+    {
+      "path": "assets/items/sunheart_amulet.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "sunheart_amulet",
+      "id": "sunheart_amulet",
+      "slot": "amulet",
+      "name": "Sunheart Amulet",
+      "description": "",
+      "source": {
+        "n": "Sunheart Amulet",
+        "slot": "amulet",
+        "ic": "amulet",
+        "tier": 5,
+        "stats": {
+          "resolve": 26,
+          "hp": 26
+        }
+      }
+    },
+    {
+      "path": "assets/items/sunsplitter.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "sunsplitter",
+      "id": "sunsplitter",
+      "slot": "weapon",
+      "name": "Sunsplitter",
+      "description": "",
+      "source": {
+        "n": "Sunsplitter",
+        "slot": "weapon",
+        "wt": "axe",
+        "ic": "axe",
+        "tier": 5,
+        "dmg": [
+          29,
+          65
+        ],
+        "scale": "str",
+        "stats": {
+          "crit": 9
+        }
+      }
+    },
+    {
+      "path": "assets/items/sunwarden_helm.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "sunwarden_helm",
+      "id": "sunwarden_helm",
+      "slot": "head",
+      "name": "Sunwarden Helm",
+      "description": "",
+      "source": {
+        "n": "Sunwarden Helm",
+        "slot": "head",
+        "ic": "helm",
+        "tier": 5,
+        "armor": 20
+      }
+    },
+    {
+      "path": "assets/items/sunwarden_quiver.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "sunwarden_quiver",
+      "id": "sunwarden_quiver",
+      "slot": "offhand",
+      "name": "Sunwarden's Quiver",
+      "description": "",
+      "source": {
+        "n": "Sunwarden's Quiver",
+        "slot": "offhand",
+        "ot": "quiver",
+        "ic": "bolt",
+        "tier": 5,
+        "stats": {
+          "crit": 16,
+          "dmg": 18
+        }
+      }
+    },
+    {
+      "path": "assets/items/u_ashen_gauntlets.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "ashen_gauntlets",
+      "id": "ashen_gauntlets",
+      "slot": null,
+      "name": "Ashen Gauntlets",
+      "description": "Gloves of fused ash, still hot to the touch. Whatever they grip, they leave a print in.",
+      "source": {
+        "base": "sunforged_gauntlets",
+        "n": "Ashen Gauntlets",
+        "ilvl": 46,
+        "armor": 10,
+        "stats": {
+          "str": 7,
+          "dmg": 15,
+          "critDmg": 30,
+          "dotPct": 25
+        },
+        "lore": "Gloves of fused ash, still hot to the touch. Whatever they grip, they leave a print in."
+      }
+    },
+    {
+      "path": "assets/items/u_atlas_of_ends.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "atlas_of_ends",
+      "id": "atlas_of_ends",
+      "slot": null,
+      "name": "Atlas of Ends",
+      "description": "A book of maps to places that have not ended yet. The last page is blank, and the blank page is yours.",
+      "source": {
+        "base": "dawn_codex",
+        "n": "Atlas of Ends",
+        "ilvl": 58,
+        "stats": {
+          "int": 10,
+          "spell": 55,
+          "focus": 40,
+          "spellPct": 12,
+          "cheatDeath": 1
+        },
+        "lore": "A book of maps to places that have not ended yet. The last page is blank, and the blank page is yours."
+      }
+    },
+    {
+      "path": "assets/items/u_cinder_ring.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "cinder_ring",
+      "id": "cinder_ring",
+      "slot": null,
+      "name": "Cinder Ring",
+      "description": "A ring of black glass with one coal set in it. The coal has been burning since before the ring was made.",
+      "source": {
+        "base": "corona_ring",
+        "n": "Cinder Ring",
+        "ilvl": 47,
+        "stats": {
+          "hp": 60,
+          "spell": 20,
+          "dmg": 10,
+          "dotPct": 30
+        },
+        "lore": "A ring of black glass with one coal set in it. The coal has been burning since before the ring was made."
+      }
+    },
+    {
+      "path": "assets/items/u_dawnsmith.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "dawnsmith",
+      "id": "dawnsmith",
+      "slot": null,
+      "name": "Dawnsmith",
+      "description": "A Lamplighter smith's hammer, struck against a black anvil on the day the sun was put to sleep. It still rings when something wakes.",
+      "source": {
+        "base": "anvil_breaker",
+        "n": "Dawnsmith",
+        "ilvl": 44,
+        "dmg": [
+          30,
+          50
+        ],
+        "stats": {
+          "str": 10,
+          "vit": 5,
+          "dmg": 20,
+          "dmgStatus": 25,
+          "armor": 8
+        },
+        "lore": "A Lamplighter smith's hammer, struck against a black anvil on the day the sun was put to sleep. It still rings when something wakes."
+      }
+    },
+    {
+      "path": "assets/items/u_eclipse_mace.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "eclipse_mace",
+      "id": "eclipse_mace",
+      "slot": null,
+      "name": "Eclipse Mace",
+      "description": "One face bright, one face black. The Lamplighters swung it bright side down, so that the dark would remember who was asking.",
+      "source": {
+        "base": "noonday_mace",
+        "n": "Eclipse Mace",
+        "ilvl": 54,
+        "dmg": [
+          40,
+          62
+        ],
+        "stats": {
+          "str": 8,
+          "wil": 8,
+          "holy": 50,
+          "dmg": 15,
+          "dreadRes": 15
+        },
+        "lore": "One face bright, one face black. The Lamplighters swung it bright side down, so that the dark would remember who was asking."
+      }
+    },
+    {
+      "path": "assets/items/u_emberplate.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "emberplate",
+      "id": "emberplate",
+      "slot": null,
+      "name": "Emberplate",
+      "description": "Plate that was quenched in ash instead of water. Anything that strikes it comes away with singed fingers and second thoughts.",
+      "source": {
+        "base": "sunforged_plate",
+        "n": "Emberplate",
+        "ilvl": 47,
+        "armor": 22,
+        "stats": {
+          "vit": 8,
+          "hp": 60,
+          "armorPct": 8,
+          "thorns": 12
+        },
+        "lore": "Plate that was quenched in ash instead of water. Anything that strikes it comes away with singed fingers and second thoughts."
+      }
+    },
+    {
+      "path": "assets/items/u_foreman_pick.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "foreman_pick",
+      "id": "foreman_pick",
+      "slot": null,
+      "name": "The Foreman's Pick",
+      "description": "The Ironforeman never once put it down. The shaft is worn to the shape of a hand that no longer needs to be there.",
+      "source": {
+        "base": "headsman",
+        "n": "The Foreman's Pick",
+        "ilvl": 20,
+        "boss": true,
+        "dmg": [
+          22,
+          42
+        ],
+        "stats": {
+          "str": 6,
+          "dmg": 14,
+          "thorns": 8,
+          "hp": 25,
+          "crit": 5
+        },
+        "lore": "The Ironforeman never once put it down. The shaft is worn to the shape of a hand that no longer needs to be there."
+      }
+    },
+    {
+      "path": "assets/items/u_gaoler_chain.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "gaoler_chain",
+      "id": "gaoler_chain",
+      "slot": null,
+      "name": "The Gaoler's Chain",
+      "description": "Each link was forged for a prisoner and given a name. The chain is heavy with them, and it hits back for all of them.",
+      "source": {
+        "base": "gaol_flail",
+        "n": "The Gaoler's Chain",
+        "ilvl": 50,
+        "dmg": [
+          32,
+          50
+        ],
+        "stats": {
+          "str": 10,
+          "vit": 6,
+          "thorns": 25,
+          "lifesteal": 5
+        },
+        "lore": "Each link was forged for a prisoner and given a name. The chain is heavy with them, and it hits back for all of them."
+      }
+    },
+    {
+      "path": "assets/items/u_glass_edge.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "glass_edge",
+      "id": "glass_edge",
+      "slot": null,
+      "name": "Glass Edge",
+      "description": "Sand fused by the Radiant's first glance, ground to an edge one grain wide. It cuts light, sound and, on a good day, doubt.",
+      "source": {
+        "base": "eclipse_blade",
+        "n": "Glass Edge",
+        "ilvl": 48,
+        "dmg": [
+          38,
+          58
+        ],
+        "stats": {
+          "str": 9,
+          "crit": 15,
+          "critDmg": 50,
+          "dmg": 15,
+          "dmgStatus": 20
+        },
+        "lore": "Sand fused by the Radiant's first glance, ground to an edge one grain wide. It cuts light, sound and, on a good day, doubt."
+      }
+    },
+    {
+      "path": "assets/items/u_hungering_scythe.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "hungering_scythe",
+      "id": "hungering_scythe",
+      "slot": null,
+      "name": "The Hungering Scythe",
+      "description": "A scythe of frozen night that was never sharpened, only fed. It takes what it cuts and is never quite full.",
+      "source": {
+        "base": "black_scythe",
+        "n": "The Hungering Scythe",
+        "ilvl": 52,
+        "dmg": [
+          24,
+          38
+        ],
+        "stats": {
+          "int": 10,
+          "spell": 52,
+          "lifesteal": 10,
+          "dotPct": 40
+        },
+        "lore": "A scythe of frozen night that was never sharpened, only fed. It takes what it cuts and is never quite full."
+      }
+    },
+    {
+      "path": "assets/items/u_lamplighters_crook.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "lamplighters_crook",
+      "id": "lamplighters_crook",
+      "slot": null,
+      "name": "The Lamplighter's Crook",
+      "description": "A hooked staff for lifting the wicks of the tallest lamps. Every Lamplighter carried one. This one has lifted rather more than wicks.",
+      "source": {
+        "base": "radiant_staff",
+        "n": "The Lamplighter's Crook",
+        "ilvl": 46,
+        "dmg": [
+          22,
+          34
+        ],
+        "stats": {
+          "int": 8,
+          "wil": 6,
+          "spell": 44,
+          "holy": 30,
+          "lightEff": 20
+        },
+        "lore": "A hooked staff for lifting the wicks of the tallest lamps. Every Lamplighter carried one. This one has lifted rather more than wicks."
+      }
+    },
+    {
+      "path": "assets/items/u_mothmother_veil.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "mothmother_veil",
+      "id": "mothmother_veil",
+      "slot": null,
+      "name": "Veil of the Moth-Mother",
+      "description": "Ten thousand wings, stitched by patient hands. When the lamps gutter, it flutters toward the light and takes you with it.",
+      "source": {
+        "base": "starwoven_robe",
+        "n": "Veil of the Moth-Mother",
+        "ilvl": 34,
+        "boss": true,
+        "armor": 10,
+        "stats": {
+          "int": 7,
+          "spell": 28,
+          "dodge": 8,
+          "dreadRes": 15,
+          "regen": 3
+        },
+        "lore": "Ten thousand wings, stitched by patient hands. When the lamps gutter, it flutters toward the light and takes you with it."
+      }
+    },
+    {
+      "path": "assets/items/u_nameless_hood.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "nameless_hood",
+      "id": "nameless_hood",
+      "slot": null,
+      "name": "The Nameless Hood",
+      "description": "Whoever wears it is forgotten by the next room. Whoever made it was forgotten first, which is how it works so well.",
+      "source": {
+        "base": "starseer_circlet",
+        "n": "The Nameless Hood",
+        "ilvl": 52,
+        "armor": 8,
+        "stats": {
+          "agi": 7,
+          "wil": 6,
+          "dodge": 10,
+          "dreadRes": 30,
+          "resolve": 25
+        },
+        "lore": "Whoever wears it is forgotten by the next room. Whoever made it was forgotten first, which is how it works so well."
+      }
+    },
+    {
+      "path": "assets/items/u_nebula_robe.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "nebula_robe",
+      "id": "nebula_robe",
+      "slot": null,
+      "name": "Nebula Robe",
+      "description": "Cloth woven from the dust between the stars. Every fold is a small night with a few cold lights in it.",
+      "source": {
+        "base": "nightweave_robe",
+        "n": "Nebula Robe",
+        "ilvl": 49,
+        "armor": 12,
+        "stats": {
+          "int": 9,
+          "spell": 40,
+          "focus": 30,
+          "focusRegen": 3,
+          "spellPct": 8
+        },
+        "lore": "Cloth woven from the dust between the stars. Every fold is a small night with a few cold lights in it."
+      }
+    },
+    {
+      "path": "assets/items/u_nightveil_talons.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "nightveil_talons",
+      "id": "nightveil_talons",
+      "slot": null,
+      "name": "Nightveil Talons",
+      "description": "Worn by a masked duellist who walked between the veils and was never seen to arrive. The blades are still wet, and it is not rain.",
+      "source": {
+        "base": "night_talons",
+        "n": "Nightveil Talons",
+        "ilvl": 47,
+        "dmg": [
+          24,
+          40
+        ],
+        "stats": {
+          "agi": 10,
+          "crit": 16,
+          "dodge": 10,
+          "critDmg": 45
+        },
+        "lore": "Worn by a masked duellist who walked between the veils and was never seen to arrive. The blades are still wet, and it is not rain."
+      }
+    },
+    {
+      "path": "assets/items/u_ninth_lamp.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "ninth_lamp",
+      "id": "ninth_lamp",
+      "slot": null,
+      "name": "The Ninth Lamp",
+      "description": "The last lamp of the last Lamplighter. Maelis carried it four hundred years, and the flame has never once been fed.",
+      "source": {
+        "base": "noon_lantern",
+        "n": "The Ninth Lamp",
+        "ilvl": 55,
+        "boss": true,
+        "stats": {
+          "lightMax": 320,
+          "lightEff": 55,
+          "resolve": 35,
+          "regen": 6,
+          "dreadRes": 20
+        },
+        "lore": "The last lamp of the last Lamplighter. Maelis carried it four hundred years, and the flame has never once been fed."
+      }
+    },
+    {
+      "path": "assets/items/u_orrery_eye.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "orrery_eye",
+      "id": "orrery_eye",
+      "slot": null,
+      "name": "Eye of the Orrery",
+      "description": "The lens at the centre of the Sovereign. It has watched every star wheel past and has opinions about the last one.",
+      "source": {
+        "base": "sunheart_amulet",
+        "n": "Eye of the Orrery",
+        "ilvl": 46,
+        "boss": true,
+        "stats": {
+          "int": 9,
+          "spell": 40,
+          "crit": 12,
+          "focus": 25,
+          "lightEff": 20
+        },
+        "lore": "The lens at the centre of the Sovereign. It has watched every star wheel past and has opinions about the last one."
+      }
+    },
+    {
+      "path": "assets/items/u_polaris.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "polaris",
+      "id": "polaris",
+      "slot": null,
+      "name": "Polaris",
+      "description": "The astronomers pointed it at the one star that never moved. The star has since moved. The staff still points where it was.",
+      "source": {
+        "base": "comet_staff",
+        "n": "Polaris",
+        "ilvl": 48,
+        "dmg": [
+          24,
+          36
+        ],
+        "stats": {
+          "int": 10,
+          "spell": 48,
+          "crit": 12,
+          "critDmg": 40
+        },
+        "lore": "The astronomers pointed it at the one star that never moved. The star has since moved. The staff still points where it was."
+      }
+    },
+    {
+      "path": "assets/items/u_radiant_crown.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "radiant_crown",
+      "id": "radiant_crown",
+      "slot": null,
+      "name": "Crown of the Radiant",
+      "description": "A ring of pale fire that fits no head and every head. It speaks to whoever wears it, in their own voice, and it is very kind.",
+      "source": {
+        "base": "sunwarden_helm",
+        "n": "Crown of the Radiant",
+        "ilvl": 60,
+        "boss": true,
+        "armor": 20,
+        "stats": {
+          "wil": 10,
+          "int": 10,
+          "resolve": 40,
+          "hp": 90,
+          "spellPct": 10,
+          "dreadRes": 25
+        },
+        "lore": "A ring of pale fire that fits no head and every head. It speaks to whoever wears it, in their own voice, and it is very kind."
+      }
+    },
+    {
+      "path": "assets/items/u_starmap_amulet.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "starmap_amulet",
+      "id": "starmap_amulet",
+      "slot": null,
+      "name": "Starmap Amulet",
+      "description": "An engraved chart of a sky that has since been rearranged. It is accurate only for those who remember the old one.",
+      "source": {
+        "base": "sunheart_amulet",
+        "n": "Starmap Amulet",
+        "ilvl": 45,
+        "stats": {
+          "int": 8,
+          "spell": 30,
+          "focus": 25,
+          "focusRegen": 3,
+          "lightEff": 20
+        },
+        "lore": "An engraved chart of a sky that has since been rearranged. It is accurate only for those who remember the old one."
+      }
+    },
+    {
+      "path": "assets/items/u_sunforge_hammer.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "sunforge_hammer",
+      "id": "sunforge_hammer",
+      "slot": null,
+      "name": "Hammer of the Sunforger",
+      "description": "Kaldrec beat the first lantern out of a sliver of the Radiant's eye with this. The head is still warm, and it is not from the forge.",
+      "source": {
+        "base": "sunforged_hammer",
+        "n": "Hammer of the Sunforger",
+        "ilvl": 50,
+        "boss": true,
+        "dmg": [
+          40,
+          66
+        ],
+        "stats": {
+          "str": 12,
+          "vit": 6,
+          "dmg": 25,
+          "dmgStatus": 30,
+          "thorns": 10
+        },
+        "lore": "Kaldrec beat the first lantern out of a sliver of the Radiant's eye with this. The head is still warm, and it is not from the forge."
+      }
+    },
+    {
+      "path": "assets/items/u_sunspear_arbalest.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "sunspear_arbalest",
+      "id": "sunspear_arbalest",
+      "slot": null,
+      "name": "Sunspear Arbalest",
+      "description": "It fires a bolt of pure noon. By the time you hear the string, the target has already been noticed by the sun.",
+      "source": {
+        "base": "zenith_crossbow",
+        "n": "Sunspear Arbalest",
+        "ilvl": 55,
+        "dmg": [
+          34,
+          54
+        ],
+        "stats": {
+          "agi": 11,
+          "crit": 22,
+          "critDmg": 60,
+          "dmg": 20,
+          "firstStrike": 30
+        },
+        "lore": "It fires a bolt of pure noon. By the time you hear the string, the target has already been noticed by the sun."
+      }
+    },
+    {
+      "path": "assets/items/u_tidewalker_boots.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "tidewalker_boots",
+      "id": "tidewalker_boots",
+      "slot": null,
+      "name": "Tidewalker Boots",
+      "description": "Salvaged from a drowned astronomer who kept walking. The soles never touch the floor, only what floods it.",
+      "source": {
+        "base": "voidstep_boots",
+        "n": "Tidewalker Boots",
+        "ilvl": 44,
+        "armor": 7,
+        "stats": {
+          "agi": 8,
+          "dodge": 15,
+          "hp": 40,
+          "regen": 4,
+          "lightEff": 15
+        },
+        "lore": "Salvaged from a drowned astronomer who kept walking. The soles never touch the floor, only what floods it."
+      }
+    },
+    {
+      "path": "assets/items/u_umbral_fang.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "umbral_fang",
+      "id": "umbral_fang",
+      "slot": null,
+      "name": "Umbral Fang",
+      "description": "It is drawn before the hand decides to. Its first cut is always the worst one, and it likes to be the first.",
+      "source": {
+        "base": "nightglass_dirk",
+        "n": "Umbral Fang",
+        "ilvl": 51,
+        "dmg": [
+          30,
+          48
+        ],
+        "stats": {
+          "agi": 10,
+          "crit": 20,
+          "critDmg": 55,
+          "lifesteal": 8,
+          "firstStrike": 25
+        },
+        "lore": "It is drawn before the hand decides to. Its first cut is always the worst one, and it likes to be the first."
+      }
+    },
+    {
+      "path": "assets/items/u_wardens_bulwark.webp",
+      "kind": "unique",
+      "type": "unique",
+      "key": "wardens_bulwark",
+      "id": "wardens_bulwark",
+      "slot": null,
+      "name": "The Warden's Bulwark",
+      "description": "The jailers of the Nine stood behind it while the sun screamed. The dents on the face are all on the inside.",
+      "source": {
+        "base": "bulwark",
+        "n": "The Warden's Bulwark",
+        "ilvl": 53,
+        "armor": 22,
+        "stats": {
+          "vit": 9,
+          "hp": 70,
+          "resolve": 30,
+          "thorns": 15,
+          "armorPct": 6
+        },
+        "lore": "The jailers of the Nine stood behind it while the sun screamed. The dents on the face are all on the inside."
+      }
+    },
+    {
+      "path": "assets/items/veil_of_dusk.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "veil_of_dusk",
+      "id": "veil_of_dusk",
+      "slot": "offhand",
+      "name": "Veil of Dusk",
+      "description": "",
+      "source": {
+        "n": "Veil of Dusk",
+        "slot": "offhand",
+        "ot": "veil",
+        "ic": "moon",
+        "tier": 3,
+        "stats": {
+          "dodge": 8,
+          "crit": 5,
+          "dreadRes": 5
+        }
+      }
+    },
+    {
+      "path": "assets/items/veil_of_glass.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "veil_of_glass",
+      "id": "veil_of_glass",
+      "slot": "offhand",
+      "name": "Veil of Glass",
+      "description": "",
+      "source": {
+        "n": "Veil of Glass",
+        "slot": "offhand",
+        "ot": "veil",
+        "ic": "moon",
+        "tier": 4,
+        "stats": {
+          "dodge": 12,
+          "crit": 8,
+          "dreadRes": 8
+        }
+      }
+    },
+    {
+      "path": "assets/items/veil_talons.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "veil_talons",
+      "id": "veil_talons",
+      "slot": "weapon",
+      "name": "Veil Talons",
+      "description": "",
+      "source": {
+        "n": "Veil Talons",
+        "slot": "weapon",
+        "wt": "claw",
+        "ic": "dagger",
+        "tier": 2,
+        "dmg": [
+          5,
+          10
+        ],
+        "scale": "agi",
+        "stats": {
+          "crit": 6,
+          "dodge": 2
+        }
+      }
+    },
+    {
+      "path": "assets/items/voidstep_boots.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "voidstep_boots",
+      "id": "voidstep_boots",
+      "slot": "feet",
+      "name": "Voidstep Boots",
+      "description": "",
+      "source": {
+        "n": "Voidstep Boots",
+        "slot": "feet",
+        "ic": "boots",
+        "tier": 5,
+        "armor": 5,
+        "stats": {
+          "dodge": 10
+        }
+      }
+    },
+    {
+      "path": "assets/items/warden_flail.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "warden_flail",
+      "id": "warden_flail",
+      "slot": "weapon",
+      "name": "Warden's Flail",
+      "description": "",
+      "source": {
+        "n": "Warden's Flail",
+        "slot": "weapon",
+        "wt": "flail",
+        "ic": "mace",
+        "tier": 2,
+        "dmg": [
+          7,
+          12
+        ],
+        "scale": "str",
+        "stats": {
+          "thorns": 4
+        }
+      }
+    },
+    {
+      "path": "assets/items/zenith_crossbow.webp",
+      "kind": "item",
+      "type": "item",
+      "key": "zenith_crossbow",
+      "id": "zenith_crossbow",
+      "slot": "weapon",
+      "name": "Zenith Crossbow",
+      "description": "",
+      "source": {
+        "n": "Zenith Crossbow",
+        "slot": "weapon",
+        "wt": "crossbow",
+        "ic": "bolt",
+        "tier": 5,
+        "dmg": [
+          27,
+          44
+        ],
+        "scale": "agi",
+        "stats": {
+          "crit": 17
+        }
+      }
+    }
+  ]
+}

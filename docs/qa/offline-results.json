@@ -1,0 +1,9 @@
+{
+  "cache": "gloamreach-v3.0.0",
+  "manifestFiles": 447,
+  "status": "PASS",
+  "offlineFilesRead": 447,
+  "offlineImagesDecoded": 393,
+  "controller": true,
+  "serverStopped": true
+}

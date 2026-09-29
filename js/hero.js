@@ -61,6 +61,7 @@ S.hero = {
         ${kv('Focus Regen', s.focusRegen + '/turn')}${kv('Resolve', s.resolve)}
         ${s.dotPct ? kv('Ailment Dmg', '+' + s.dotPct + '%') : ''}${s.dmgStatus ? kv('Vs Afflicted', '+' + s.dmgStatus + '%') : ''}
         ${s.firstStrike ? kv('First Strike', '+' + s.firstStrike + '%') : ''}${s.cheatDeath ? kv('Deathless', 'Once per fight') : ''}
+        ${s.thorns ? kv('Thorns', s.thorns) : ''}
       </div>
       <h3>Survival</h3>
       <div class="card statgrid">
@@ -109,6 +110,9 @@ S.bag = {
       if (P.dungeon) body += '<p class="tiny muted mt">Camp Kits and Homeward Ash are used from the dungeon action bar.</p>';
     } else {
       body += Object.keys(G.D.MATS).map(id => { const m = G.D.MATS[id]; return `<div class="item-row" style="cursor:default">${G.UI.artIcon(G.ART.mat(id))}<div class="info"><div class="nm">${m.n} <span class="muted">×${P.mats[id] || 0}</span></div><div class="sub">${m.desc}</div></div></div>`; }).join('');
+      const runes = Object.entries(G.D.RUNES || {}).filter(([id]) => (P.runes || {})[id] > 0);
+      body += '<h3>Runes</h3>' + (runes.length ? runes.map(([id, r]) => `<div class="item-row" style="cursor:default">${G.UI.artIcon(G.ART.rune(id))}<div class="info"><div class="nm">${r.n} <span class="muted">×${P.runes[id]}</span></div><div class="sub">${Object.entries(r.stat).map(([k, v]) => E.statLine(k, v)).join(', ')}<br>Fits: ${r.slots.map(k => G.D.SLOT_INFO[k].n).join(', ')}</div></div></div>`).join('') : '<p class="muted small">No loose runes. Craft and socket them at the Ember Forge.</p>');
+      if (P.flags.forge && !P.dungeon) body += '<button class="btn small block mt" data-a="goLoc" data-k="forge">Visit the Ember Forge</button>';
       const q = Object.keys(P.qitems).filter(k => P.qitems[k]);
       body += '<h3>Quest Items</h3>' + (q.length ? q.map(id => `<div class="item-row" style="cursor:default">${G.UI.artIcon(G.ART.qitem(id))}<div class="info"><div class="nm gold">${G.D.QITEMS[id].n}</div><div class="sub">${G.D.QITEMS[id].desc}</div></div></div>`).join('') : '<p class="muted small">None.</p>');
     }
@@ -119,7 +123,7 @@ S.bag = {
 function canUseHere(id) {
   const p = G.S;
   if (['ash', 'campkit'].includes(id) || G.D.CONS[id].combatOnly) return false;
-  if (id === 'oil') return !!p.dungeon;
+  if (id === 'oil' || (G.D.CONS[id].fx && G.D.CONS[id].fx.light)) return !!p.dungeon;
   return true;
 }
 function itemRow(it, right) {

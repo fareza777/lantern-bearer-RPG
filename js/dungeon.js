@@ -184,7 +184,9 @@ G.Dungeon = {
     const d = this.d(), Z = G.D.ZONES[d.zone];
     const sizes = [[1, 1, 2], [1, 2, 2, 3], [2, 2, 3]];
     const n = Z.endless ? U.rand(2, 3) : U.pick(sizes[U.clamp(d.floor, 1, sizes.length) - 1]);
-    return Array.from({ length: n }, () => ({ id: U.weighted(Z.pool, x => x[1])[0], lvl: d.lvl + U.rand(0, 1) }));
+    const eligible = Z.endless ? Z.pool.filter(([id]) => G.D.ENEMIES[id].lvl <= d.lvl + 5) : Z.pool;
+    const pool = eligible.length ? eligible : Z.pool;
+    return Array.from({ length: n }, () => ({ id: U.weighted(pool, x => x[1])[0], lvl: d.lvl + U.rand(0, 1) }));
   },
   // Elites or bosses of the story zones the hero has opened, near the current depth
   endlessFoes(kind) {
@@ -193,7 +195,7 @@ G.Dungeon = {
       const Z = G.D.ZONES[z], id = Z[kind];
       if (Z.endless || !id || !G.D.ENEMIES[id] || !E.zoneUnlocked(z)) return;
       const e = G.D.ENEMIES[id];
-      if (e.final || e.final2 || e.lvl > d.lvl + 5 || ids.includes(id)) return;
+      if (e.final || e.final2 || e.final3 || e.lvl > d.lvl + 5 || ids.includes(id)) return;
       ids.push(id);
     });
     if (kind === 'boss' && ids.length < 3) this.endlessFoes('elite').forEach(id => { if (!ids.includes(id)) ids.push(id); });
@@ -269,7 +271,7 @@ G.Dungeon = {
     const res = E.applyFx(br.fx);
     p.stats.events++;
     if (ev.once) p.flags['ev_' + id] = true;
-    if (room && !res.shop) room.clr = true;
+    if (room && !res.shop && !res.fight) room.clr = true;
     if (res.reveal) this.revealAll();
     this.pend = res;
     this.log(`<b>${ev.title}:</b> ${br.txt}`);
@@ -375,8 +377,8 @@ G.Dungeon = {
       onWin: () => {
         r.t = Z.endless ? 'stairs' : 'portal'; r.clr = false;
         const e = G.D.ENEMIES[id], f = G.S.flags;
-        const choice = e.final && !f.ended ? 'final_choice' : e.final2 && !f.ended2 ? 'heart_choice' : null;
-        if (choice && G.D.EVENTS[choice]) { E.save(); G.UI.go('dungeon'); setTimeout(() => this.showEvent(choice, null), 300); return; }
+        const choice = e.final && !f.ended ? 'final_choice' : e.final2 && !f.ended2 ? 'heart_choice' : e.final3 && !f.ended3 ? 'sun_choice' : null;
+        if (choice && G.D.EVENTS[choice]) { d.pendingEnding = choice; E.save(); G.UI.go('dungeon'); return; }
         E.save(); G.UI.go('dungeon');
         setTimeout(() => Z.endless ? this.promptDescend() : this.promptPortal(), 400);
       },
@@ -504,6 +506,11 @@ S.dungeon = {
   },
   after(prm, isRefresh) {
     G.Audio.ambient('dungeon');
+    const d = G.S.dungeon;
+    if (!isRefresh && d && d.pendingEnding && G.D.EVENTS[d.pendingEnding]) {
+      setTimeout(() => { if (G.S.dungeon === d && G.UI.is('dungeon')) G.Dungeon.showEvent(d.pendingEnding, null); }, 300);
+      return;
+    }
     if (!isRefresh) S.checkLevel();
   },
 };

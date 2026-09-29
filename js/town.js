@@ -6,6 +6,7 @@ const LOCS = {
   hall: { n: 'Wardens\' Hall', ic: 'shield', npc: 'maelis', d: 'Main quests and the bounty board.' },
   inn: { n: 'The Guttering Candle', ic: 'mug', npc: 'hesk', d: 'Rest, rumors, side work and your stash.' },
   smith: { n: 'Anvil & Ash', ic: 'anvil', npc: 'orla', d: 'Buy, sell, upgrade and salvage gear.' },
+  forge: { n: 'The Ember Forge', ic: 'flame', npc: 'vashti', d: 'Craft gear and supplies, socket runes, reforge.', req: () => G.S.flags.forge },
   apoth: { n: 'Bitterroot & Bone', ic: 'mortar', npc: 'wren', d: 'Draughts, tonics, oil and supplies.' },
   chapel: { n: 'Chapel of the Wick', ic: 'chapel', npc: 'caddoc', d: 'Cleanse Dread, receive blessings, respec.' },
   curio: { n: 'Osk\'s Curios', ic: 'coinbag', npc: 'osk', d: 'Rare relics from the deep. Expensive.', req: () => G.S.flags.osk_free },
@@ -43,7 +44,8 @@ S.town = {
     if (next) {
       const q = G.D.QUESTS[next];
       hint = E.qAvailable(next) ? `Speak with ${G.D.NPCS[q.giver].n} at the Wardens' Hall.` : E.qReady(next) ? `Report to ${G.D.NPCS[q.giver].n}: ${q.n}.` : q.desc;
-    } else if (p.flags.ended2) hint = 'The dark is quiet. The Reach endures, and so do you.';
+    } else if (p.flags.ended3) hint = 'The last lamp still burns. Your chronicle continues in the deep.';
+    else if (p.flags.ended2) hint = 'The dark is quiet. The Reach endures, and so do you.';
     else if (p.flags.ended) hint = 'The Endless Undercroft awaits beneath the Cathedral.';
     return `${G.UI.hud()}
     <div class="scroll grow">
@@ -79,7 +81,7 @@ S.loc = {
     </div>
     ${G.nav('home')}`;
   },
-  after(prm) { if (prm.k === 'smith') S.tip('smith'); if (prm.k === 'gate') S.tip('gate'); S.checkLevel(); },
+  after(prm) { if (prm.k === 'smith') S.tip('smith'); if (prm.k === 'forge') S.tip('forge'); if (prm.k === 'gate') S.tip('gate'); S.checkLevel(); },
 };
 G.A.toTown = () => G.UI.go('town');
 
@@ -99,7 +101,18 @@ G.A.qOffer = d => {
   G.UI.modal(`<h2>${q.n}</h2><div class="body mt"><p style="line-height:1.6">${q.offer}</p><div class="card small"><b>Objective:</b> ${q.desc}</div></div>
     <div class="foot btn-grid"><button class="btn ghost" data-a="closeModal">Not now</button><button class="btn primary" data-a="qAccept" data-q="${d.q}">Accept</button></div>`, { center: true });
 };
-G.A.qAccept = d => { G.UI.closeModal(); E.accept(d.q); G.UI.refresh(); };
+G.A.qAccept = d => {
+  G.UI.closeModal();
+  const available = E.qAvailable(d.q);
+  E.accept(d.q);
+  if (available && d.q === 'm13' && E.qState('m13') === 'active' && !G.S.flags.intro3Seen && G.D.INTRO3 && G.D.INTRO3.length) {
+    G.S.flags.intro3Seen = true;
+    E.save();
+    G.UI.go('cine', { slides: G.D.INTRO3, music: 'ending', voMap: G.D.INTRO3.map((_, i) => 'intro3_' + (i + 1)), done: () => G.UI.go('loc', { k: 'hall' }) });
+    return;
+  }
+  G.UI.refresh();
+};
 G.A.qTurnIn = d => {
   const q = G.D.QUESTS[d.q];
   const res = E.turnIn(d.q);
@@ -111,6 +124,26 @@ G.A.qTurnIn = d => {
 
 // ---------------- Location bodies ----------------
 const LOCBODY = {
+  forge(prm) {
+    const p = G.S, t = prm.tab || 'craft';
+    if (!p.flags.forge) return '<p class="muted">The Ember Forge is cold. Continue the chronicle to kindle it.</p>';
+    let h = `<div class="tabs" style="margin:0 -14px 12px">${[['craft', 'Craft'], ['runes', 'Socket runes'], ['reforge', 'Reforge']].map(([k, n]) => `<button class="${t === k ? 'on' : ''}" data-a="locTab" data-t="${k}">${n}</button>`).join('')}</div>`;
+    if (t === 'craft') {
+      const cat = prm.cat || 'weapon';
+      h += `<div class="row wrap mb" style="gap:6px">${[['weapon', 'Weapons'], ['armor', 'Armor'], ['jewel', 'Jewels'], ['lantern', 'Lanterns'], ['consumable', 'Supplies'], ['rune', 'Runes']].map(([k, n]) => `<button class="btn small ${cat === k ? 'primary' : 'ghost'}" data-a="forgeCategory" data-k="${k}">${n}</button>`).join('')}</div>`;
+      h += Object.entries(G.D.RECIPES || {}).filter(([, r]) => r.cat === cat).map(([id, r]) => {
+        const unlocked = E.recipeAvailable(id), out = r.out;
+        const desc = out.rune ? runeDesc(G.D.RUNES[out.rune]) : out.cons ? G.D.CONS[out.cons].desc : `${G.D.RARITY[r.rarity || 2].n} · Item level ${p.level}`;
+        return `<div class="card"><div class="row between">${out.rune ? G.UI.artIcon(G.ART.rune(out.rune)) : ''}<b class="gold grow">${r.n}${out.cons && out.n > 1 ? ' ×' + out.n : ''}</b><span class="chip">Lv ${r.lvl}</span></div><div class="small muted mt">${desc}</div><div class="small mt">${forgeCosts({ gold: r.gold, mats: r.mats })}</div>${!unlocked ? `<p class="tiny bad">${p.level < r.lvl ? 'Requires level ' + r.lvl + '. ' : ''}${r.flag && !p.flags[r.flag] ? 'Defeat the Sunforger and turn in his quest.' : ''}</p>` : ''}${out.base && E.bagFull() ? '<p class="tiny bad">Make room in your backpack.</p>' : ''}<button class="btn small primary block mt" data-a="forgeCraft" data-k="${id}" ${E.canCraft(id) ? '' : 'disabled'}>Craft</button></div>`;
+      }).join('');
+    } else {
+      const items = [...Object.values(p.equip).filter(Boolean), ...p.bag].filter(it => t !== 'reforge' || !it.unique);
+      h += `<p class="small muted">${t === 'runes' ? 'Each item holds one rune. Replacing or removing a rune returns it to your collection. Choose an item below.' : 'Reroll an item’s properties at its current level and rarity. Upgrades and its rune are preserved. Unique relics cannot be reforged.'}</p>`;
+      h += items.length ? items.map(it => S.itemRow(it, { act: t === 'runes' ? 'forgeSocketView' : 'forgeReforgeView', label: t === 'runes' ? (it.rune ? 'Runed' : 'Empty rune slot') : `${E.reforgeCost(it).gold}g` })).join('') : '<p class="muted small">No eligible equipment.</p>';
+    }
+    h += `<button class="btn ghost small block mt" data-a="forgeTemper">Temper equipment at Anvil & Ash</button>`;
+    return h + questSection('vashti');
+  },
   hall(prm) {
     const p = G.S, b = p.bounties;
     let h = questSection('maelis');
@@ -209,6 +242,30 @@ const LOCBODY = {
 };
 
 // ---------------- Actions ----------------
+function runeDesc(r) {
+  return Object.entries(r.stat).map(([k, v]) => E.statLine(k, v)).join(', ') + '<br><span class="tiny">Fits: ' + r.slots.map(k => G.D.SLOT_INFO[k].n).join(', ') + '</span>';
+}
+function forgeCosts(c) {
+  return `<span class="${G.S.gold >= c.gold ? 'gold' : 'bad'}">${c.gold} gold</span>` + Object.entries(c.mats || {}).map(([k, n]) => ` · <span class="${(G.S.mats[k] || 0) >= n ? 'muted' : 'bad'}">${G.D.MATS[k].n} ${G.S.mats[k] || 0}/${n}</span>`).join('');
+}
+function forgeItem(uid) { return [...Object.values(G.S.equip).filter(Boolean), ...G.S.bag].find(it => it.uid === uid); }
+function forgeSuccess(message) { G.UI.closeModal(); G.UI.toast(message, 'gold'); G.UI.refresh(); }
+G.A.forgeCategory = d => { G.UI.go('loc', { k: 'forge', tab: 'craft', cat: d.k }); };
+G.A.forgeTemper = () => G.UI.go('loc', { k: 'smith', tab: 'upgrade' });
+G.A.forgeCraft = d => { if (E.craft(d.k)) forgeSuccess(`Crafted ${G.D.RECIPES[d.k].n}.`); };
+G.A.forgeSocketView = d => {
+  const it = forgeItem(d.u); if (!it || !G.S.flags.forge || G.S.dungeon) return;
+  const runes = Object.entries(G.D.RUNES).filter(([id, r]) => (G.S.runes[id] || 0) > 0 && r.slots.includes(it.slot));
+  G.UI.modal(`<h2>Socket a rune</h2><div class="small">${E.itemName(it)}</div><div class="body mt">${it.rune ? `<div class="card small">Current: ${it.rune.n}<button class="btn small ghost block mt" data-a="forgeRemoveRune" data-u="${it.uid}">Remove and recover rune</button></div>` : ''}${runes.length ? runes.map(([id, r]) => `<div class="card"><div class="row">${G.UI.artIcon(G.ART.rune(id))}<b style="color:${r.color}">${r.n} ×${G.S.runes[id]}</b></div><div class="small mt">${runeDesc(r)}</div><button class="btn primary small block mt" data-a="forgeSocket" data-u="${it.uid}" data-k="${id}">${it.rune ? 'Replace rune' : 'Socket rune'}</button></div>`).join('') : '<p class="muted small">No compatible runes in your collection. Craft one at the forge.</p>'}</div><div class="foot"><button class="btn ghost block" data-a="closeModal">Close</button></div>`);
+};
+G.A.forgeSocket = d => { if (E.socketRune(d.u, d.k)) forgeSuccess('Rune socketed.'); };
+G.A.forgeRemoveRune = d => { if (E.removeRune(d.u)) forgeSuccess('Rune recovered.'); };
+G.A.forgeReforgeView = d => {
+  const it = forgeItem(d.u); if (!it || it.unique || !G.S.flags.forge || G.S.dungeon) return;
+  const c = E.reforgeCost(it), ok = G.S.gold >= c.gold && Object.entries(c.mats).every(([k, n]) => (G.S.mats[k] || 0) >= n);
+  G.UI.modal(S.itemDetail(it, `<button class="btn ghost" data-a="closeModal">Keep</button><button class="btn primary" data-a="forgeReforge" data-u="${it.uid}" ${ok ? '' : 'disabled'}>Reforge</button>`).replace('<div class="foot', `<p class="small">Rerolling replaces the current properties and may produce a weaker item.</p><div class="small mt">${forgeCosts(c)}</div><div class="foot`));
+};
+G.A.forgeReforge = d => { if (E.reforge(d.u)) { forgeSuccess('Item reforged.'); G.A.forgeReforgeView(d); } };
 const restCost = () => 10 + G.S.level * 3;
 const cleanseCost = () => 15 + G.S.level * 5;
 const respecCost = () => 40 * G.S.level;

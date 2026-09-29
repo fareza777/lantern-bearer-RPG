@@ -1,6 +1,6 @@
 # GLOAMREACH: Chronicle of the Last Lantern
 
-A dark fantasy, text-driven dungeon crawler RPG for portrait mobile. It runs fully offline and saves locally. It is plain HTML, CSS and JavaScript with no build step and no dependencies.
+A dark fantasy, text-driven dungeon crawler RPG for portrait mobile. The web game uses plain HTML, CSS and JavaScript, with no runtime dependencies or application build step. Saves stay on your device. Offline play is available after the service worker finishes caching the game on a supported secure origin.
 
 ## Play it
 
@@ -15,9 +15,11 @@ python -m http.server 8765
 
 Then open `http://localhost:8765`. Use the browser's device toolbar (F12, then the phone icon) for a portrait phone view.
 
-A server is required. Opening `index.html` straight from disk works for play, but the service worker (offline cache) only runs over `http://`.
+A server is recommended. Use `http://localhost:8765` for local development; service workers accept localhost as a secure origin. Opening `index.html` from disk does not enable offline caching.
 
-**On a phone (same Wi-Fi):** run the server, find your PC's IP with `ipconfig`, and open `http://<PC-IP>:8765` on the phone. To install it as an app, use Chrome's menu and choose "Add to Home screen". After the first load it works offline.
+**On a phone (same Wi-Fi):** run the server, find your PC's IP with `ipconfig`, and open `http://<PC-IP>:8765` on the phone. This is useful for previewing, but ordinary LAN HTTP does **not** enable service-worker caching or reliable offline installation.
+
+**Install for offline play:** host the complete game folder over HTTPS, open it on the phone, and let the initial download finish. In Android Chrome, choose **Install app** or **Add to Home screen** from the menu. On iPhone, use Safari's Share menu, then **Add to Home Screen**. Open the installed app while online once, then verify that it launches in airplane mode. Saves belong to the browser/app origin; use export/import when moving between hosts or installations.
 
 ## The core loop
 
@@ -26,36 +28,67 @@ A server is required. Opening `index.html` straight from disk works for play, bu
 3. **Explore:** move room by room on a fogged 5x7 map. Rooms hold fights, events, traps, shrines, treasure, camps and a wandering merchant. Light drains as you go.
 4. **Fight or choose:** turn-based combat against telegraphed enemy intents, or text events with attribute checks.
 5. **Rewards:** gold, XP, materials, 5 rarities of gear, uniques, codex lore.
-6. **Upgrade:** level up (attributes and skill points), equip, upgrade and salvage gear, then go deeper.
+6. **Upgrade:** level up (attributes and skill points), equip, upgrade and salvage gear, then go deeper. In Act III, craft at the Ember Forge, socket runes, and reforge equipment.
 
-The story spans two acts. Act I: the first three zones and their bosses. Act II: **The Hungering Dark**, three new zones (the Ashen Archive, the Sunless Court, the Gloamheart) plus the Gallows Wood side dungeon, two new playable classes (Gravecaller and Duskwarden), and a final choice with 4 endings, then the Endless Undercroft. Level cap is 40.
+The story spans three acts, with a **level cap of 60**. Act I begins beneath Candlemere. Act II, **The Hungering Dark**, adds the Ashen Archive, Sunless Court, Gloamheart and Gallows Wood. Act III, **The Sunless Dawn**, continues with the Black Noon, Drowned Observatory, Cinderwaste, Hall of Nine Lamps and Sunken Sun, plus the Weeping Mines and Moth Warren side dungeons. The Endless Undercroft remains available for deeper expeditions.
+
+Choose among ten classes from level 1: Sellsword, Nightblade, Ashwright, Penitent, Gravecaller, Duskwarden, **Sunforger, Starseer, Veilwalker and Chainwarden**. Act III adds three final choices and endings, bringing the full chronicle to seven endings.
+
+Accept **The Black Noon** at the Wardens' Hall after completing Act II's main quest chain to unlock Vashti's **Ember Forge**. Its 76 recipes cover equipment, supplies and runes. Materials and level requirements appear on each recipe; advanced recipes unlock after the Sunforger quest. Each item accepts one compatible rune. Removing or replacing it returns the old rune to your collection. Reforging rerolls non-unique equipment while preserving its upgrade level and rune. Tempering equipment uses the existing smith upgrade service.
 
 Death: you lose 30% of carried gold and wake in town. In Hardcore, the save is deleted.
 
 ## Content at a glance
 
-- 6 classes, 8 backgrounds, 72 skills
-- 8 zones, 58 enemies with painted art, 12 bosses and elites with mechanics
-- 82 gear bases, 18 uniques (some only drop from their boss), 13 consumables
-- 34 quests, 56 exploration events, 41 codex entries, 22 rumors
-- Cinematic intro and endings: painted keyframes with Ken Burns motion, ElevenLabs voice-over and synced subtitles (narration volume in Settings)
+- 10 classes, 12 backgrounds, 148 skills
+- 14 zones, 98 enemies
+- 137 gear bases, 43 uniques, 25 consumables
+- 62 quests, 111 exploration events, 78 codex entries, 34 rumors
+- 76 crafting recipes, 16 runes, 7 endings
+- Cinematic prologues and endings with painted keyframes, motion, music and subtitles
+
+These counts come from the data loaded by `index.html`. Act III narration scripts are prepared, but **17 new voice clips are unavailable** because the ElevenLabs request returned HTTP 401. Act III cinematics use adaptive text subtitles and existing music; earlier available narration remains supported. Narration volume is in Settings.
 
 ## Saves
 
 - 3 save slots in the browser's `localStorage`. Autosaves after every meaningful action.
 - Export and import saves as text from Settings, in the Data section. Export appears when opened from inside a game.
 - Clearing browser site data deletes saves. Export first.
+- Loading older saves adds missing material/rune containers and Act III progression flags where appropriate. Existing characters, items and earlier ending flags remain intact; no restart is required. Keep an exported backup before changing versions.
+
+## Validation and offline cache
+
+Run from the project root with Node.js:
+
+```sh
+node tools/verify-content.cjs --allow-missing-voice
+node tools/test-gameplay.cjs
+node tools/build-cache.cjs
+node tools/test-offline.cjs
+```
+
+The content checker validates loaded data, references, recipes and UI action bindings. The voice flag permits the documented missing narration only; missing art still fails validation. While preparing artwork, `--allow-missing-art` can be used for functional checks, but it is not a release completeness check.
+
+Regenerate the offline manifest with `build-cache.cjs` whenever scripts or assets change, and bump `G.VERSION` before shipping a new cached release. The offline checker starts its own temporary server and verifies service-worker installation and offline loading in an isolated Chromium context.
+
+With the web server running on port 8765, run the interaction suite:
+
+```sh
+node tools/test-browser.cjs
+```
+
+It covers class creation, the Act III prologue, Forge crafting/socketing/reforging, inventory, mobile layouts, all three new endings, and representative boss combat. Set `GLOAM_URL` to test another server. Results and screenshots are written to `docs/qa/`. Browser tests require Playwright and its Chromium browser; they use an installed package or the bundled Codex runtime when available. They never connect to the user's browser or reuse personal saves.
 
 ## Project layout
 
 ```
 index.html              entry point
 manifest.webmanifest    PWA manifest (portrait, standalone)
-sw.js                   offline cache (bump CACHE when shipping changes)
+sw.js                   generated offline cache manifest and service worker
 css/style.css           all styles, animations and combat effects
-js/util.js              helpers, icons, art paths, version
+js/util.js              helpers, icons, version
 js/engine.js            state, saves, stats, items, quests, economy
-js/fx.js                combat animation and visual effects engine
+js/fx.js                art paths, combat animation and visual effects engine
 js/ui.js                screen manager, modals, toasts, tap dispatcher
 js/screens.js           splash, intro, menu, load, settings, create, onboarding, ending
 js/town.js              Candlemere and its locations
@@ -69,13 +102,20 @@ assets/                 painted art (webp/jpg), voice-over clips (mp3) and app i
 tools/process_art.py    crops and converts generated art
 tools/build_vo.py       regenerates voice-over clips (needs ELEVENLABS_API_KEY)
 tools/gen_fal.py        image generation helper (needs FAL_KEY)
+tools/build-cache.cjs   regenerates the offline file manifest
+tools/verify-content.cjs content/reference/asset validation
+tools/test-gameplay.cjs engine and combat regression tests
+tools/test-browser.cjs  isolated mobile browser interaction tests
+tools/test-offline.cjs  service-worker and offline loading test
 ```
 
 ## Publishing to Google Play (Capacitor)
 
 The game is a static web app, so it can be wrapped into an Android app with Capacitor.
 
-1. Install Node.js 18+ and Android Studio (with an SDK and JDK 17).
+The new [gloamreach-act3-debug.apk](gloamreach-act3-debug.apk) contains the finalized Act III source: versionCode **2**, versionName **3.0.0**, about **21.15 MiB**. Its offline Gradle build and APK signature checks passed, and all 447 bundled runtime files match the web source byte-for-byte. It uses the same debug signing certificate as the preserved older `gloamreach-debug.apk`. It has **not been tested on an Android device** and is a local debug build, not a signed Play release. See [build instructions and checksums](docs/android-build.md) and [release validation](docs/release-validation.md).
+
+1. Install Node.js, Android Studio, an Android SDK and a JDK compatible with the Capacitor version used by your wrapper project. Follow that version's requirements rather than assuming an older SDK/JDK combination will work.
 2. Copy the game into a `www` folder inside a new project:
 
 ```

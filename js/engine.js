@@ -2,9 +2,9 @@
 G.SETTINGS_KEY = 'gloamreach_settings';
 G.settings = { music: 0.6, sfx: 0.8, vibrate: true, textSize: 'm', tips: true, fastCombat: false, shake: true, introSeen: false, lastSlot: null };
 G.S = null;
-const MAX_LEVEL = 40, BAG_SIZE = 30, SLOT_COUNT = 3;
+const MAX_LEVEL = 60, BAG_SIZE = 30, SLOT_COUNT = 3;
 const START_CODEX = ['wick', 'candlemere'];
-const TIER_MIN = [1, 6, 12, 20];
+const TIER_MIN = [1, 6, 12, 20, 40];
 // Kill-unlocked lore whose codex id differs from the enemy id
 const KILL_CODEX = { weepknight: 'aldric', ivel: 'ivel_truth' };
 const ACT2_CONS = ['sunwater', 'smokebomb', 'whetstone', 'frostvial'];
@@ -16,6 +16,10 @@ const CLASS_PREF = {
   penitent: { wt: ['mace'], off: ['censer'] },
   gravecaller: { wt: ['sickle'], off: ['fetish'], armor: b => (b.stats || {}).spell > 0 },
   duskwarden: { wt: ['crossbow'], off: ['quiver'], armor: b => (b.stats || {}).dodge > 0 || (b.stats || {}).crit > 0 || /jerkin|leather|hood|boots/.test(b.n.toLowerCase()) },
+  sunforger: { wt: ['hammer'], off: ['shield'], armor: b => (b.armor || 0) > 0 },
+  starseer: { wt: ['astrolabe', 'staff'], off: ['lens', 'tome'], armor: b => (b.stats || {}).spell > 0 },
+  veilwalker: { wt: ['claw', 'dagger'], off: ['veil'], armor: b => (b.stats || {}).dodge > 0 || (b.stats || {}).crit > 0 },
+  chainwarden: { wt: ['flail'], off: ['shield'], armor: b => (b.armor || 0) > 0 },
 };
 
 G.Engine = {
@@ -48,6 +52,7 @@ G.Engine = {
     } catch (e) { console.error(e); return false; }
   },
   migrate(p) {
+    p.quests = p.quests || {}; p.runes = p.runes || {};
     p.cons = p.cons || {}; p.mats = p.mats || {}; p.qitems = p.qitems || {}; p.flags = p.flags || {};
     p.codex = p.codex || []; p.kills = p.kills || {}; p.blessings = p.blessings || []; p.tips = p.tips || {};
     p.bounties = p.bounties || { offers: [], active: [] }; p.shops = p.shops || {}; p.perm = p.perm || {};
@@ -55,6 +60,18 @@ G.Engine = {
     p.zp = p.zp || {};
     for (const z in G.D.ZONES) if (!p.zp[z]) p.zp[z] = { deepest: 0 };
     if (p.quests.m7) p.flags.act2 = true;
+    if (p.quests.m13) { p.flags.act3 = true; p.flags.forge = true; }
+    if (p.quests.m17 && p.quests.m17.st === 'done') {
+      p.flags.sunforge = true; p.qitems.first_faceplate = 1;
+    }
+    // Older saves may have closed after a final boss fell but before its choice.
+    if (p.dungeon && !p.dungeon.pendingEnding) {
+      const d = p.dungeon, zone = G.D.ZONES[d.zone], room = d.rooms && d.rooms[d.pos];
+      const boss = zone && G.D.ENEMIES[zone.boss];
+      if (boss && room && room.t === 'portal') {
+        d.pendingEnding = boss.final && !p.flags.ended ? 'final_choice' : boss.final2 && !p.flags.ended2 ? 'heart_choice' : boss.final3 && !p.flags.ended3 ? 'sun_choice' : null;
+      }
+    }
     return p;
   },
   slots() {
@@ -85,7 +102,7 @@ G.Engine = {
       level: 1, xp: 0, attrs, baseAttrs: Object.assign({}, attrs), perm: {}, ap: 0,
       skills: { [c.skills[0]]: 1 }, sp: 1, spTotal: 2,
       hp: 1, focus: 1, dread: 0, light: 100, gold: 40 + (b.gold || 0),
-      equip: {}, bag: [], stash: [],
+      equip: {}, bag: [], stash: [], runes: {},
       cons: Object.assign({ potion: 3, oil: 2, antidote: 1 }), mats: { scrap: 0, shard: 0, gloamcap: 0 }, qitems: {},
       quests: {}, flags: {}, codex: START_CODEX.slice(), kills: {},
       zp: {},
@@ -129,6 +146,7 @@ G.Engine = {
       const um = 1 + 0.08 * (it.up || 0);
       if (it.armor) b.armor += Math.round(it.armor * um);
       for (const k in (it.stats || {})) b[k] = (b[k] || 0) + it.stats[k];
+      if (it.rune) for (const k in it.rune.stats) b[k] = (b[k] || 0) + it.rune.stats[k];
     }
     for (const bl of (p.blessings || [])) for (const k in bl.stats) b[k] = (b[k] || 0) + bl.stats[k];
     return b;
@@ -146,13 +164,13 @@ G.Engine = {
     const atkBonus = Math.floor(sv * (scale === 'int' ? 0.3 : 0.6));
     const s = {
       A, scale, wtype: base ? base.wt : 'fist',
-      maxHp: Math.round((30 + A.vit * 6 + A.str + p.level * 4 + (b.hp || 0)) * (1 + (ps.hpPct || 0) / 100)),
+      maxHp: Math.round((30 + A.vit * 6 + A.str + p.level * 4 + (b.hp || 0)) * (1 + ((ps.hpPct || 0) + (b.hpPct || 0)) / 100)),
       maxFocus: Math.round((10 + A.int * 1.5 + A.wil * 0.7 + p.level * 0.5 + (b.focus || 0)) * (1 + (ps.focusPct || 0) / 100)),
       atkMin: wd[0] + atkBonus, atkMax: wd[1] + atkBonus,
       dmgPct: (b.dmg || 0),
-      spell: Math.round((A.int * 1.3 + (b.spell || 0) + p.level) * (1 + (ps.spellPct || 0) / 100)),
-      holy: Math.round((A.wil * 1.2 + (b.holy || 0) + p.level) * (1 + (ps.holyPct || 0) / 100)),
-      armor: Math.round(b.armor * (1 + (ps.armorPct || 0) / 100)),
+      spell: Math.round((A.int * 1.3 + (b.spell || 0) + p.level) * (1 + ((ps.spellPct || 0) + (b.spellPct || 0)) / 100)),
+      holy: Math.round((A.wil * 1.2 + (b.holy || 0) + p.level) * (1 + ((ps.holyPct || 0) + (b.holyPct || 0)) / 100)),
+      armor: Math.round(b.armor * (1 + ((ps.armorPct || 0) + (b.armorPct || 0)) / 100)),
       crit: Math.min(75, 5 + A.agi * 0.5 + (b.crit || 0) + (ps.crit || 0)),
       critDmg: 150 + (b.critDmg || 0) + (ps.critDmg || 0),
       dodge: Math.max(0, Math.min(60, 3 + A.agi * 0.5 + (b.dodge || 0) + (ps.dodge || 0))),
@@ -168,7 +186,7 @@ G.Engine = {
       dotPct: (b.dotPct || 0) + (ps.dotPct || 0), dmgStatus: (b.dmgStatus || 0) + (ps.dmgStatus || 0),
       lowHpRegen: ps.lowHpRegen || 0, ambushRes: ps.ambushRes || 0,
       cheatDeath: (b.cheatDeath || 0) + (ps.cheatDeath || 0), firstStrike: (b.firstStrike || 0) + (ps.firstStrike || 0),
-      xpPct: (bg.xpPct || 0) + (b.xpPct || 0),
+      xpPct: (bg.xpPct || 0) + (b.xpPct || 0), thorns: (b.thorns || 0) + (ps.thorns || 0),
     };
     s.atkMin = Math.max(1, s.atkMin); s.atkMax = Math.max(s.atkMin, s.atkMax);
     return s;
@@ -196,7 +214,7 @@ G.Engine = {
   },
 
   // ---------------- XP ----------------
-  xpNeed(l) { return Math.floor(30 * Math.pow(l, 1.45)); },
+  xpNeed(l) { return Math.floor(30 * Math.pow(Math.min(l, 40), 1.45) * (l > 40 ? 1 + (l - 40) * 0.05 : 1)); },
   gainXp(n) {
     const p = G.S, s = this.stats();
     n = Math.round(n * (1 + s.xpPct / 100));
@@ -216,7 +234,7 @@ G.Engine = {
   },
 
   // ---------------- items ----------------
-  tierOf(ilvl) { return ilvl <= 5 ? 1 : ilvl <= 11 ? 2 : ilvl <= 19 ? 3 : 4; },
+  tierOf(ilvl) { return ilvl <= 5 ? 1 : ilvl <= 11 ? 2 : ilvl <= 19 ? 3 : ilvl <= 39 ? 4 : 5; },
   rollRarity(bonus) {
     bonus = bonus || 0;
     const ws = G.D.RARITY.map((r, i) => r.w * (i === 0 ? Math.max(0.2, 1 - bonus / 60) : 1 + bonus * i / 25));
@@ -326,6 +344,7 @@ G.Engine = {
     if (it.dmg) L.push(`<b>${Math.round(it.dmg[0] * um)}-${Math.round(it.dmg[1] * um)}</b> Damage <span class="muted">(${G.D.ATTRS[G.D.BASES[it.base].scale].n} scaling)</span>`);
     if (it.armor) L.push(`<b>${Math.round(it.armor * um)}</b> Armor`);
     for (const k in it.stats) L.push(this.statLine(k, it.stats[k]));
+    if (it.rune) L.push(`<span style="color:${it.rune.color || '#e0b060'}">${G.U.esc(it.rune.n)}:</span> ${Object.keys(it.rune.stats).map(k => this.statLine(k, it.rune.stats[k])).join(', ')}`);
     return L;
   },
   itemPower(it) {
@@ -334,8 +353,9 @@ G.Engine = {
     let s = 0;
     if (it.dmg) s += (it.dmg[0] + it.dmg[1]) / 2 * um * 3;
     if (it.armor) s += it.armor * um * 2;
-    const W = { str: 3, agi: 3, int: 3, wil: 3, vit: 3, hp: 0.4, armor: 2, crit: 2, dodge: 2, spell: 1.6, holy: 1.6, lifesteal: 3, resolve: 0.5, focus: 0.8, dmg: 2, lightEff: 0.7, lightMax: 0.25, regen: 3, critDmg: 1, dotPct: 1, dreadRes: 1.2, focusRegen: 6 };
+    const W = { str: 3, agi: 3, int: 3, wil: 3, vit: 3, hp: 0.4, armor: 2, crit: 2, dodge: 2, spell: 1.6, holy: 1.6, lifesteal: 3, resolve: 0.5, focus: 0.8, dmg: 2, lightEff: 0.7, lightMax: 0.25, regen: 3, critDmg: 1, dotPct: 1, dreadRes: 1.2, focusRegen: 6, thorns: 2, armorPct: 2, spellPct: 2, holyPct: 2, hpPct: 3, xpPct: 2 };
     for (const k in it.stats) s += (W[k] || 1) * it.stats[k];
+    if (it.rune) for (const k in it.rune.stats) s += (W[k] || 1) * it.rune.stats[k];
     return Math.round(s);
   },
   compare(it) {
@@ -345,15 +365,18 @@ G.Engine = {
     const um = x => 1 + 0.08 * (x.up || 0);
     const fill = (o, x) => {
       if (x.dmg) o['Avg Damage'] = Math.round((x.dmg[0] + x.dmg[1]) / 2 * um(x));
-      if (x.armor) o.Armor = Math.round(x.armor * um(x));
-      for (const k in x.stats) o[(G.D.STAT_NAMES[k] || [k])[0]] = x.stats[k];
+      if (x.armor) o.armor = Math.round(x.armor * um(x));
+      for (const stats of [x.stats, x.rune && x.rune.stats]) {
+        for (const k in (stats || {})) o[k] = (o[k] || 0) + stats[k];
+      }
     };
     fill(a, it); fill(b, cur);
     const keys = [...new Set([...Object.keys(a), ...Object.keys(b)])];
     const lines = keys.map(k => {
       const d = (a[k] || 0) - (b[k] || 0);
       if (!d) return '';
-      return `<div class="fxline ${d > 0 ? 'cmp-up' : 'cmp-down'}">${d > 0 ? '▲ +' : '▼ '}${d} ${k}</div>`;
+      const name = G.D.STAT_NAMES[k] || [k, ''];
+      return `<div class="fxline ${d > 0 ? 'cmp-up' : 'cmp-down'}">${d > 0 ? '▲ +' : '▼ '}${d}${name[1]} ${name[0]}</div>`;
     }).join('');
     return lines ? `<div class="mt small muted">Compared to ${this.itemName(cur)}:</div>${lines}` : '';
   },
@@ -399,11 +422,65 @@ G.Engine = {
   },
   maxUpgrade() { return G.S.flags.hammer ? 5 : 3; },
 
+  // ---------------- Ember Forge ----------------
+  recipeAvailable(id) {
+    const r = (G.D.RECIPES || {})[id], p = G.S;
+    return !!(r && p.flags.forge && p.level >= r.lvl && (!r.flag || p.flags[r.flag]));
+  },
+  afford(cost) {
+    return G.S.gold >= (cost.gold || 0) && Object.keys(cost.mats || {}).every(k => (G.S.mats[k] || 0) >= cost.mats[k]);
+  },
+  pay(cost) {
+    G.S.gold -= cost.gold || 0;
+    for (const k in (cost.mats || {})) G.S.mats[k] -= cost.mats[k];
+  },
+  canCraft(id) {
+    const r = (G.D.RECIPES || {})[id];
+    return this.recipeAvailable(id) && !G.S.dungeon && this.afford(r) && (!r.out.base || !this.bagFull());
+  },
+  craft(id) {
+    if (!this.canCraft(id)) { G.UI.toast('Check the recipe requirements and your bag space.', 'bad'); return false; }
+    const r = G.D.RECIPES[id], p = G.S;
+    if (r.out.base) {
+      const it = this.makeItem(r.out.base, p.level, r.rarity || 2); it.fresh = false;
+      this.addItem(it);
+    } else if (r.out.cons) this.addCons(r.out.cons, r.out.n || 1);
+    else if (r.out.rune) p.runes[r.out.rune] = (p.runes[r.out.rune] || 0) + 1;
+    this.pay(r); p.flags.crafted = true;
+    G.Audio.sfx('forge'); this.save(); return true;
+  },
+  forgeItem(uid) { return [...G.S.bag, ...Object.values(G.S.equip)].find(it => it && it.uid === uid); },
+  socketRune(uid, id) {
+    const p = G.S, it = this.forgeItem(uid), r = (G.D.RUNES || {})[id];
+    if (!p.flags.forge || p.dungeon || !it || !r || !p.runes[id] || !r.slots.includes(it.slot)) return false;
+    if (it.rune && it.rune.id) p.runes[it.rune.id] = (p.runes[it.rune.id] || 0) + 1;
+    p.runes[id]--;
+    it.rune = { id, n: r.n, stats: Object.assign({}, r.stat), color: r.color };
+    p.flags.runed = true; this.clampVitals(); G.Audio.sfx('forge'); this.save(); return true;
+  },
+  removeRune(uid) {
+    const p = G.S, it = this.forgeItem(uid);
+    if (!p.flags.forge || p.dungeon || !it || !it.rune || !it.rune.id) return false;
+    p.runes[it.rune.id] = (p.runes[it.rune.id] || 0) + 1; delete it.rune;
+    this.clampVitals(); this.save(); return true;
+  },
+  reforgeCost(it) { return { gold: Math.round(this.itemValue(it) * 0.75), mats: { scrap: 4 + it.rarity * 2, shard: Math.max(1, it.rarity) } }; },
+  reforge(uid) {
+    const p = G.S, it = this.forgeItem(uid);
+    if (!p.flags.forge || p.dungeon || !it || it.unique) return false;
+    const cost = this.reforgeCost(it);
+    if (!this.afford(cost)) { G.UI.toast('Not enough gold or materials.', 'bad'); return false; }
+    const next = this.makeItem(it.base, it.ilvl, it.rarity);
+    Object.assign(it, next, { uid: it.uid, up: it.up || 0, fresh: false });
+    this.pay(cost); p.flags.reforged = true;
+    this.clampVitals(); G.Audio.sfx('forge'); this.save(); return true;
+  },
+
   // ---------------- consumables ----------------
   addCons(id, n) { G.S.cons[id] = Math.max(0, (G.S.cons[id] || 0) + n); },
   useCons(id, ctx) {
     const p = G.S, c = G.D.CONS[id], s = this.stats();
-    if (!p.cons[id]) return null;
+    if (!c || !p.cons[id] || (c.combatOnly && !ctx)) return null;
     let msg = '';
     switch (id) {
       case 'potion': { const h = Math.round(s.maxHp * 0.35); p.hp = Math.min(s.maxHp, p.hp + h); msg = `You drink a Red Draught. +${h} HP.`; G.Audio.sfx('heal'); break; }
@@ -416,10 +493,39 @@ G.Engine = {
         const h = Math.round(s.maxHp * 0.2); p.hp = Math.min(s.maxHp, p.hp + h); const v = this.addDread(-40);
         msg = `The Sunwater tastes of a morning you never saw. +${h} HP, ${v} Dread, ailments cured.`; if (ctx && ctx.cure) ctx.cure(true); G.Audio.sfx('holy'); break;
       }
-      default: if (c.combatOnly) return null; msg = c.n + ' used.';
+      default: {
+        if (c.fx && !c.fx.aoe && !c.fx.phoenix) { msg = this.consFx(c, ctx); if (!msg) return null; break; }
+        if (c.combatOnly) return null;
+        msg = c.n + ' used.';
+      }
     }
     p.cons[id]--;
     return msg;
+  },
+  // Generic handler for consumables that describe their effect in an `fx` object (heal %, focus %, light, dread, cure, status, ward)
+  consFx(c, ctx) {
+    const p = G.S, s = this.stats(), f = c.fx, out = [];
+    if (f.heal) { const h = Math.round(s.maxHp * f.heal / 100), b = p.hp; p.hp = Math.min(s.maxHp, p.hp + h); out.push(`+${Math.round(p.hp - b)} HP`); G.Audio.sfx('heal'); }
+    if (f.focus) { const b = p.focus; p.focus = Math.min(s.maxFocus, p.focus + Math.round(s.maxFocus * f.focus / 100)); out.push(`+${Math.round(p.focus - b)} Focus`); G.Audio.sfx('spell'); }
+    if (f.light) { if (!p.dungeon) return null; const b = p.light; p.light = Math.min(s.lightMax, p.light + f.light); out.push(`+${Math.round(p.light - b)} Light`); G.Audio.sfx('fire'); }
+    if (f.dread) { const v = this.addDread(f.dread); if (v) out.push(`${v} Dread`); }
+    if (f.cure && ctx && ctx.cure) { ctx.cure(true); out.push('ailments cured'); }
+    if (f.status && ctx && ctx.addSt) {
+      // Keep potion duration separate from stronger, short-lived skill buffs.
+      const id = f.status.id === 'rage' ? 'warElixir' : f.status.id === 'guard' ? 'stoneskin' : f.status.id;
+      ctx.addSt(id, f.status.turns, f.status.pow); out.push(G.D.STATUS[id].n); G.Audio.sfx('forge');
+    }
+    if (f.ward && ctx && ctx.addSt) { const w = Math.round(s.maxHp * f.ward / 100); ctx.addSt('ward', 5, w); out.push(`a ${w}-point ward`); G.Audio.sfx('holy'); }
+    return `${c.n}: ${out.join(', ') || 'used'}.`;
+  },
+  // Crafting/salvage materials that enemies drop, from G.D.MAT_DROPS
+  rollMatDrops(lvl, rank, mats) {
+    const boss = rank === 'boss', elite = rank === 'elite';
+    (G.D.MAT_DROPS || []).forEach(d => {
+      if (lvl < d.minLvl || (d.maxLvl && lvl > d.maxLvl)) return;
+      const ch = d.chance * (boss ? (d.bossMult || 3) : elite ? 2 : 1);
+      if (G.U.chance(Math.min(95, ch * 100))) mats[d.mat] = (mats[d.mat] || 0) + G.U.rand(d.n[0], d.n[1]) * (boss ? 2 : 1);
+    });
   },
   consUnlocked(id) {
     const c = G.D.CONS[id], f = G.S.flags;
@@ -482,6 +588,7 @@ G.Engine = {
     }
     if (fx.qitem) { p.qitems[fx.qitem] = 1; L(`Quest item: <b>${G.D.QITEMS[fx.qitem].n}</b>`, 'gold'); G.Audio.sfx('rare'); }
     if (fx.flag) { p.flags[fx.flag] = true; }
+    if (fx.flags) fx.flags.forEach(flag => { p.flags[flag] = true; });
     if (fx.codex) { const id = fx.codex === 'random' ? this.randomCodex() : fx.codex; if (id && this.unlockCodex(id)) L(`New lore: <b>${G.D.CODEX[id].n}</b>`, 'gold'); }
     if (fx.bless) { p.blessings.push(G.U.deep(fx.bless)); L(`Boon gained: <b>${fx.bless.n}</b> (${Object.keys(fx.bless.stats).map(k => this.statLine(k, fx.bless.stats[k])).join(', ')}) until you return to town`, 'gold'); }
     if (fx.perm) for (const k in fx.perm) { p.attrs[k] += fx.perm[k]; p.perm[k] = (p.perm[k] || 0) + fx.perm[k]; L(`Permanently +${fx.perm[k]} ${G.D.ATTRS[k].full}!`, 'gold'); }
@@ -540,6 +647,7 @@ G.Engine = {
     return !G.S.quests[id] && (!q.pre || this.qDone(q.pre));
   },
   accept(id) {
+    if (!this.qAvailable(id)) return false;
     const q = G.D.QUESTS[id];
     G.S.quests[id] = { st: 'active', prog: 0 };
     if (q.grant && q.grant.unique) {
@@ -548,6 +656,7 @@ G.Engine = {
       G.UI.toast(`Received ${it.n}`, 'gold');
     }
     if (q.grant && q.grant.flag) G.S.flags[q.grant.flag] = true;
+    if (q.grant && q.grant.flags) q.grant.flags.forEach(flag => { G.S.flags[flag] = true; });
     G.UI.toast(`Quest accepted: ${q.n}`, 'gold');
     this.save();
   },
@@ -571,7 +680,7 @@ G.Engine = {
     if (q.obj.t === 'item') delete p.qitems[q.obj.id];
     if (q.obj.t === 'mats') p.mats[q.obj.id] -= q.obj.n;
     p.quests[id].st = 'done';
-    const fx = { gold: r.gold, xp: r.xp, cons: r.cons, sp: r.sp, flag: r.flag, codex: q.codex };
+    const fx = { gold: r.gold, xp: r.xp, cons: r.cons, sp: r.sp, flag: r.flag, flags: r.flags, qitem: r.qitem, codex: q.codex };
     const res = this.applyFx(fx);
     if (r.item != null) {
       const il = Math.max(p.level, 2, r.ilvl || 0, r.tier ? TIER_MIN[r.tier - 1] || 0 : 0);

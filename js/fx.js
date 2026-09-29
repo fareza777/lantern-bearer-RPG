@@ -10,6 +10,7 @@ G.ART = {
   cons: id => `assets/items/c_${id}.webp`,
   mat: id => `assets/items/m_${id}.webp`,
   qitem: id => `assets/items/q_${id}.webp`,
+  rune: id => `assets/items/r_${id}.webp`,
   misc: k => `assets/items/x_${k}.webp`,
 };
 
@@ -408,7 +409,7 @@ const STRIKES = {
 const heroWeaponStyle = () => {
   const w = G.S.equip.weapon;
   const wt = w ? (G.D.BASES[w.base] || {}).wt : null;
-  return { sword: 'blade', axe: 'heavy', dagger: 'stab', mace: 'blunt', staff: 'arcane', sickle: 'lash', crossbow: 'arcane' }[wt] || 'blunt';
+  return { sword: 'blade', axe: 'heavy', dagger: 'stab', mace: 'blunt', staff: 'arcane', sickle: 'lash', crossbow: 'arcane', hammer: 'heavy', astrolabe: 'arcane', claw: 'claw', flail: 'lash' }[wt] || 'blunt';
 };
 const rarityCol = r => ['#f4eee0', '#bff5b0', '#a8d0ff', '#e0b8ff', '#ffd27a'][r || 0];
 

@@ -1,0 +1,1579 @@
+{
+  "dimensions": {
+    "./assets/foe/acolyte.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/bellringer.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/blindeel.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/bloodthrall.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/boar.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/brightwraith.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/bogsister.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/brine.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/burnedscribe.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/boneknight.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/bones.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/bookwyrm.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/candlewight.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/dawnhusk.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/cantor.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/censor.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/choirecho.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/cinderauto.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/cinderhound.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/clockworkcrab.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/cocoonhusk.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/corona.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/courtier.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/crows.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/deathshead.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/deeplamp.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/dimflame.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/drownedastronomer.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/furnaceknight.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/dustmoth.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/eclipsemaw.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/emberwisp.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/executioner.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/eyeless.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/fcantor.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/folio.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/gallowcrow.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/ghoul.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/gibbet.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/glassgolem.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/glasswalker.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/gloamwolf.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/gnashmaw.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/golem.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/grevald.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/gulleteel.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/handmaiden.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/hangedman.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/hollowed.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/hollowminer.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/lampmoth.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/lampshade.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/husk.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/inkling.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/ironforeman.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/isolde.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/ivel.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/jester.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/kaldrec.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/keybearer.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/lampwarden.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/leech.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/lenseye.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/orrery.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/lurker.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/maelis.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/mawwarden.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/mimic.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/moth.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/mothkeeper.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/mothmother.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/oathbound.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/pilgrim.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/radiant.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/quillon.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/rat.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/rimegargoyle.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/robber.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/seraph.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/shepherd.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/sigilknight.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/slagbrute.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/slagworm.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/snuffer.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/spherewarden.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/sunscarred.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/sunwarden.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/tidewraith.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/stalker.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/stonechewer.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/witchlight.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/tombweaver.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/veincrawler.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/weepknight.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/wickcrawler.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/wickerman.webp": [
+      440,
+      440
+    ],
+    "./assets/foe/wraith.webp": [
+      440,
+      440
+    ],
+    "./assets/hero/penitent.webp": [
+      400,
+      400
+    ],
+    "./assets/hero/ashwright.webp": [
+      400,
+      400
+    ],
+    "./assets/hero/chainwarden.webp": [
+      400,
+      400
+    ],
+    "./assets/hero/duskwarden.webp": [
+      400,
+      400
+    ],
+    "./assets/hero/gravecaller.webp": [
+      400,
+      400
+    ],
+    "./assets/hero/nightblade.webp": [
+      400,
+      400
+    ],
+    "./assets/hero/veilwalker.webp": [
+      400,
+      400
+    ],
+    "./assets/hero/sellsword.webp": [
+      400,
+      400
+    ],
+    "./assets/hero/starseer.webp": [
+      400,
+      400
+    ],
+    "./assets/hero/sunforger.webp": [
+      400,
+      400
+    ],
+    "./assets/icons/icon-1024.png": [
+      1024,
+      1024
+    ],
+    "./assets/icons/icon-192.png": [
+      192,
+      192
+    ],
+    "./assets/icons/icon-512.png": [
+      512,
+      512
+    ],
+    "./assets/img/c_bearers.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/c_choir.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/c_everlight.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/c_forge.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/c_gloam.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/c_heart.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/c_ivel.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/c_crack.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/c_key.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/c_dawn.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/keyart.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/c_lamps.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/town.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/zone1.jpg": [
+      900,
+      600
+    ],
+    "./assets/img/zone10.jpg": [
+      900,
+      600
+    ],
+    "./assets/img/zone11.jpg": [
+      900,
+      600
+    ],
+    "./assets/img/c_longnight.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/zone12.jpg": [
+      900,
+      600
+    ],
+    "./assets/img/c_noon.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/c_sunface.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/c_wake.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/c_wick.jpg": [
+      720,
+      1280
+    ],
+    "./assets/img/zone14.jpg": [
+      900,
+      600
+    ],
+    "./assets/img/zone13.jpg": [
+      900,
+      600
+    ],
+    "./assets/img/zone2.jpg": [
+      900,
+      506
+    ],
+    "./assets/img/zone3.jpg": [
+      900,
+      600
+    ],
+    "./assets/img/zone4.jpg": [
+      900,
+      600
+    ],
+    "./assets/img/zone8.jpg": [
+      900,
+      600
+    ],
+    "./assets/img/zone9.jpg": [
+      900,
+      600
+    ],
+    "./assets/items/aegis.webp": [
+      160,
+      160
+    ],
+    "./assets/img/zone5.jpg": [
+      900,
+      600
+    ],
+    "./assets/items/anvil_breaker.webp": [
+      160,
+      160
+    ],
+    "./assets/img/zone6.jpg": [
+      900,
+      600
+    ],
+    "./assets/img/zone7.jpg": [
+      900,
+      600
+    ],
+    "./assets/items/arbalest.webp": [
+      160,
+      160
+    ],
+    "./assets/items/archivist_hood.webp": [
+      160,
+      160
+    ],
+    "./assets/items/ash_staff.webp": [
+      160,
+      160
+    ],
+    "./assets/items/astral_gloves.webp": [
+      160,
+      160
+    ],
+    "./assets/items/bearded_axe.webp": [
+      160,
+      160
+    ],
+    "./assets/items/bell_censer.webp": [
+      160,
+      160
+    ],
+    "./assets/items/black_scythe.webp": [
+      160,
+      160
+    ],
+    "./assets/items/bone_charm.webp": [
+      160,
+      160
+    ],
+    "./assets/items/bone_fetish.webp": [
+      160,
+      160
+    ],
+    "./assets/items/bone_sickle.webp": [
+      160,
+      160
+    ],
+    "./assets/items/bone_talons.webp": [
+      160,
+      160
+    ],
+    "./assets/items/boots.webp": [
+      160,
+      160
+    ],
+    "./assets/items/brass_astrolabe.webp": [
+      160,
+      160
+    ],
+    "./assets/items/brass_lantern.webp": [
+      160,
+      160
+    ],
+    "./assets/items/brass_lens.webp": [
+      160,
+      160
+    ],
+    "./assets/items/brigandine.webp": [
+      160,
+      160
+    ],
+    "./assets/items/buckler.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_ash.webp": [
+      160,
+      160
+    ],
+    "./assets/items/bulwark.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_antidote.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_bomb.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_campkit.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_elixir.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_emberdraught.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_frostvial.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_greaterdraught.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_stoneskin.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_greatersalts.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_lightflask.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_nighttonic.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_oil.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_phoenixash.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_potion.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_salts.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_smokebomb.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_starwater.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_sunbomb.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_sunwater.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_tonic.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_voidbomb.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_wardsalt.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_warelixir.webp": [
+      160,
+      160
+    ],
+    "./assets/items/c_whetstone.webp": [
+      160,
+      160
+    ],
+    "./assets/items/chain_coif.webp": [
+      160,
+      160
+    ],
+    "./assets/items/chain_flail.webp": [
+      160,
+      160
+    ],
+    "./assets/items/choir_staff.webp": [
+      160,
+      160
+    ],
+    "./assets/items/circlet.webp": [
+      160,
+      160
+    ],
+    "./assets/items/codex_ash.webp": [
+      160,
+      160
+    ],
+    "./assets/items/comet_staff.webp": [
+      160,
+      160
+    ],
+    "./assets/items/corona_ring.webp": [
+      160,
+      160
+    ],
+    "./assets/items/court_plate.webp": [
+      160,
+      160
+    ],
+    "./assets/items/cowl.webp": [
+      160,
+      160
+    ],
+    "./assets/items/cracked_lens.webp": [
+      160,
+      160
+    ],
+    "./assets/items/crown_helm.webp": [
+      160,
+      160
+    ],
+    "./assets/items/cudgel.webp": [
+      160,
+      160
+    ],
+    "./assets/items/dawn_codex.webp": [
+      160,
+      160
+    ],
+    "./assets/items/dawnhammer.webp": [
+      160,
+      160
+    ],
+    "./assets/items/duskbow.webp": [
+      160,
+      160
+    ],
+    "./assets/items/eclipse_astrolabe.webp": [
+      160,
+      160
+    ],
+    "./assets/items/eclipse_blade.webp": [
+      160,
+      160
+    ],
+    "./assets/items/frostbound_gauntlets.webp": [
+      160,
+      160
+    ],
+    "./assets/items/gaol_flail.webp": [
+      160,
+      160
+    ],
+    "./assets/items/eclipse_lens.webp": [
+      160,
+      160
+    ],
+    "./assets/items/gauntlets.webp": [
+      160,
+      160
+    ],
+    "./assets/items/gauze_veil.webp": [
+      160,
+      160
+    ],
+    "./assets/items/glasswoven_gloves.webp": [
+      160,
+      160
+    ],
+    "./assets/items/gloam_locket.webp": [
+      160,
+      160
+    ],
+    "./assets/items/gloam_talons.webp": [
+      160,
+      160
+    ],
+    "./assets/items/eclipse_talons.webp": [
+      160,
+      160
+    ],
+    "./assets/items/ember_staff.webp": [
+      160,
+      160
+    ],
+    "./assets/items/flanged_mace.webp": [
+      160,
+      160
+    ],
+    "./assets/items/forge_hammer.webp": [
+      160,
+      160
+    ],
+    "./assets/items/gloamglass.webp": [
+      160,
+      160
+    ],
+    "./assets/items/gloamsteel.webp": [
+      160,
+      160
+    ],
+    "./assets/items/grave_scythe.webp": [
+      160,
+      160
+    ],
+    "./assets/items/great_helm.webp": [
+      160,
+      160
+    ],
+    "./assets/items/greaves.webp": [
+      160,
+      160
+    ],
+    "./assets/items/grimoire.webp": [
+      160,
+      160
+    ],
+    "./assets/items/hand_crossbow.webp": [
+      160,
+      160
+    ],
+    "./assets/items/hatchet.webp": [
+      160,
+      160
+    ],
+    "./assets/items/headsman.webp": [
+      160,
+      160
+    ],
+    "./assets/items/heart_amulet.webp": [
+      160,
+      160
+    ],
+    "./assets/items/heartwood_staff.webp": [
+      160,
+      160
+    ],
+    "./assets/items/hood.webp": [
+      160,
+      160
+    ],
+    "./assets/items/hunters_quiver.webp": [
+      160,
+      160
+    ],
+    "./assets/items/m_starglass.webp": [
+      160,
+      160
+    ],
+    "./assets/items/m_sunsteel.webp": [
+      160,
+      160
+    ],
+    "./assets/items/iron_band.webp": [
+      160,
+      160
+    ],
+    "./assets/items/jerkin.webp": [
+      160,
+      160
+    ],
+    "./assets/items/kite_shield.webp": [
+      160,
+      160
+    ],
+    "./assets/items/leather_cap.webp": [
+      160,
+      160
+    ],
+    "./assets/items/m_emberore.webp": [
+      160,
+      160
+    ],
+    "./assets/items/m_gloamcap.webp": [
+      160,
+      160
+    ],
+    "./assets/items/m_lampresin.webp": [
+      160,
+      160
+    ],
+    "./assets/items/m_scrap.webp": [
+      160,
+      160
+    ],
+    "./assets/items/m_shard.webp": [
+      160,
+      160
+    ],
+    "./assets/items/m_voidsilk.webp": [
+      160,
+      160
+    ],
+    "./assets/items/mage_robe.webp": [
+      160,
+      160
+    ],
+    "./assets/items/morning_chain.webp": [
+      160,
+      160
+    ],
+    "./assets/items/mourning_veil.webp": [
+      160,
+      160
+    ],
+    "./assets/items/night_talons.webp": [
+      160,
+      160
+    ],
+    "./assets/items/nightglass_dirk.webp": [
+      160,
+      160
+    ],
+    "./assets/items/nightstep_boots.webp": [
+      160,
+      160
+    ],
+    "./assets/items/nightweave_robe.webp": [
+      160,
+      160
+    ],
+    "./assets/items/nine_flame_censer.webp": [
+      160,
+      160
+    ],
+    "./assets/items/noon_lantern.webp": [
+      160,
+      160
+    ],
+    "./assets/items/noonday_mace.webp": [
+      160,
+      160
+    ],
+    "./assets/items/obsidian_ring.webp": [
+      160,
+      160
+    ],
+    "./assets/items/orrery_rod.webp": [
+      160,
+      160
+    ],
+    "./assets/items/pale_greaves.webp": [
+      160,
+      160
+    ],
+    "./assets/items/penitent_maul.webp": [
+      160,
+      160
+    ],
+    "./assets/items/plate.webp": [
+      160,
+      160
+    ],
+    "./assets/items/plate_gauntlets.webp": [
+      160,
+      160
+    ],
+    "./assets/items/pulsar_lens.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_astro_log.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_bellfrag.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_choirkey.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_cold_key.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_first_faceplate.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_foreman_lamp.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_frost_seal.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_sunglass.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_glass_rose.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_hammer.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_ivel_journal.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_locket.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_lost_folio.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_moth_silk.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_nine_sigils.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_ninth_letter.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_shepherd_bell.webp": [
+      160,
+      160
+    ],
+    "./assets/items/q_star_chart.webp": [
+      160,
+      160
+    ],
+    "./assets/items/quiver.webp": [
+      160,
+      160
+    ],
+    "./assets/items/r_ash.webp": [
+      160,
+      160
+    ],
+    "./assets/items/r_briars.webp": [
+      160,
+      160
+    ],
+    "./assets/items/r_dawn.webp": [
+      160,
+      160
+    ],
+    "./assets/items/r_eclipse.webp": [
+      160,
+      160
+    ],
+    "./assets/items/r_embers.webp": [
+      160,
+      160
+    ],
+    "./assets/items/r_frost.webp": [
+      160,
+      160
+    ],
+    "./assets/items/r_glass.webp": [
+      160,
+      160
+    ],
+    "./assets/items/r_hunger.webp": [
+      160,
+      160
+    ],
+    "./assets/items/r_noon.webp": [
+      160,
+      160
+    ],
+    "./assets/items/r_iron.webp": [
+      160,
+      160
+    ],
+    "./assets/items/r_nine.webp": [
+      160,
+      160
+    ],
+    "./assets/items/r_stars.webp": [
+      160,
+      160
+    ],
+    "./assets/items/r_sunforge.webp": [
+      160,
+      160
+    ],
+    "./assets/items/r_veils.webp": [
+      160,
+      160
+    ],
+    "./assets/items/r_vigil.webp": [
+      160,
+      160
+    ],
+    "./assets/items/r_wick.webp": [
+      160,
+      160
+    ],
+    "./assets/items/radiant_staff.webp": [
+      160,
+      160
+    ],
+    "./assets/items/radiant_totem.webp": [
+      160,
+      160
+    ],
+    "./assets/items/shiv.webp": [
+      160,
+      160
+    ],
+    "./assets/items/reaping_sickle.webp": [
+      160,
+      160
+    ],
+    "./assets/items/robe.webp": [
+      160,
+      160
+    ],
+    "./assets/items/rusty_blade.webp": [
+      160,
+      160
+    ],
+    "./assets/items/sabatons.webp": [
+      160,
+      160
+    ],
+    "./assets/items/silk_gloves.webp": [
+      160,
+      160
+    ],
+    "./assets/items/silver_censer.webp": [
+      160,
+      160
+    ],
+    "./assets/items/silver_pendant.webp": [
+      160,
+      160
+    ],
+    "./assets/items/silver_ring.webp": [
+      160,
+      160
+    ],
+    "./assets/items/skull_totem.webp": [
+      160,
+      160
+    ],
+    "./assets/items/smith_maul.webp": [
+      160,
+      160
+    ],
+    "./assets/items/soft_boots.webp": [
+      160,
+      160
+    ],
+    "./assets/items/star_compass.webp": [
+      160,
+      160
+    ],
+    "./assets/items/star_lens.webp": [
+      160,
+      160
+    ],
+    "./assets/items/shroud_of_nine.webp": [
+      160,
+      160
+    ],
+    "./assets/items/starlight_lantern.webp": [
+      160,
+      160
+    ],
+    "./assets/items/starseer_circlet.webp": [
+      160,
+      160
+    ],
+    "./assets/items/sunsplitter.webp": [
+      160,
+      160
+    ],
+    "./assets/items/starwoven_robe.webp": [
+      160,
+      160
+    ],
+    "./assets/items/sunsteel.webp": [
+      160,
+      160
+    ],
+    "./assets/items/stiletto.webp": [
+      160,
+      160
+    ],
+    "./assets/items/sun_censer.webp": [
+      160,
+      160
+    ],
+    "./assets/items/sunchain_flail.webp": [
+      160,
+      160
+    ],
+    "./assets/items/sunfall_maul.webp": [
+      160,
+      160
+    ],
+    "./assets/items/sunforged_gauntlets.webp": [
+      160,
+      160
+    ],
+    "./assets/items/sunforged_greaves.webp": [
+      160,
+      160
+    ],
+    "./assets/items/sunforged_hammer.webp": [
+      160,
+      160
+    ],
+    "./assets/items/sunforged_plate.webp": [
+      160,
+      160
+    ],
+    "./assets/items/sunheart_amulet.webp": [
+      160,
+      160
+    ],
+    "./assets/items/sunstone_ring.webp": [
+      160,
+      160
+    ],
+    "./assets/items/sunwarden_helm.webp": [
+      160,
+      160
+    ],
+    "./assets/items/sunwarden_quiver.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_bellbreaker.webp": [
+      160,
+      160
+    ],
+    "./assets/items/tin_censer.webp": [
+      160,
+      160
+    ],
+    "./assets/items/tin_lantern.webp": [
+      160,
+      160
+    ],
+    "./assets/items/tower_shield.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_aldric_oath.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_ashen_gauntlets.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_ashen_mantle.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_atlas_of_ends.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_brine_tear.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_cantor_tongue.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_cinder_ring.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_dawnsmith.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_ivel_heart.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_eclipse_mace.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_emberplate.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_foreman_pick.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_gaoler_chain.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_glass_edge.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_gravesong.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_grevald_crown.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_hungering_scythe.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_lamplighters_crook.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_mothmother_veil.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_last_dawn.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_mothwing_mantle.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_nameless_hood.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_nebula_robe.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_nightveil_talons.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_ninth_lamp.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_noose_of_mercy.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_orrery_eye.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_pale_crown.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_polaris.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_quill_unwritten.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_radiant_crown.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_st_ivel.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_starmap_amulet.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_sunfall_boots.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_sunforge_hammer.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_sunspear_arbalest.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_thornkiss.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_tidewalker_boots.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_umbral_fang.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_vigils_end.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_wardens_bulwark.webp": [
+      160,
+      160
+    ],
+    "./assets/items/u_wolfsbane.webp": [
+      160,
+      160
+    ],
+    "./assets/items/unwritten_scythe.webp": [
+      160,
+      160
+    ],
+    "./assets/items/unwritten_tome.webp": [
+      160,
+      160
+    ],
+    "./assets/items/veil_of_dusk.webp": [
+      160,
+      160
+    ],
+    "./assets/items/veil_of_glass.webp": [
+      160,
+      160
+    ],
+    "./assets/items/veil_talons.webp": [
+      160,
+      160
+    ],
+    "./assets/items/veinripper.webp": [
+      160,
+      160
+    ],
+    "./assets/items/vestments.webp": [
+      160,
+      160
+    ],
+    "./assets/items/vigil_crossbow.webp": [
+      160,
+      160
+    ],
+    "./assets/items/voidstep_boots.webp": [
+      160,
+      160
+    ],
+    "./assets/items/warden_flail.webp": [
+      160,
+      160
+    ],
+    "./assets/items/warden_sword.webp": [
+      160,
+      160
+    ],
+    "./assets/items/whisperfang.webp": [
+      160,
+      160
+    ],
+    "./assets/items/worldsplitter.webp": [
+      160,
+      160
+    ],
+    "./assets/items/worn_tome.webp": [
+      160,
+      160
+    ],
+    "./assets/items/wraps.webp": [
+      160,
+      160
+    ],
+    "./assets/items/x_chest.webp": [
+      160,
+      160
+    ],
+    "./assets/items/x_gold.webp": [
+      160,
+      160
+    ],
+    "./assets/items/x_scroll.webp": [
+      160,
+      160
+    ],
+    "./assets/items/x_skull.webp": [
+      160,
+      160
+    ],
+    "./assets/items/zenith_crossbow.webp": [
+      160,
+      160
+    ]
+  },
+  "opaqueSprites": [],
+  "duplicateFiles": [],
+  "note": "Opaque sprites and identical files are review findings, not automatic failures."
+}

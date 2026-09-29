@@ -27,6 +27,9 @@ S.ENDING_VO = {
   silence: ['end_silence1', 'end_silence2', 'end_silence3'],
   ember: ['end_ember1', 'end_ember2', 'end_ember3', 'end_ember4'],
   hunger: ['end_hunger1', 'end_hunger2', 'end_hunger3', 'end_hunger4'],
+  everlight: ['end_everlight1', 'end_everlight2', 'end_everlight3', 'end_everlight4'],
+  longnight: ['end_longnight1', 'end_longnight2', 'end_longnight3', 'end_longnight4'],
+  sunface: ['end_sunface1', 'end_sunface2', 'end_sunface3', 'end_sunface4'],
 };
 
 S.cine = {
@@ -50,7 +53,7 @@ S.cine = {
   after(p) {
     const slides = p.slides.map((sl, i) => {
       const m = p.voMap && p.voMap[i];
-      return m && !sl.vo ? Object.assign({}, sl, { vo: m }) : sl;
+      return m && VO()[m] && !sl.vo ? Object.assign({}, sl, { vo: m }) : sl;
     });
     this.st = { slides, i: -1, timers: [], parts: [], done: p.done, flip: false, voice: null, drone: null, sfx: [], t0: 0, dur: 0 };
     if (p.drone) {
@@ -115,6 +118,16 @@ S.cine = {
 
     const showSubs = starts => ps.forEach((pe, k) => this.at(((starts[k] != null ? starts[k] : k * 2) + 0.15) * 1000, () => pe.classList.add('on')));
     const scheduleEnd = dur => { st.dur = dur; this.at((dur + 1.6) * 1000, () => this.next()); };
+    const textOnly = () => {
+      if (this.st !== st || st.slides[st.i] !== sl) return;
+      let duration = 0;
+      const starts = sl.lines.map(line => {
+        const start = duration;
+        duration += Math.max(2.6, line.trim().split(/\s+/).length * 0.3);
+        return start;
+      });
+      showSubs(starts); scheduleEnd(duration + 1.2);
+    };
 
     (sl.sfx || []).forEach(s => A.loadClip(`assets/vo/${s.id}.mp3`).then(bf => {
       if (this.st === st && st.slides[st.i] === sl) st.sfx.push(A.playClip(bf, { delay: Math.max(0, s.at - (this.t() - st.t0)), vol: 0.9 }));
@@ -129,10 +142,9 @@ S.cine = {
         showSubs(meta && meta.t ? meta.t : []);
         scheduleEnd(d);
         this.at(d * 1000 + 300, () => this.duck(false));
-      }).catch(() => { showSubs([]); scheduleEnd(1.2 + sl.lines.length * 2.6); });
+      }).catch(textOnly);
     } else {
-      showSubs([]);
-      scheduleEnd(1.2 + sl.lines.length * 2.6);
+      textOnly();
     }
 
     if (sl.pt) this.particles(sl.pt);
@@ -187,7 +199,9 @@ S.playEnding = kind => {
   const E = G.D.ENDINGS[kind];
   if (!E) { G.UI.go('town'); return; }
   // endings beyond the first are tracked in `ended2` so the first ending's flag keeps its old meaning
-  if (G.S.flags.ended) G.S.flags.ended2 = kind; else G.S.flags.ended = kind;
+  if (['everlight', 'longnight', 'sunface'].includes(kind)) G.S.flags.ended3 = kind;
+  else if (G.S.flags.ended) G.S.flags.ended2 = kind; else G.S.flags.ended = kind;
+  G.S.flags['end_' + kind] = true;
   G.Engine.save();
   const slides = E.slides.slice();
   if (kind === 'ring') slides.push({ img: 'keyart', lines: ['...and you wake on the pyre-steps of Candlemere, lantern in hand.', 'Your name is all you remember. Somewhere far below, a new darkness is stirring.'] });

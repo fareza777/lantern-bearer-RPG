@@ -1,17 +1,130 @@
-﻿{
- "end_ring1": ["You set the ember of the Wick into the cracked Bell, and begin to sing.", "You do not know the words. The Bell teaches them to you."],
- "end_ring2": ["Your voice gives out at the final verse, as it was always meant to.", "Far above, for the first time in three hundred years, the sky turns grey... then gold."],
- "end_ring3": ["In Candlemere, twelve thousand people step into the street and weep in the sunlight.", "The Vigil carves a new name into the Crypt. Tomorrow, someone else must sing."],
- "end_ring4": ["...and you wake on the pyre-steps of Candlemere, lantern in hand.", "Your name is all you remember. Somewhere far below, a new darkness is stirring."],
- "end_silence1": ["You lower your lantern. The Bell stays silent.", "No one else will be sung to death for a sunrise."],
- "end_silence2": ["The Gloam does not end. But without the Cantor, it no longer hungers.", "Slowly, the dead lie down in the black water, and rest."],
- "end_silence3": ["You carry the Wick ember back to Candlemere, and light a second flame. Then a third.", "The world will be lit by human hands from now on. It will be enough. It will have to be."],
- "end_ember1": ["You open your lantern, and offer the Heart your ember, and yourself with it.", "The Hunger takes you gently, the way a wave takes a candle."],
- "end_ember2": ["Ivel bows his hidden face, and steps out of the dark at last, light as ash.", "Tell them, he says, the watch is over. Someone is keeping it. Then he is gone... and you are the flame."],
- "end_ember3": ["Above, a pale dawn rises. Thin, but true. And it does not ask for a voice.", "In Candlemere, the Wick burns brighter than it has in three hundred years. No one knows why. Maelis knows why."],
- "end_ember4": ["The Vigil carves two names into the Crypt that day, side by side.", "The lanterns of the Reach never go out now. Somewhere in the deep, something warm is keeping them lit."],
- "end_hunger1": ["You reach into the Heart, and take the Hunger into yourself.", "It comes willingly. It has been so lonely. And you are so warm."],
- "end_hunger2": ["Ivel is free. He turns to you with the shadow where his face was, and he is smiling. You can tell.", "Walk softly, he says, and it will follow you like a fed hound."],
- "end_hunger3": ["You walk out into the deep dark, and the dark walks with you, gentle as dusk.", "It does not feed on the world anymore. It feeds on you. And you are endless, and content."],
- "end_hunger4": ["In Candlemere, the nights grow quiet. The dead rest. The fog thins to a grey that children no longer fear.", "On moonless nights, at the edge of the Wood, a single lantern is seen walking. It is not hunting. It is herding the dark home."]
+{
+  "end_ring1": [
+    "You set the ember of the Wick into the cracked Bell, and begin to sing.",
+    "You do not know the words. The Bell teaches them to you."
+  ],
+  "end_ring2": [
+    "Your voice gives out at the final verse, as it was always meant to.",
+    "Far above, for the first time in three hundred years, the sky turns grey... then gold."
+  ],
+  "end_ring3": [
+    "In Candlemere, twelve thousand people step into the street and weep in the sunlight.",
+    "The Vigil carves a new name into the Crypt. Tomorrow, someone else must sing."
+  ],
+  "end_ring4": [
+    "...and you wake on the pyre-steps of Candlemere, lantern in hand.",
+    "Your name is all you remember. Somewhere far below, a new darkness is stirring."
+  ],
+  "end_silence1": [
+    "You lower your lantern. The Bell stays silent.",
+    "No one else will be sung to death for a sunrise."
+  ],
+  "end_silence2": [
+    "The Gloam does not end. But without the Cantor, it no longer hungers.",
+    "Slowly, the dead lie down in the black water, and rest."
+  ],
+  "end_silence3": [
+    "You carry the Wick ember back to Candlemere, and light a second flame. Then a third.",
+    "The world will be lit by human hands from now on. It will be enough. It will have to be."
+  ],
+  "end_ember1": [
+    "You open your lantern, and offer the Heart your ember, and yourself with it.",
+    "The Hunger takes you gently, the way a wave takes a candle."
+  ],
+  "end_ember2": [
+    "Ivel bows his hidden face, and steps out of the dark at last, light as ash.",
+    "Tell them, he says, the watch is over. Someone is keeping it. Then he is gone... and you are the flame."
+  ],
+  "end_ember3": [
+    "Above, a pale dawn rises. Thin, but true. And it does not ask for a voice.",
+    "In Candlemere, the Wick burns brighter than it has in three hundred years. No one knows why. Maelis knows why."
+  ],
+  "end_ember4": [
+    "The Vigil carves two names into the Crypt that day, side by side.",
+    "The lanterns of the Reach never go out now. Somewhere in the deep, something warm is keeping them lit."
+  ],
+  "end_hunger1": [
+    "You reach into the Heart, and take the Hunger into yourself.",
+    "It comes willingly. It has been so lonely. And you are so warm."
+  ],
+  "end_hunger2": [
+    "Ivel is free. He turns to you with the shadow where his face was, and he is smiling. You can tell.",
+    "Walk softly, he says, and it will follow you like a fed hound."
+  ],
+  "end_hunger3": [
+    "You walk out into the deep dark, and the dark walks with you, gentle as dusk.",
+    "It does not feed on the world anymore. It feeds on you. And you are endless, and content."
+  ],
+  "end_hunger4": [
+    "In Candlemere, the nights grow quiet. The dead rest. The fog thins to a grey that children no longer fear.",
+    "On moonless nights, at the edge of the Wood, a single lantern is seen walking. It is not hunting. It is herding the dark home."
+  ],
+  "intro3_1": [
+    "You wake at dusk in Candlemere, as you have every dusk since the Heart went quiet.",
+    "At midday the sky opens like an eye, and a black sun looks down at the town."
+  ],
+  "intro3_2": [
+    "Nine Lamplighters once drowned a hungry sun beneath a lid of darkness, and called it the Gloam.",
+    "You were told the dark was the enemy. You were told wrong."
+  ],
+  "intro3_3": [
+    "Every lantern in the Reach is a splinter of that sun's eye, forged by a single hammer.",
+    "And every Lanternbearer wears a hood, because someone must be the Key."
+  ],
+  "intro3_4": [
+    "Below the Black Noon, the Drowned Observatory still turns its stars under the water.",
+    "Someone down there has been counting the days until the lid comes off."
+  ],
+  "intro3_5": [
+    "Maelis sends you down once more, and this time she will not say why.",
+    "Your face is the one thing you cannot remember. It is the last thing you will find."
+  ],
+  "end_everlight1": [
+    "You lift your lantern to the black sun and open the glass.",
+    "The ash of the Key goes up with the flame, and the Radiant wakes gladly."
+  ],
+  "end_everlight2": [
+    "Noon arrives all at once, white and total, and the whole Reach forgets what shade is.",
+    "The Gloam boils off the roads in an hour. The dead lie down and do not get up."
+  ],
+  "end_everlight3": [
+    "The crops leap. The ice runs. The sun is warm on every face in the world.",
+    "The sun feeds, as it always did, on everything it warms. It will take a long time."
+  ],
+  "end_everlight4": [
+    "In Candlemere, twelve thousand people stand in the street and weep at the brightness.",
+    "You are ash on the wind now, and nobody will ever see your face."
+  ],
+  "end_longnight1": [
+    "You walk to the ninth chair and set your lantern in the ninth lamp.",
+    "The lid settles over the sun like a hand over a mouth."
+  ],
+  "end_longnight2": [
+    "Forty Keys came before you. You are the forty-first, and the last that anyone will need.",
+    "Your name goes quiet. Your face was already the price."
+  ],
+  "end_longnight3": [
+    "Above, the black sun closes its eye, and the Long Night settles over the Reach.",
+    "The dim will never end, and nothing will ever be eaten by the light."
+  ],
+  "end_longnight4": [
+    "Candlemere lights another candle, then another. The world is small, and it is alive.",
+    "Far below, a Key holds the lid, and hums a tune it half remembers."
+  ],
+  "end_sunface1": [
+    "The Radiant offers you a face, in your own voice, and you take it like a hand at the edge of a cliff.",
+    "It fits. It was always meant to fit."
+  ],
+  "end_sunface2": [
+    "A small sun opens where your mask was, gentle, tame, and yours.",
+    "The Radiant stops starving. It learns to hunger only for you."
+  ],
+  "end_sunface3": [
+    "The lid lifts slowly and does not fall. The Gloam thins to a friendly dusk.",
+    "Day and night return as things one can choose between."
+  ],
+  "end_sunface4": [
+    "In Candlemere, children look up at a warm gold face in the sky and wave.",
+    "A hooded Lanternbearer with a face of light walks home, and every lantern in the Reach flickers, and forgives."
+  ]
 }

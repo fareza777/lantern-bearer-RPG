@@ -5,6 +5,8 @@ const DOTS = ['bleed', 'poison', 'burn'];
 const AILMENTS = ['bleed', 'poison', 'burn', 'stun', 'weak', 'vuln'];
 // Whetstone bonus is kept apart from Rage so the two do not merge into a permanent Bloodrage
 G.D.STATUS.honed = G.D.STATUS.honed || { n: 'Honed', c: 'o', desc: 'Deals more damage for the rest of the fight.' };
+G.D.STATUS.warElixir = { n: 'Elixir of War', c: 'o', desc: 'Deals 30% more damage for the rest of the fight.' };
+G.D.STATUS.stoneskin = { n: 'Stoneskin', c: '', desc: 'Takes 35% less damage for the rest of the fight.' };
 
 G.Combat = {
   C: null,
@@ -17,7 +19,7 @@ G.Combat = {
       uid: U.uid(), id, n: b.n, ic: b.ic, lvl, rank: b.rank || 'normal', hp, maxHp: hp,
       atk: [Math.max(1, Math.round(b.atk[0] * fa)), Math.max(1, Math.round(b.atk[1] * fa))],
       armor: Math.round(b.armor + Math.max(0, dl) * 0.8), res: b.res, dodge: b.dodge, crit: b.crit, tags: b.tags || [],
-      moves: U.deep(b.moves), st: {}, intent: null, charged: false, phase2: b.phase2 ? U.deep(b.phase2) : null, p2: false, summons: 0, dead: false,
+      moves: U.deep(b.moves), st: {}, intent: null, charged: false, phase2: b.phase2 ? U.deep(b.phase2) : null, p2: false, phase3: b.phase3 ? U.deep(b.phase3) : null, p3: false, summons: 0, dead: false,
     };
   },
 
@@ -29,14 +31,14 @@ G.Combat = {
     };
     C.target = C.en[0].uid;
     C.en.forEach(e => { e.intent = this.chooseIntent(e); });
-    const boss = C.en.some(e => e.rank === 'boss');
+    const boss = !!opts.boss || C.en.some(e => e.rank === 'boss');
     C.boss = boss;
     this.log(opts.ambush ? '<span class="bad">You are ambushed! The enemy strikes first.</span>' : boss ? `<span class="bad"><b>${C.en[0].n}</b> rises to face you.</span>` : 'Battle begins. Choose your action.');
     G.FX.clear();
     G.UI.go('combat');
     C.en.forEach((e, i) => G.FX.spawn(e, (opts.ambush ? 0 : 120) + i * 170, false));
     if (boss) {
-      const b = C.en.find(e => e.rank === 'boss');
+      const b = C.en.find(e => e.rank === 'boss') || C.en[0];
       G.FX.later(500, () => { G.FX.banner(U.esc(b.n), G.S.dungeon ? U.esc(G.D.ZONES[G.S.dungeon.zone].n) : ''); G.FX.shake(2); });
     }
     S.tip('combat');
@@ -69,6 +71,7 @@ G.Combat = {
   },
   hasAilment(u) { return AILMENTS.some(a => u.st[a]); },
   heal(u, n) {
+    if (this.hpOf(u) <= 0 || u.dead) return 0;
     n = Math.max(0, Math.round(n));
     if (u.isPlayer) { const m = E.stats().maxHp; const b = G.S.hp; G.S.hp = Math.min(m, G.S.hp + n); n = Math.round(G.S.hp - b); }
     else { const b = u.hp; u.hp = Math.min(u.maxHp, u.hp + n); n = u.hp - b; }
@@ -85,6 +88,13 @@ G.Combat = {
         this.log('<span class="gold"><b>Deathless!</b> You refuse to fall, and stand with 1 HP.</span>');
         G.Audio.sfx('holy');
       }
+      if (hp <= 0 && !this.C.phoenixUsed && G.S.cons.phoenixash > 0) {
+        const pct = (G.D.CONS.phoenixash.fx || {}).phoenix || 40;
+        G.S.cons.phoenixash--; this.C.phoenixUsed = true; hp = Math.round(s.maxHp * pct / 100);
+        this.float('pl', 'Reborn!', '#ffb347');
+        this.log(`<span class="gold"><b>Phoenix Ash!</b> You burn, and rise again with ${hp} HP.</span>`);
+        G.Audio.sfx('holy'); G.Audio.sfx('fire');
+      }
       G.S.hp = Math.max(0, hp);
       U.vibrate(n > s.maxHp * 0.15 ? 120 : 40);
     } else {
@@ -94,6 +104,15 @@ G.Combat = {
         if (u.phase2.self) this.addSt(u, u.phase2.self.id, u.phase2.self.turns, u.phase2.self.pow);
         u.moves.push(...u.phase2.add);
         this.log(`<span class="bad"><b>${u.phase2.txt}</b></span>`);
+        G.Audio.sfx('bell'); G.Audio.sfx('dread');
+        this.C.flash = true;
+        G.FX.phase2(u);
+      }
+      if (u.phase3 && !u.p3 && u.hp > 0 && u.hp / u.maxHp * 100 <= u.phase3.at) {
+        u.p3 = true;
+        if (u.phase3.self) this.addSt(u, u.phase3.self.id, u.phase3.self.turns, u.phase3.self.pow);
+        u.moves.push(...u.phase3.add);
+        this.log(`<span class="bad"><b>${u.phase3.txt}</b></span>`);
         G.Audio.sfx('bell'); G.Audio.sfx('dread');
         this.C.flash = true;
         G.FX.phase2(u);
@@ -133,7 +152,8 @@ G.Combat = {
     else crit = U.chance((P ? s.crit : src.crit) + (o.critBonus || 0));
     let d = base;
     if (crit) d *= P ? s.critDmg / 100 : 1.5;
-    if (src.st.rage) d *= 1 + src.st.rage.pow / 100;
+    const rage = Math.max(src.st.rage ? src.st.rage.pow : 0, src.st.warElixir ? src.st.warElixir.pow : 0);
+    if (rage) d *= 1 + rage / 100;
     if (src.st.honed) d *= 1 + src.st.honed.pow / 100;
     if (src.st.weak) d *= 1 - src.st.weak.pow / 100;
     if (P) {
@@ -143,7 +163,8 @@ G.Combat = {
       if (s.dmgStatus && this.hasAilment(tgt)) d *= 1 + s.dmgStatus / 100;
     }
     if (tgt.st.vuln) d *= 1 + tgt.st.vuln.pow / 100;
-    if (tgt.st.guard) d *= 1 - tgt.st.guard.pow / 100;
+    const guard = Math.max(tgt.st.guard ? tgt.st.guard.pow : 0, tgt.st.stoneskin ? tgt.st.stoneskin.pow : 0);
+    if (guard) d *= 1 - guard / 100;
     if (tgt.isPlayer && this.C.defend) d *= 0.5;
     const lvl = P ? G.S.level : src.lvl;
     if (dt === 'phys') { const ar = tgt.isPlayer ? s.armor : tgt.armor; d *= 1 - Math.min(0.75, ar / (ar + 25 + 5 * lvl)); }
@@ -155,6 +176,10 @@ G.Combat = {
       if (tgt.st.ward.pow <= 0) delete tgt.st.ward;
     }
     if (d > 0) this.damage(tgt, d);
+    if (tgt.isPlayer && s.thorns && d > 0 && dt === 'phys' && !src.isPlayer && !src.dead) {
+      const rd = Math.max(1, Math.round(d * s.thorns / 100));
+      this.damage(src, rd); this.float(src.uid, '-' + rd, '#d9b25a');
+    }
     this.float(tgt.isPlayer ? 'pl' : tgt.uid, (crit ? 'CRIT ' : '') + (d > 0 ? d : 'Absorbed'), tgt.isPlayer ? '#ff7070' : crit ? '#ffcf5a' : '#fff');
     G.Audio.sfx(crit ? 'crit' : tgt.isPlayer ? 'hurt' : dt === 'magic' ? 'spell' : dt === 'holy' ? 'holy' : 'hit');
     if (P && s.lifesteal && d > 0) this.heal(this.C.pl, d * s.lifesteal / 100);
@@ -174,7 +199,9 @@ G.Combat = {
   // ---------------- player turn ----------------
   tickUnit(u) {
     for (const id of Object.keys(u.st)) {
+      if (this.hpOf(u) <= 0 || u.dead) break;
       const st = u.st[id];
+      if (!st) continue;
       if (id === 'stun') continue;
       if (DOTS.includes(id)) {
         const d = Math.max(1, Math.round(st.pow));
@@ -259,7 +286,7 @@ G.Combat = {
   useSkill(id) {
     if (!this.canAct()) return;
     const C = this.C, p = G.S, sk = G.D.SKILLS[id], r = p.skills[id], s = E.stats();
-    if (!r || p.focus < sk.cost) return;
+    if (!sk || sk.kind !== 'active' || !r || p.focus < sk.cost) return;
     G.UI.closeAllModals();
     p.focus -= sk.cost;
     const ri = r - 1;
@@ -276,6 +303,10 @@ G.Combat = {
         if (sk.sp === 'execute' && t.hp / t.maxHp < 0.3) base *= 2;
         if (sk.sp === 'undead' && t.tags.includes('undead')) base *= 1.5;
         const res = this.hit(C.pl, t, base, sk.dt, { critBonus: sk.sp === 'assassinate' ? 50 : 0 });
+        if (!res.miss && !t.dead) {
+          if (sk.sp === 'chainlash' && ![sk.st, sk.st2].some(st => st && st.id === 'vuln')) { this.addSt(t, 'vuln', 2, 25); parts.push(`${t.n} is bound`); }
+          if (sk.sp === 'gravity' && U.chance(60)) { this.addSt(t, 'stun', 1); this.addSt(t, 'weak', 2, 20); parts.push(`${t.n} is crushed by gravity`); }
+        }
         parts.push(res.miss ? `${t.n} dodges` : `${t.n} takes <b>${res.dmg}</b>${res.crit ? ' (crit)' : ''}`);
         if (sk.sp === 'harvest' && t.dead && !reaped) {
           reaped = true;
@@ -312,6 +343,7 @@ G.Combat = {
         this.addSt(C.pl, 'ward', 4, w); this.addSt(C.pl, 'rage', 3, sk.rage ? sk.rage[ri] : 30);
         parts.push(`death wraps you in a ${w}-point ward`); G.Audio.sfx('dread'); break;
       }
+      case 'temper': this.addSt(C.pl, 'guard', 3, sk.guard ? sk.guard[ri] : 40); this.addSt(C.pl, 'rage', 3, sk.rage ? sk.rage[ri] : 25); parts.push('your armour glows white-hot'); G.Audio.sfx('forge'); break;
       case 'flare': {
         if (p.dungeon) { const b = p.light; p.light = Math.min(s.lightMax, p.light + 20); const lg = Math.round(p.light - b); if (lg) parts.push(`+${lg} Light`); }
         const v = E.addDread(-8); if (v) parts.push(`Dread ${v}`);
@@ -372,8 +404,26 @@ G.Combat = {
       });
       this.refresh();
       setTimeout(() => this.endPlayerTurn(), 620 + this.alive().length * 70);
+    } else if (G.D.CONS[id].fx && G.D.CONS[id].fx.aoe) {
+      const a = G.D.CONS[id].fx.aoe, cn = G.D.CONS[id];
+      p.cons[id]--;
+      const base = (a.m || 2) * (10 + p.level * 2.2);
+      const parts = this.alive().map(t => {
+        const r = this.hit(C.pl, t, base, a.dt || 'magic', { noMiss: true, noPoise: true });
+        if (!t.dead && a.st && U.chance(a.st.ch)) { this.addSt(t, a.st.id, a.st.turns, a.st.pow); G.FX.statusFx(t.uid, a.st.id, 300); }
+        return `${t.n} ${r.dmg}`;
+      });
+      G.Audio.sfx('fire');
+      this.log(`You hurl ${cn.n}! ${parts.join(', ')}.`);
+      C.busy = true;
+      G.FX.mark('pl', 'move', 'p-cast', 380, 0);
+      this.alive().forEach((t, ti) => {
+        G.FX.later(240 + ti * 70, () => G.FX.onHit(t, { dmg: 1 }, 'none', a.st && a.st.id === 'burn' ? '#ffb347' : '#b58cff', { burst: 'ember', shake: ti === 0 ? 2 : 0 }));
+      });
+      this.refresh();
+      setTimeout(() => this.endPlayerTurn(), 620 + this.alive().length * 70);
     } else {
-      const msg = E.useCons(id, { cure: all => { (all ? AILMENTS : DOTS).forEach(d => delete C.pl.st[d]); } });
+      const msg = E.useCons(id, { cure: all => { (all ? AILMENTS : DOTS).forEach(d => delete C.pl.st[d]); }, addSt: (sid, turns, pow) => this.addSt(C.pl, sid, turns, pow) });
       if (!msg) return;
       this.log(msg);
       G.FX.heroSelf(id === 'potion' || id === 'elixir' ? 'heal' : id === 'tonic' ? 'litany' : 'ward');
@@ -435,7 +485,7 @@ G.Combat = {
     let next = null;
     switch (m.t) {
       case 'atk': { const r = strike(m.m, 'phys'); if (!r.miss) { this.applyMoveSt(m, pl); if (m.leech) { this.heal(e, r.dmg * m.leech / 100); G.FX.later(150, () => G.FX.stream(G.FX.el('pl'), G.FX.spr(e.uid), 'blood', 10)); } } break; }
-      case 'multi': for (let i = 0; i < m.hits && p.hp > 0; i++) { const r = strike(m.m, 'phys', null, i * 150); if (!r.miss) this.applyMoveSt(m, pl, i * 150); } break;
+      case 'multi': for (let i = 0; i < m.hits && p.hp > 0 && !e.dead; i++) { const r = strike(m.m, 'phys', null, i * 150); if (!r.miss) this.applyMoveSt(m, pl, i * 150); } break;
       case 'mag': { const r = strike(m.m, 'magic'); if (!r.miss) this.applyMoveSt(m, pl); if (m.dread) { const v = E.addDread(m.dread); if (v) this.log(`<span style="color:#b080e0">+${v} Dread</span>`); } break; }
       case 'dread': {
         const v = E.addDread(m.dread);
@@ -553,6 +603,7 @@ G.Combat = {
         if (U.chance(22)) items.push(E.genItem(e.lvl, 0, { bonus }));
         if (b.codex) E.unlockCodex(b.codex);
       }
+      E.rollMatDrops(e.lvl, e.rank, mats);
       if (U.chance(30)) mats.scrap = (mats.scrap || 0) + U.rand(1, 2);
       if (z >= 3 && U.chance(10)) mats.shard = (mats.shard || 0) + 1;
       if (E.qState('s_herbs') === 'active' && U.chance(18)) mats.gloamcap = (mats.gloamcap || 0) + 1;
@@ -564,10 +615,15 @@ G.Combat = {
     });
     const res = E.applyFx({ xp: Math.round(xp), gold, mats: Object.keys(mats).length ? mats : null, cons: Object.keys(cons).length ? cons : null });
     lines.unshift(...res.lines);
-    items.forEach(it => { if (E.addItem(it)) lines.push(`<div class="fxline">${G.UI.itemIcon(it, { cls: 'sm' })} ${E.itemName(it)} <span class="tiny muted">${G.D.RARITY[it.rarity].n}</span></div>`); });
+    items.forEach(it => {
+      if (it.unique && G.D.UNIQUES[it.unique].boss && E.bagFull()) {
+        p.stash.push(it);
+        lines.push(`<div class="fxline gold">Boss reward sent to your stash: ${E.itemName(it)}</div>`);
+      } else if (E.addItem(it)) lines.push(`<div class="fxline">${G.UI.itemIcon(it, { cls: 'sm' })} ${E.itemName(it)} <span class="tiny muted">${G.D.RARITY[it.rarity].n}</span></div>`);
+    });
     if (items.some(i => i.rarity >= 2)) G.Audio.sfx('rare'); else G.Audio.sfx('loot');
     E.save();
-    const title = C.boss ? `${G.icon('crown')} ${C.en.find(e => e.rank === 'boss').n} is defeated!` : `${G.icon('swords')} Victory`;
+    const title = C.boss ? `${G.icon('crown')} ${(C.en.find(e => e.rank === 'boss') || C.en[0]).n} is defeated!` : `${G.icon('swords')} Victory`;
     G.UI.modal(`<h2 class="${C.boss ? 'gold' : ''}">${title}</h2><div class="body mt"><div class="outcome">${lines.join('')}</div>
       ${E.bagFull() ? '<p class="tiny bad">Your backpack is full. Sell or salvage items in town.</p>' : ''}</div>
       <div class="foot"><button class="btn primary block" data-a="cWin">Continue</button></div>`, { locked: true, center: true });
@@ -664,7 +720,7 @@ G.A.cSkills = () => {
 };
 G.A.cUseSkill = d => G.Combat.useSkill(d.k);
 G.A.cItems = () => {
-  const p = G.S, ids = Object.keys(G.D.CONS).filter(id => (G.D.CONS[id].combat || G.D.CONS[id].combatOnly) && p.cons[id] > 0);
+  const p = G.S, ids = Object.keys(G.D.CONS).filter(id => (G.D.CONS[id].combat || G.D.CONS[id].combatOnly) && p.cons[id] > 0 && !(G.D.CONS[id].fx || {}).phoenix);
   G.UI.modal(`<h2>${G.icon('potion')} Items</h2><div class="body mt">${ids.map(id => { const c = G.D.CONS[id];
     return `<button class="btn block choice mb" data-a="cUseItem" data-k="${id}" style="flex-direction:column;align-items:flex-start;gap:2px">
       <span class="row between" style="width:100%"><b>${c.n}</b><span class="chance">×${p.cons[id]}</span></span><span class="tiny muted">${c.desc}</span></button>`; }).join('') || '<p class="muted">You have no usable items.</p>'}</div>

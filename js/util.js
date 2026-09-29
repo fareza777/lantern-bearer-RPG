@@ -1,6 +1,6 @@
 /* Gloamreach - utilities and shared namespace */
 window.G = window.G || {};
-G.VERSION = '1.1.0';
+G.VERSION = '3.0.0';
 G.PKG = 'com.hollowlantern.gloamreach';
 G.D = {};
 G.A = {};

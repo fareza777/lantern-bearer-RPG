@@ -1,0 +1,15 @@
+{
+  "revisions": [
+    {
+      "path": "assets/items/q_sunglass.webp",
+      "reason": "Replace eyeglasses with the quest's single desert-glass shard lens.",
+      "prompt": "Create ONE single irregular palm-sized lens shard made from translucent honey-amber DESERT GLASS for the quest relic 'Sunglass' in GLOAMREACH dark fantasy RPG. This is a single broken piece of glowing glass ground into a lens by a desert smith, with chipped asymmetrical rim, curved polished center, trapped warm sunlight, tiny sand inclusions and subtle etched circular ray marks, no writing. It is NOT eyeglasses, NOT sunglasses, NOT spectacles, no pair of lenses, NO frames, NO arms, no face, no person. Detailed hand-painted medieval fantasy inventory art, weathered earthy ochre and luminous amber with subtle cool rim light, centered isolated genuine transparent background with generous blank margin, no floor, no background, no shadow, no text, no border, recognizable at 160px. Three-quarter angle shows thick chipped glass edge and convex golden lens center.",
+      "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-597735bc-2e43-44f2-a7b8-07be0129c975.png"
+    },
+    {
+      "path": "assets/items/u_emberplate.webp",
+      "reason": "Replace round platter silhouette with wearable ember-seamed chest armor.",
+      "source": "C:\\Users\\FAJAR\\.codex\\generated_images\\01a0eab1-7163-7a91-b374-1a32d498e261\\exec-7d7ec016-4219-4880-ad80-98a9c888b363.png"
+    }
+  ]
+}

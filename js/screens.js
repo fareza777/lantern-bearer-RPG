@@ -334,8 +334,10 @@ G.A.gmQuit = () => { G.Engine.save(); G.UI.go('menu'); };
 S.playEnding = kind => {
   const E = G.D.ENDINGS[kind];
   if (!E) { G.UI.go('town'); return; }
-  // endings beyond the first are tracked in `ended2` so the first ending's flag keeps its old meaning
-  if (G.S.flags.ended) G.S.flags.ended2 = kind; else G.S.flags.ended = kind;
+  G.S.flags['end_' + kind] = true;
+  if (['everlight', 'longnight', 'sunface'].includes(kind)) G.S.flags.ended3 = kind;
+  else if (['ember', 'hunger'].includes(kind)) G.S.flags.ended2 = kind;
+  else G.S.flags.ended = kind;
   G.Engine.save();
   const slides = E.slides.slice();
   if (kind === 'ring') slides.push({ img: 'keyart', lines: ['...and you wake on the pyre-steps of Candlemere, lantern in hand.', 'Your name is all you remember. Somewhere far below, a new darkness is stirring.'] });
