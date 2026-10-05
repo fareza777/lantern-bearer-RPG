@@ -444,6 +444,7 @@ const FILES = [
   "./js/fx.js",
   "./js/hero.js",
   "./js/main.js",
+  "./js/monetization.js",
   "./js/screens.js",
   "./js/town.js",
   "./js/ui.js",
