@@ -118,6 +118,12 @@ S.settings = {
       <div class="setting"><div><div>Screen Shake & Flashes</div><div class="tiny muted">Impact camera effects in combat</div></div>${tg('shake', s.shake !== false)}</div>
       <div class="setting"><span>Text Size</span><div class="seg">${['s', 'm', 'l'].map(z => `<button class="${s.textSize === z ? 'on' : ''}" data-a="setSize" data-z="${z}">${{ s: 'Small', m: 'Medium', l: 'Large' }[z]}</button>`).join('')}</div></div>
       <div class="setting"><span>Language</span><div class="seg"><button class="on">English</button></div></div>
+      <h3>Support the Lantern</h3>
+      <div class="card">
+        <div class="t">${G.Monetization?.removed() ? 'Ads removed' : 'Remove Ads'}</div>
+        <div class="small muted mt">${G.Monetization?.removed() ? 'Thank you for supporting the chronicle.' : 'Remove banner advertising forever with one purchase. Google Play handles payment securely.'}</div>
+        ${G.Monetization?.removed() ? '' : `<div class="btn-grid mt"><button class="btn primary" data-a="purchaseRemoveAds">Remove Ads · $4.99</button><button class="btn ghost" data-a="restoreRemoveAds">Restore purchase</button></div>`}
+      </div>
       <h3>Data</h3>
       <div class="btn-col">
         ${inGame ? `<button class="btn" data-a="exportSave">${G.icon('share')} Export current save</button>` : ''}
@@ -142,6 +148,8 @@ G.A.settingsBack = () => {
 };
 G.A.setToggle = d => { G.settings[d.k] = !G.settings[d.k]; G.Engine.saveSettings(); if (d.k === 'vibrate' && G.settings.vibrate) U.vibrate(40); G.UI.refresh(); };
 G.A.setSize = d => { G.settings.textSize = d.z; G.Engine.saveSettings(); G.UI.refresh(); };
+G.A.purchaseRemoveAds = () => G.Monetization?.purchase();
+G.A.restoreRemoveAds = () => G.Monetization?.restore();
 G.A.resetTips = () => { if (G.S) { G.S.tips = {}; G.Engine.save(); } G.settings.tips = true; G.Engine.saveSettings(); G.UI.toast('Tutorial tips will be shown again.'); G.UI.refresh(); };
 G.A.exportSave = () => {
   const code = G.Engine.exportSave();

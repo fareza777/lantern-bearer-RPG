@@ -12,6 +12,7 @@ G.UI = {
     const sc = document.querySelector('#screen .scroll');
     if (sc) sc.scrollTop = 0;
     if (scr.after) scr.after(this.cur.params);
+    G.Monetization?.sync();
   },
   refresh() {
     if (!this.cur) return;
@@ -20,12 +21,14 @@ G.UI = {
       // Patch in place so animated sprites keep their <img> nodes (re-creating them makes art blink)
       this.morph(document.getElementById('screen'), scr.render(this.cur.params));
       if (scr.after) scr.after(this.cur.params, true);
+      G.Monetization?.sync();
       return;
     }
     const scs = [...document.querySelectorAll('#screen .scroll')].map(e => e.scrollTop);
     document.getElementById('screen').innerHTML = scr.render(this.cur.params);
     document.querySelectorAll('#screen .scroll').forEach((e, i) => { if (scs[i] != null) e.scrollTop = scs[i]; });
     if (scr.after) scr.after(this.cur.params, true);
+    G.Monetization?.sync();
   },
   is(name) { return this.cur && this.cur.name === name; },
 

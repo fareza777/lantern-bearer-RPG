@@ -1,6 +1,7 @@
 /* Bootstrap */
 (() => {
   G.Engine.loadSettings();
+  G.Monetization?.init();
 
   // Play-time tracking and periodic autosave
   setInterval(() => {
